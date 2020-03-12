@@ -1,0 +1,16 @@
+E:\Git\Kouvee\Kouvee\bin\Debug\Kouvee.exe.config
+E:\Git\Kouvee\Kouvee\bin\Debug\Kouvee.exe
+E:\Git\Kouvee\Kouvee\bin\Debug\Kouvee.pdb
+E:\Git\Kouvee\Kouvee\bin\Debug\MySql.Data.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\Google.Protobuf.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\BouncyCastle.Crypto.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\Ubiety.Dns.Core.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\Renci.SshNet.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\MySql.Data.xml
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csprojAssemblyReference.cache
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.MainForm.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.Properties.Resources.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.GenerateResource.cache
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.CopyComplete
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.exe
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.pdb

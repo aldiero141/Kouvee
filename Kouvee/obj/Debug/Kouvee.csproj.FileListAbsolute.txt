@@ -14,3 +14,7 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.GenerateResource.cache
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.CopyComplete
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.exe
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.pdb
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLogin.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLaporan.resources
+E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.xml

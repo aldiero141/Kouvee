@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Kouvee
 {
-    public partial class MainForm : Form
+    public partial class FormLaporan : Form
     {
-        public MainForm()
+        public FormLaporan()
         {
             InitializeComponent();
         }
-
     }
 }

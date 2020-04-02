@@ -14,7 +14,7 @@ using System.Windows.Documents;
 
 namespace Kouvee.DAO
 {
-    public class HewanDAO
+    class ProdukDAO
     {
         public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
         MySqlConnection conn = new MySqlConnection(connStr);
@@ -46,16 +46,15 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        public void CreateHewan()
+        public void CreateProduk()
         {
 
         }
 
-        public List<Hewan> ShowHewan()
+        public List<Produk> ShowProduk()
         {
-            string sql = "SELECT * FROM hewan";
-            List<Hewan> HewanList = new List<Hewan>();
+            string sql = "SELECT * FROM produk";
+            List<Produk> ProdukList = new List<Produk>();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -64,15 +63,16 @@ namespace Kouvee.DAO
                 {
                     while (result.Read())
                     {
-                        Hewan H = new Hewan(
-                            result.GetInt32("ID_Hewan"),
-                            result.GetInt32("ID_JenisHewan"),
-                            //result.GetInt32("ID_Ukuran"),
-                            result.GetInt32("ID_Pelanggan"),
-                            result.GetInt32("ID_Pegawai"),
-                            result.GetString("Nama_Hewan"),
-                            result.GetString("Tgl_Lahir_Hewan"));
-                        HewanList.Add(H);
+                        Produk Pr = new Produk(
+                            result.GetInt32("ID_Produk"),
+                            result.GetString("Nama_Produk"),
+                            result.GetInt32("Stock"),
+                            result.GetInt32("Min_Stock"),
+                            result.GetInt32("Harga_Beli"),
+                            result.GetInt32("Harga_Jual"),
+                            result.GetString("Gambar"),
+                            result.GetInt32("ID_Pegawai"));
+                        ProdukList.Add(Pr);
                     }
                 }
             }
@@ -81,15 +81,15 @@ namespace Kouvee.DAO
                 Console.WriteLine("Failed to read...");
                 Console.WriteLine(ex.ToString());
             }
-            return HewanList;
+            return ProdukList;
         }
 
-        public void UpdateHewan()
+        public void UpdateProduk()
         {
 
         }
 
-        public void DeleteHewan()
+        public void DeleteProduk()
         {
 
         }

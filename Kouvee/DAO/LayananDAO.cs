@@ -14,7 +14,7 @@ using System.Windows.Documents;
 
 namespace Kouvee.DAO
 {
-    public class HewanDAO
+    public class LayananDAO
     {
         public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
         MySqlConnection conn = new MySqlConnection(connStr);
@@ -46,16 +46,15 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        public void CreateHewan()
+        public void CreateLayanan()
         {
 
         }
 
-        public List<Hewan> ShowHewan()
+        public List<Layanan> ShowLayanan()
         {
-            string sql = "SELECT * FROM hewan";
-            List<Hewan> HewanList = new List<Hewan>();
+            string sql = "SELECT * FROM layanan";
+            List<Layanan> LayananList = new List<Layanan>();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -64,15 +63,10 @@ namespace Kouvee.DAO
                 {
                     while (result.Read())
                     {
-                        Hewan H = new Hewan(
-                            result.GetInt32("ID_Hewan"),
-                            result.GetInt32("ID_JenisHewan"),
-                            //result.GetInt32("ID_Ukuran"),
-                            result.GetInt32("ID_Pelanggan"),
-                            result.GetInt32("ID_Pegawai"),
-                            result.GetString("Nama_Hewan"),
-                            result.GetString("Tgl_Lahir_Hewan"));
-                        HewanList.Add(H);
+                        Layanan L = new Layanan(
+                            result.GetInt32("ID_Layanan"),
+                            result.GetString("Nama_Layanan"));
+                        LayananList.Add(L);
                     }
                 }
             }
@@ -81,15 +75,15 @@ namespace Kouvee.DAO
                 Console.WriteLine("Failed to read...");
                 Console.WriteLine(ex.ToString());
             }
-            return HewanList;
+            return LayananList;
         }
 
-        public void UpdateHewan()
+        public void UpdateLayanan()
         {
 
         }
 
-        public void DeleteHewan()
+        public void DeleteLayanan()
         {
 
         }

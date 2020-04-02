@@ -108,6 +108,7 @@
             this.btnUkuranHewan.TabIndex = 7;
             this.btnUkuranHewan.Text = "Data Ukuran Hewan";
             this.btnUkuranHewan.UseVisualStyleBackColor = true;
+            this.btnUkuranHewan.Click += new System.EventHandler(this.btnUkuranHewan_Click);
             // 
             // btnSupplier
             // 
@@ -117,6 +118,7 @@
             this.btnSupplier.TabIndex = 6;
             this.btnSupplier.Text = "Data Supplier";
             this.btnSupplier.UseVisualStyleBackColor = true;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btnPegawai
             // 
@@ -136,6 +138,7 @@
             this.btnProduk.TabIndex = 4;
             this.btnProduk.Text = "Data Produk";
             this.btnProduk.UseVisualStyleBackColor = true;
+            this.btnProduk.Click += new System.EventHandler(this.btnProduk_Click);
             // 
             // btnLayanan
             // 
@@ -145,6 +148,7 @@
             this.btnLayanan.TabIndex = 3;
             this.btnLayanan.Text = "Data Layanan";
             this.btnLayanan.UseVisualStyleBackColor = true;
+            this.btnLayanan.Click += new System.EventHandler(this.btnLayanan_Click);
             // 
             // btnJenisHewan
             // 
@@ -154,6 +158,7 @@
             this.btnJenisHewan.TabIndex = 2;
             this.btnJenisHewan.Text = "Data Jenis Hewan";
             this.btnJenisHewan.UseVisualStyleBackColor = true;
+            this.btnJenisHewan.Click += new System.EventHandler(this.btnJenisHewan_Click);
             // 
             // btnHewan
             // 
@@ -163,6 +168,7 @@
             this.btnHewan.TabIndex = 1;
             this.btnHewan.Text = "Data Hewan";
             this.btnHewan.UseVisualStyleBackColor = true;
+            this.btnHewan.Click += new System.EventHandler(this.btnHewan_Click);
             // 
             // btnCustomer
             // 

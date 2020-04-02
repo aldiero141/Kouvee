@@ -54,10 +54,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\CustomerControl.cs" />
+    <Compile Include="Control\HewanControl.cs" />
+    <Compile Include="Control\JenisHewanControl.cs" />
+    <Compile Include="Control\LayananControl.cs" />
     <Compile Include="Control\PegawaiControl.cs" />
+    <Compile Include="Control\ProdukControl.cs" />
+    <Compile Include="Control\SupplierControl.cs" />
+    <Compile Include="Control\UkuranHewanControl.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\HewanDAO.cs" />
+    <Compile Include="DAO\JenisHewanDAO.cs" />
+    <Compile Include="DAO\LayananDAO.cs" />
     <Compile Include="DAO\PegawaiDAO.cs" />
+    <Compile Include="DAO\ProdukDAO.cs" />
+    <Compile Include="DAO\SupplierDAO.cs" />
+    <Compile Include="DAO\UkuranHewanDAO.cs" />
     <Compile Include="FormData.cs">
       <SubType>Form</SubType>
     </Compile>

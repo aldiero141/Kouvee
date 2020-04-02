@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kouvee.Models;
-using Kouvee.Interface;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -47,22 +46,48 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void Create()
+        public void CreateCustomer()
         {
             
         }
 
-        public void Read()
+        public List<Customer> ShowCustomer()
+        {
+            string sql = "SELECT * FROM pelanggan";
+            List<Customer> CustomerList = new List<Customer>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        Customer C = new Customer(
+                            result.GetInt32("ID_Pelanggan"),
+                            result.GetString("Nama_Pelanggan"),
+                            result.GetString("Alamat_Pelanggan"),
+                            result.GetString("Tgl_Lahir_Pelanggan"),
+                            result.GetString("Phone_Pelanggan"),
+                            result.GetInt32("ID_Pegawai"));
+                        CustomerList.Add(C);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return CustomerList;
+        }
+
+        public void UpdateCustomer()
         {
             
         }
 
-        public void Update()
-        {
-            
-        }
-
-        public void Delete()
+        public void DeleteCustomer()
         {
             
         }

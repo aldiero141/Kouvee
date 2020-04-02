@@ -12,9 +12,10 @@ using System.Windows;
 using System.Numerics;
 using System.Windows.Documents;
 
+
 namespace Kouvee.DAO
 {
-    public class HewanDAO
+    public class UkuranHewanDAO
     {
         public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
         MySqlConnection conn = new MySqlConnection(connStr);
@@ -46,16 +47,15 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        public void CreateHewan()
+        public void CreateUkuranHewan()
         {
 
         }
 
-        public List<Hewan> ShowHewan()
+        public List<UkuranHewan> ShowUkuranHewan()
         {
-            string sql = "SELECT * FROM hewan";
-            List<Hewan> HewanList = new List<Hewan>();
+            string sql = "SELECT * FROM ukuran";
+            List<UkuranHewan> UkuranHewanList = new List<UkuranHewan>();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -64,15 +64,10 @@ namespace Kouvee.DAO
                 {
                     while (result.Read())
                     {
-                        Hewan H = new Hewan(
-                            result.GetInt32("ID_Hewan"),
-                            result.GetInt32("ID_JenisHewan"),
-                            //result.GetInt32("ID_Ukuran"),
-                            result.GetInt32("ID_Pelanggan"),
-                            result.GetInt32("ID_Pegawai"),
-                            result.GetString("Nama_Hewan"),
-                            result.GetString("Tgl_Lahir_Hewan"));
-                        HewanList.Add(H);
+                        UkuranHewan UH = new UkuranHewan(
+                            result.GetInt32("ID_Ukuran"),
+                            result.GetString("Ukuran"));
+                        UkuranHewanList.Add(UH);
                     }
                 }
             }
@@ -81,15 +76,15 @@ namespace Kouvee.DAO
                 Console.WriteLine("Failed to read...");
                 Console.WriteLine(ex.ToString());
             }
-            return HewanList;
+            return UkuranHewanList;
         }
 
-        public void UpdateHewan()
+        public void UpdateUkuranHewan()
         {
 
         }
 
-        public void DeleteHewan()
+        public void DeleteUkuranHewan()
         {
 
         }

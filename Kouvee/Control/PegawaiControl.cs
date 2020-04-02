@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kouvee.Models;
-using Kouvee.Interface;
 using Kouvee.DAO;
 using MySql.Data;
 using MySql.Data.MySqlClient;
@@ -20,14 +19,14 @@ namespace Kouvee.Control
     {
         private PegawaiDAO pDAO = new PegawaiDAO();
 
-        public void CreatePegawai(Pegawai pegawai)
+        public void CreatePegawai(Customer pegawai)
         {
             pDAO.makeConnection();
             pDAO.CreatePegawai();
             pDAO.closeConnection();
         }
 
-        public void UpdatePegawai(Pegawai pegawai)
+        public void UpdatePegawai(Customer pegawai)
         {
             pDAO.makeConnection();
             pDAO.UpdatePegawai();

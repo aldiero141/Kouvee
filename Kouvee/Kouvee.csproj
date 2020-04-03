@@ -70,22 +70,76 @@
     <Compile Include="DAO\ProdukDAO.cs" />
     <Compile Include="DAO\SupplierDAO.cs" />
     <Compile Include="DAO\UkuranHewanDAO.cs" />
-    <Compile Include="FormData.cs">
+    <Compile Include="View\Data\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormData.Designer.cs">
+    <Compile Include="View\Data\FormData.Designer.cs">
       <DependentUpon>FormData.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLaporan.cs">
+    <Compile Include="View\Data\Tambah\FormTambahCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLaporan.Designer.cs">
+    <Compile Include="View\Data\Tambah\FormTambahCustomer.Designer.cs">
+      <DependentUpon>FormTambahCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahHewan.Designer.cs">
+      <DependentUpon>FormTambahHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahJenisHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahJenisHewan.Designer.cs">
+      <DependentUpon>FormTambahJenisHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahLayanan.Designer.cs">
+      <DependentUpon>FormTambahLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahPegawai.Designer.cs">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahProduk.Designer.cs">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahSupplier.Designer.cs">
+      <DependentUpon>FormTambahSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahUkuranHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tambah\FormTambahUkuranHewan.Designer.cs">
+      <DependentUpon>FormTambahUkuranHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Tampil\FormTampil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Tampil\FormTampil.Designer.cs">
+      <DependentUpon>FormTampil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormLaporan.Designer.cs">
       <DependentUpon>FormLaporan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
@@ -98,13 +152,40 @@
     <Compile Include="Models\UkuranHewan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormData.resx">
+    <EmbeddedResource Include="View\Data\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporan.resx">
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahCustomer.resx">
+      <DependentUpon>FormTambahCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahHewan.resx">
+      <DependentUpon>FormTambahHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahJenisHewan.resx">
+      <DependentUpon>FormTambahJenisHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahLayanan.resx">
+      <DependentUpon>FormTambahLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahPegawai.resx">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahProduk.resx">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahSupplier.resx">
+      <DependentUpon>FormTambahSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tambah\FormTambahUkuranHewan.resx">
+      <DependentUpon>FormTambahUkuranHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Tampil\FormTampil.resx">
+      <DependentUpon>FormTampil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormLaporan.resx">
       <DependentUpon>FormLaporan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
+    <Folder Include="View\Data\Hapus\" />
+    <Folder Include="View\Data\Ubah\" />
+    <Folder Include="View\Transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

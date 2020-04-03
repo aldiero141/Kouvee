@@ -18,3 +18,12 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLogin.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLaporan.resources
 E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.xml
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tampil.FormTampil.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahCustomer.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahJenisHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahPegawai.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahSupplier.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahUkuranHewan.resources

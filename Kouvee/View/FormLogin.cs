@@ -17,7 +17,7 @@ namespace Kouvee
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             var frm = new MainForm();
             frm.Location = this.Location;
@@ -25,6 +25,11 @@ namespace Kouvee
             frm.FormClosing += delegate { this.Show(); };
             frm.Show();
             this.Hide();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -35,12 +35,12 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.panelInput = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTitle2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.labelTitle2 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelInput.SuspendLayout();
@@ -125,6 +125,18 @@
             this.panel1.Size = new System.Drawing.Size(235, 346);
             this.panel1.TabIndex = 2;
             // 
+            // labelTitle2
+            // 
+            this.labelTitle2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitle2.AutoSize = true;
+            this.labelTitle2.Font = new System.Drawing.Font("Forte", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.labelTitle2.Location = new System.Drawing.Point(34, 120);
+            this.labelTitle2.Name = "labelTitle2";
+            this.labelTitle2.Size = new System.Drawing.Size(168, 52);
+            this.labelTitle2.TabIndex = 7;
+            this.labelTitle2.Text = "Kouvee";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -139,15 +151,20 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(17, 275);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(200, 22);
             this.txtPassword.TabIndex = 5;
             // 
             // txtUsername
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(17, 214);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
@@ -177,18 +194,6 @@
             this.labelUsername.Size = new System.Drawing.Size(83, 20);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Username";
-            // 
-            // labelTitle2
-            // 
-            this.labelTitle2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle2.AutoSize = true;
-            this.labelTitle2.Font = new System.Drawing.Font("Forte", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.labelTitle2.Location = new System.Drawing.Point(34, 120);
-            this.labelTitle2.Name = "labelTitle2";
-            this.labelTitle2.Size = new System.Drawing.Size(168, 52);
-            this.labelTitle2.TabIndex = 7;
-            this.labelTitle2.Text = "Kouvee";
             // 
             // FormLogin
             // 

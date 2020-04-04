@@ -12,6 +12,8 @@ using Kouvee.View.Data.Tampil;
 using Kouvee.View.Data.Tambah;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Kouvee.View.Data.Ubah;
+using Kouvee.View.Data.Hapus;
 
 namespace Kouvee
 {
@@ -165,6 +167,7 @@ namespace Kouvee
 
         private void buttonUbahCustomer_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahCustomer());
             //
             // Code 
             //
@@ -173,6 +176,7 @@ namespace Kouvee
 
         private void buttonUbahHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahHewan());
             //
             // Code 
             //
@@ -181,6 +185,7 @@ namespace Kouvee
 
         private void buttonUbahJenisHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahJenisHewan());
             //
             // Code 
             //
@@ -189,6 +194,7 @@ namespace Kouvee
 
         private void buttonUbahLayanan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahLayanan());
             //
             // Code 
             //
@@ -197,6 +203,7 @@ namespace Kouvee
 
         private void buttonUbahPegawai_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahPegawai());
             //
             // Code 
             //
@@ -205,6 +212,7 @@ namespace Kouvee
 
         private void buttonUbahProduk_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahProduk());
             //
             // Code 
             //
@@ -213,6 +221,7 @@ namespace Kouvee
 
         private void buttonUbahSupplier_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahSupplier());
             //
             // Code 
             //
@@ -221,6 +230,7 @@ namespace Kouvee
 
         private void buttonUbahUkuranHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUbahUkuranHewan());
             //
             // Code 
             //
@@ -236,6 +246,7 @@ namespace Kouvee
 
         private void buttonHapusCustomer_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusCustomer());
             //
             // Code 
             //
@@ -244,6 +255,7 @@ namespace Kouvee
 
         private void buttonHapusHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusHewan());
             //
             // Code 
             //
@@ -252,6 +264,7 @@ namespace Kouvee
 
         private void buttonHapusJenisHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusJenisHewan());
             //
             // Code 
             //
@@ -260,6 +273,7 @@ namespace Kouvee
 
         private void buttonHapusLayanan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusLayanan());
             //
             // Code 
             //
@@ -268,6 +282,7 @@ namespace Kouvee
 
         private void buttonHapusPegawai_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusPegawai());
             //
             // Code 
             //
@@ -276,6 +291,7 @@ namespace Kouvee
 
         private void buttonHapusProduk_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusProduk());
             //
             // Code 
             //
@@ -284,6 +300,7 @@ namespace Kouvee
 
         private void buttonHapusSupplier_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusSupplier());
             //
             // Code 
             //
@@ -292,6 +309,7 @@ namespace Kouvee
 
         private void buttonHapusUkuranHewan_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormHapusUkuranHewan());
             //
             // Code 
             //

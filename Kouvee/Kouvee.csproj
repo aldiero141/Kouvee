@@ -76,6 +76,54 @@
     <Compile Include="View\Data\FormData.Designer.cs">
       <DependentUpon>FormData.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusCustomer.Designer.cs">
+      <DependentUpon>FormHapusCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusHewan.Designer.cs">
+      <DependentUpon>FormHapusHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusJenisHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusJenisHewan.Designer.cs">
+      <DependentUpon>FormHapusJenisHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusLayanan.Designer.cs">
+      <DependentUpon>FormHapusLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusPegawai.Designer.cs">
+      <DependentUpon>FormHapusPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusProduk.Designer.cs">
+      <DependentUpon>FormHapusProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusSupplier.Designer.cs">
+      <DependentUpon>FormHapusSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusUkuranHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Hapus\FormHapusUkuranHewan.Designer.cs">
+      <DependentUpon>FormHapusUkuranHewan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Data\Tambah\FormTambahCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +178,53 @@
     <Compile Include="View\Data\Tampil\FormTampil.Designer.cs">
       <DependentUpon>FormTampil.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Laporan\FormLaporan.cs">
+    <Compile Include="View\Data\Ubah\FormUbahCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Laporan\FormLaporan.Designer.cs">
-      <DependentUpon>FormLaporan.cs</DependentUpon>
+    <Compile Include="View\Data\Ubah\FormUbahCustomer.Designer.cs">
+      <DependentUpon>FormUbahCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahHewan.Designer.cs">
+      <DependentUpon>FormUbahHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahJenisHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahJenisHewan.Designer.cs">
+      <DependentUpon>FormUbahJenisHewan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahLayanan.Designer.cs">
+      <DependentUpon>FormUbahLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahPegawai.Designer.cs">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahProduk.Designer.cs">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahSupplier.Designer.cs">
+      <DependentUpon>FormUbahSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahUkuranHewan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Data\Ubah\FormUbahUkuranHewan.Designer.cs">
+      <DependentUpon>FormUbahUkuranHewan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -154,6 +244,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\Data\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusCustomer.resx">
+      <DependentUpon>FormHapusCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusHewan.resx">
+      <DependentUpon>FormHapusHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusJenisHewan.resx">
+      <DependentUpon>FormHapusJenisHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusLayanan.resx">
+      <DependentUpon>FormHapusLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusPegawai.resx">
+      <DependentUpon>FormHapusPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusProduk.resx">
+      <DependentUpon>FormHapusProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusSupplier.resx">
+      <DependentUpon>FormHapusSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Hapus\FormHapusUkuranHewan.resx">
+      <DependentUpon>FormHapusUkuranHewan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Data\Tambah\FormTambahCustomer.resx">
       <DependentUpon>FormTambahCustomer.cs</DependentUpon>
@@ -182,8 +296,29 @@
     <EmbeddedResource Include="View\Data\Tampil\FormTampil.resx">
       <DependentUpon>FormTampil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Laporan\FormLaporan.resx">
-      <DependentUpon>FormLaporan.cs</DependentUpon>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahCustomer.resx">
+      <DependentUpon>FormUbahCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahHewan.resx">
+      <DependentUpon>FormUbahHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahJenisHewan.resx">
+      <DependentUpon>FormUbahJenisHewan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahLayanan.resx">
+      <DependentUpon>FormUbahLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahPegawai.resx">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahProduk.resx">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahSupplier.resx">
+      <DependentUpon>FormUbahSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Data\Ubah\FormUbahUkuranHewan.resx">
+      <DependentUpon>FormUbahUkuranHewan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -216,8 +351,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
-    <Folder Include="View\Data\Hapus\" />
-    <Folder Include="View\Data\Ubah\" />
+    <Folder Include="View\Laporan\" />
     <Folder Include="View\Transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

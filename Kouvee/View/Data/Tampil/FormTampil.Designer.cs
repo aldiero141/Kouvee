@@ -262,7 +262,7 @@
             this.panelTampilData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTampilData.Location = new System.Drawing.Point(0, 0);
             this.panelTampilData.Name = "panelTampilData";
-            this.panelTampilData.Size = new System.Drawing.Size(798, 566);
+            this.panelTampilData.Size = new System.Drawing.Size(798, 562);
             this.panelTampilData.TabIndex = 2;
             // 
             // dataGridViewTampil
@@ -274,7 +274,7 @@
             this.dataGridViewTampil.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTampil.Name = "dataGridViewTampil";
             this.dataGridViewTampil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewTampil.Size = new System.Drawing.Size(798, 566);
+            this.dataGridViewTampil.Size = new System.Drawing.Size(798, 562);
             this.dataGridViewTampil.TabIndex = 0;
             // 
             // panelCariData
@@ -283,17 +283,19 @@
             this.panelCariData.Controls.Add(this.txtCari);
             this.panelCariData.Controls.Add(this.button9);
             this.panelCariData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCariData.Location = new System.Drawing.Point(0, 566);
+            this.panelCariData.Location = new System.Drawing.Point(0, 562);
             this.panelCariData.Name = "panelCariData";
-            this.panelCariData.Size = new System.Drawing.Size(798, 20);
+            this.panelCariData.Size = new System.Drawing.Size(798, 24);
             this.panelCariData.TabIndex = 1;
             // 
             // txtCari
             // 
+            this.txtCari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCari.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCari.Location = new System.Drawing.Point(0, 0);
             this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(740, 20);
+            this.txtCari.Size = new System.Drawing.Size(740, 22);
             this.txtCari.TabIndex = 2;
             // 
             // button9
@@ -302,10 +304,11 @@
             this.button9.Dock = System.Windows.Forms.DockStyle.Right;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Silver;
             this.button9.Location = new System.Drawing.Point(740, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(58, 20);
+            this.button9.Size = new System.Drawing.Size(58, 24);
             this.button9.TabIndex = 1;
             this.button9.Text = "Cari";
             this.button9.UseVisualStyleBackColor = false;

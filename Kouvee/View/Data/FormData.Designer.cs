@@ -63,20 +63,20 @@
             this.buttonTambahCustomer = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.panelStat = new System.Windows.Forms.Panel();
+            this.panelNotif = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.labelTitle2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSidemenu.SuspendLayout();
             this.panelHapusSubmenu.SuspendLayout();
             this.panelUbahSubmenu.SuspendLayout();
             this.panelTambahSubmenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidemenu
@@ -658,6 +658,17 @@
             this.panelLogo.Size = new System.Drawing.Size(233, 112);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(16, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
@@ -669,14 +680,14 @@
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Kouvee";
             // 
-            // panelStat
+            // panelNotif
             // 
-            this.panelStat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
-            this.panelStat.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelStat.Location = new System.Drawing.Point(250, 625);
-            this.panelStat.Name = "panelStat";
-            this.panelStat.Size = new System.Drawing.Size(1014, 56);
-            this.panelStat.TabIndex = 5;
+            this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
+            this.panelNotif.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelNotif.Location = new System.Drawing.Point(250, 625);
+            this.panelNotif.Name = "panelNotif";
+            this.panelNotif.Size = new System.Drawing.Size(1014, 56);
+            this.panelNotif.TabIndex = 5;
             // 
             // panelChildForm
             // 
@@ -712,17 +723,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(62, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,7 +730,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelChildForm);
-            this.Controls.Add(this.panelStat);
+            this.Controls.Add(this.panelNotif);
             this.Controls.Add(this.panelSidemenu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
@@ -743,10 +743,10 @@
             this.panelTambahSubmenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -785,7 +785,7 @@
         private System.Windows.Forms.Button buttonHapusJenisHewan;
         private System.Windows.Forms.Button buttonHapusHewan;
         private System.Windows.Forms.Button buttonHapusCustomer;
-        private System.Windows.Forms.Panel panelStat;
+        private System.Windows.Forms.Panel panelNotif;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBox1;

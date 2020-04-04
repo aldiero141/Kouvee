@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kouvee
+namespace Kouvee.View.Data.Ubah
 {
-    public partial class FormLaporan : Form
+    public partial class FormUbahJenisHewan : Form
     {
-        public FormLaporan()
+        public FormUbahJenisHewan()
         {
             InitializeComponent();
+        }
+
+        private void buttonKembali_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

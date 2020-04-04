@@ -15,7 +15,6 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.CopyComplete
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.exe
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.pdb
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLogin.resources
-E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.FormLaporan.resources
 E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\System.Numerics.Vectors.xml
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tampil.FormTampil.resources
@@ -27,3 +26,19 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahPegawai.resourc
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahProduk.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahSupplier.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Tambah.FormTambahUkuranHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahCustomer.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahJenisHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahPegawai.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahSupplier.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Ubah.FormUbahUkuranHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusCustomer.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusJenisHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusPegawai.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusSupplier.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusUkuranHewan.resources

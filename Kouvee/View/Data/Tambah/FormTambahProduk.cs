@@ -21,5 +21,10 @@ namespace Kouvee.View.Data.Tambah
         {
             this.Close();
         }
+
+        private void btnBrowseGambar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

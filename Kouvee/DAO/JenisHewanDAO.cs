@@ -17,7 +17,7 @@ namespace Kouvee.DAO
 {
     public class JenisHewanDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -47,9 +47,21 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void CreateJenisHewan()
+        public void CreateJenisHewan(JenisHewan jH)
         {
-
+            string sql = "INSERT INTO jenis_hewan(ID_PEGAWAI,JENISHEWAN) " +
+                "VALUES('" + jH.ID_Pegawai + "','" + jH.Jenis_Hewan +"');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<JenisHewan> ShowJenisHewan()
@@ -66,7 +78,11 @@ namespace Kouvee.DAO
                     {
                         JenisHewan JH = new JenisHewan(
                             result.GetInt32("ID_JenisHewan"),
-                            result.GetString("JenisHewan"));
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetString("JenisHewan"),
+                            result.GetDateTime("Create_At_Jhewan"),
+                            result.GetDateTime("Update_At_Jhewan"),
+                            result.GetDateTime("Delete_At_Jhewan"));
                         JenisHewanList.Add(JH);
                     }
                 }

@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateCustomer(Customer customer)
         {
             cDAO.makeConnection();
-            cDAO.CreateCustomer();
+            cDAO.CreateCustomer(customer);
             cDAO.closeConnection();
         }
 

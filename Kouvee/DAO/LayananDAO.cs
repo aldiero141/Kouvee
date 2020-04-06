@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     public class LayananDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -46,9 +46,21 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void CreateLayanan()
+        public void CreateLayanan(Layanan L)
         {
-
+            string sql = "INSERT INTO layanan(ID_UKURAN, ID_PEGAWAI, ID_JENISHEWAN, NAMA_LAYANAN, HARGA_LAYANAN ) " +
+                "VALUES('" + L.ID_Ukuran + "','" + L.ID_Pegawai + "','" + L.ID_JenisHewan + "','" + L.Nama_Layanan + "','" + L.Harga_Layanan + "');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<Layanan> ShowLayanan()
@@ -65,7 +77,14 @@ namespace Kouvee.DAO
                     {
                         Layanan L = new Layanan(
                             result.GetInt32("ID_Layanan"),
-                            result.GetString("Nama_Layanan"));
+                            result.GetInt32("ID_Ukuran"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetInt32("ID_JenisHewan"),
+                            result.GetString("Nama_Layanan"),
+                            result.GetInt32("Harga_Layanan"),
+                            result.GetDateTime("Create_At_Layanan"),
+                            result.GetDateTime("Update_At_Layanan"),
+                            result.GetDateTime("Delete_At_Layanan"));
                         LayananList.Add(L);
                     }
                 }

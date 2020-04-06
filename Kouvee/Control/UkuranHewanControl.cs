@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateUkuranHewan(UkuranHewan ukuranHewan)
         {
             ukDAO.makeConnection();
-            ukDAO.CreateUkuranHewan();
+            ukDAO.CreateUkuranHewan(ukuranHewan);
             ukDAO.closeConnection();
         }
 

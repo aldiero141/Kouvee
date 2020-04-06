@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     public class HewanDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -71,7 +71,10 @@ namespace Kouvee.DAO
                             result.GetInt32("ID_Pelanggan"),
                             result.GetInt32("ID_Pegawai"),
                             result.GetString("Nama_Hewan"),
-                            result.GetString("Tgl_Lahir_Hewan"));
+                            result.GetString("Tgl_Lahir_Hewan"),
+                            result.GetDateTime("Create_At_Hewan"),
+                            result.GetDateTime("Update_At_Hewan"),
+                            result.GetDateTime("Delete_At_Hewan"));
                         HewanList.Add(H);
                     }
                 }

@@ -46,11 +46,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNamaLayanan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtHargaLayanan = new System.Windows.Forms.TextBox();
+            this.txtNamaLayanan = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
+            this.comboBoxUkuran = new System.Windows.Forms.ComboBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -106,6 +112,7 @@
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonKembali
             // 
@@ -264,11 +271,26 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(41, 180);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(25, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Harga Layanan";
             // 
             // label3
             // 
@@ -276,7 +298,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(25, 112);
+            this.label3.Location = new System.Drawing.Point(25, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 1;
@@ -285,21 +307,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxUkuran);
+            this.panel1.Controls.Add(this.comboBoxJenisHewan);
+            this.panel1.Controls.Add(this.txtHargaLayanan);
             this.panel1.Controls.Add(this.txtNamaLayanan);
             this.panel1.Location = new System.Drawing.Point(205, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
-            // 
-            // txtNamaLayanan
-            // 
-            this.txtNamaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaLayanan.Location = new System.Drawing.Point(20, 110);
-            this.txtNamaLayanan.Name = "txtNamaLayanan";
-            this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaLayanan.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -320,6 +335,66 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            // 
+            // txtHargaLayanan
+            // 
+            this.txtHargaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHargaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHargaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHargaLayanan.Location = new System.Drawing.Point(22, 95);
+            this.txtHargaLayanan.Name = "txtHargaLayanan";
+            this.txtHargaLayanan.Size = new System.Drawing.Size(514, 22);
+            this.txtHargaLayanan.TabIndex = 8;
+            // 
+            // txtNamaLayanan
+            // 
+            this.txtNamaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaLayanan.Location = new System.Drawing.Point(22, 59);
+            this.txtNamaLayanan.Name = "txtNamaLayanan";
+            this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaLayanan.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(25, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ukuran";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(25, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Jenis Hewan";
+            // 
+            // comboBoxJenisHewan
+            // 
+            this.comboBoxJenisHewan.FormattingEnabled = true;
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 135);
+            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
+            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJenisHewan.TabIndex = 9;
+            // 
+            // comboBoxUkuran
+            // 
+            this.comboBoxUkuran.FormattingEnabled = true;
+            this.comboBoxUkuran.Location = new System.Drawing.Point(22, 171);
+            this.comboBoxUkuran.Name = "comboBoxUkuran";
+            this.comboBoxUkuran.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxUkuran.TabIndex = 10;
             // 
             // FormTambahLayanan
             // 
@@ -373,8 +448,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNamaLayanan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtHargaLayanan;
+        private System.Windows.Forms.TextBox txtNamaLayanan;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxUkuran;
+        private System.Windows.Forms.ComboBox comboBoxJenisHewan;
     }
 }

@@ -106,6 +106,7 @@
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonKembali
             // 

@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateLayanan(Layanan layanan)
         {
             lDAO.makeConnection();
-            lDAO.CreateLayanan();
+            lDAO.CreateLayanan(layanan);
             lDAO.closeConnection();
         }
 

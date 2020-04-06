@@ -12,6 +12,7 @@ namespace Kouvee
 {
     public partial class FormLogin : Form
     {
+        public static int id_pegawai;
         public FormLogin()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Kouvee
             frm.FormClosing += delegate { this.Show(); };
             frm.Show();
             this.Hide();
+            id_pegawai = 1;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

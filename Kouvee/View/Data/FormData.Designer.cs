@@ -100,7 +100,7 @@
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
             this.buttonKeluar.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,7 +110,7 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.buttonKeluar.Size = new System.Drawing.Size(233, 40);
-            this.buttonKeluar.TabIndex = 9;
+            this.buttonKeluar.TabIndex = 19;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             // 
             // panelHapusSubmenu
             // 
-            this.panelHapusSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
+            this.panelHapusSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelHapusSubmenu.Controls.Add(this.buttonHapusUkuranHewan);
             this.panelHapusSubmenu.Controls.Add(this.buttonHapusSupplier);
             this.panelHapusSubmenu.Controls.Add(this.buttonHapusProduk);
@@ -131,7 +131,7 @@
             this.panelHapusSubmenu.Location = new System.Drawing.Point(0, 770);
             this.panelHapusSubmenu.Name = "panelHapusSubmenu";
             this.panelHapusSubmenu.Size = new System.Drawing.Size(233, 249);
-            this.panelHapusSubmenu.TabIndex = 8;
+            this.panelHapusSubmenu.TabIndex = 18;
             // 
             // buttonHapusUkuranHewan
             // 
@@ -281,7 +281,7 @@
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.buttonHapus.Size = new System.Drawing.Size(233, 40);
-            this.buttonHapus.TabIndex = 7;
+            this.buttonHapus.TabIndex = 17;
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHapus.UseVisualStyleBackColor = false;
@@ -289,7 +289,7 @@
             // 
             // panelUbahSubmenu
             // 
-            this.panelUbahSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
+            this.panelUbahSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelUbahSubmenu.Controls.Add(this.buttonUbahUkuranHewan);
             this.panelUbahSubmenu.Controls.Add(this.buttonUbahSupplier);
             this.panelUbahSubmenu.Controls.Add(this.buttonUbahProduk);
@@ -302,7 +302,7 @@
             this.panelUbahSubmenu.Location = new System.Drawing.Point(0, 481);
             this.panelUbahSubmenu.Name = "panelUbahSubmenu";
             this.panelUbahSubmenu.Size = new System.Drawing.Size(233, 249);
-            this.panelUbahSubmenu.TabIndex = 6;
+            this.panelUbahSubmenu.TabIndex = 16;
             // 
             // buttonUbahUkuranHewan
             // 
@@ -452,7 +452,7 @@
             this.buttonUbah.Name = "buttonUbah";
             this.buttonUbah.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.buttonUbah.Size = new System.Drawing.Size(233, 40);
-            this.buttonUbah.TabIndex = 5;
+            this.buttonUbah.TabIndex = 15;
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUbah.UseVisualStyleBackColor = false;
@@ -478,7 +478,7 @@
             // 
             // panelTambahSubmenu
             // 
-            this.panelTambahSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
+            this.panelTambahSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelTambahSubmenu.Controls.Add(this.buttonTambahUkuranHewan);
             this.panelTambahSubmenu.Controls.Add(this.buttonTambahSupplier);
             this.panelTambahSubmenu.Controls.Add(this.buttonTambahProduk);
@@ -682,7 +682,7 @@
             // 
             // panelNotif
             // 
-            this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
+            this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelNotif.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelNotif.Location = new System.Drawing.Point(250, 625);
             this.panelNotif.Name = "panelNotif";
@@ -734,7 +734,7 @@
             this.Controls.Add(this.panelSidemenu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Kouvee";
             this.panelSidemenu.ResumeLayout(false);
@@ -765,6 +765,22 @@
         private System.Windows.Forms.Button buttonTambahCustomer;
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Button buttonTampil;
+        private System.Windows.Forms.Panel panelNotif;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelTitle2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.Panel panelHapusSubmenu;
+        private System.Windows.Forms.Button buttonHapusUkuranHewan;
+        private System.Windows.Forms.Button buttonHapusSupplier;
+        private System.Windows.Forms.Button buttonHapusProduk;
+        private System.Windows.Forms.Button buttonHapusPegawai;
+        private System.Windows.Forms.Button buttonHapusLayanan;
+        private System.Windows.Forms.Button buttonHapusJenisHewan;
+        private System.Windows.Forms.Button buttonHapusHewan;
+        private System.Windows.Forms.Button buttonHapusCustomer;
         private System.Windows.Forms.Button buttonHapus;
         private System.Windows.Forms.Panel panelUbahSubmenu;
         private System.Windows.Forms.Button buttonUbahUkuranHewan;
@@ -776,22 +792,6 @@
         private System.Windows.Forms.Button buttonUbahHewan;
         private System.Windows.Forms.Button buttonUbahCustomer;
         private System.Windows.Forms.Button buttonUbah;
-        private System.Windows.Forms.Panel panelHapusSubmenu;
-        private System.Windows.Forms.Button buttonHapusUkuranHewan;
-        private System.Windows.Forms.Button buttonHapusSupplier;
-        private System.Windows.Forms.Button buttonHapusProduk;
-        private System.Windows.Forms.Button buttonHapusPegawai;
-        private System.Windows.Forms.Button buttonHapusLayanan;
-        private System.Windows.Forms.Button buttonHapusJenisHewan;
-        private System.Windows.Forms.Button buttonHapusHewan;
-        private System.Windows.Forms.Button buttonHapusCustomer;
-        private System.Windows.Forms.Panel panelNotif;
-        private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelTitle2;
-        private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

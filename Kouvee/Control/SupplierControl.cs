@@ -19,14 +19,14 @@ namespace Kouvee.Control
     {
         private SupplierDAO sDAO = new SupplierDAO();
 
-        public void CreateSupplier(Supplier customer)
+        public void CreateSupplier(Supplier supplier)
         {
             sDAO.makeConnection();
-            sDAO.CreateSupplier();
+            sDAO.CreateSupplier(supplier);
             sDAO.closeConnection();
         }
 
-        public void UpdateSupplier(Supplier customer)
+        public void UpdateSupplier(Supplier supplier)
         {
             sDAO.makeConnection();
             sDAO.UpdateSupplier();

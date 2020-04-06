@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     public class PegawaiDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection() 
@@ -47,9 +47,21 @@ namespace Kouvee.DAO
             }
         }
 
-        public void CreatePegawai()
+        public void CreatePegawai(Pegawai P)
         {
-
+            string sql = "INSERT INTO pegawai(NAMA_PEGAWAI, TGL_LAHIR_PEGAWAI, PHONE_PEGAWAI, ALAMAT_PEGAWAI, JABATAN, PASSWORD) " +
+               "VALUES('" + P.Nama_Pegawai + "','" + P.Tgl_Lahir_Pegawai + "','" + P.Phone_Pegawai + "','" + P.Alamat_Pegawai + "','" + P.Jabatan + "','" + P.Password + "');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<Pegawai> ShowPegawai()
@@ -71,7 +83,10 @@ namespace Kouvee.DAO
                             result.GetString("Tgl_Lahir_Pegawai"),
                             result.GetString("Phone_Pegawai"),
                             result.GetString("Jabatan"),
-                            result.GetString("Password"));
+                            result.GetString("Password"),
+                            result.GetDateTime("Create_At_Pegawai"),
+                            result.GetDateTime("Update_At_Pegawai"),
+                            result.GetDateTime("Delete_At_Pegawai"));
                         PegawaiList.Add(P);
                     }
                 }

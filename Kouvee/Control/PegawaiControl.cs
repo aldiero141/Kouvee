@@ -19,14 +19,14 @@ namespace Kouvee.Control
     {
         private PegawaiDAO pDAO = new PegawaiDAO();
 
-        public void CreatePegawai(Customer pegawai)
+        public void CreatePegawai(Pegawai pegawai)
         {
             pDAO.makeConnection();
-            pDAO.CreatePegawai();
+            pDAO.CreatePegawai(pegawai);
             pDAO.closeConnection();
         }
 
-        public void UpdatePegawai(Customer pegawai)
+        public void UpdatePegawai(Pegawai pegawai)
         {
             pDAO.makeConnection();
             pDAO.UpdatePegawai();

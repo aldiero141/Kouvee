@@ -49,13 +49,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSatuanProduk = new System.Windows.Forms.TextBox();
             this.txtBrowseGambar = new System.Windows.Forms.TextBox();
             this.btnBrowseGambar = new System.Windows.Forms.Button();
             this.txtHargaJual = new System.Windows.Forms.TextBox();
@@ -63,8 +67,6 @@
             this.txtStokMinimal = new System.Windows.Forms.TextBox();
             this.txtStok = new System.Windows.Forms.TextBox();
             this.txtNamaProduk = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -314,6 +316,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label7);
@@ -325,81 +328,10 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(27, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Gambar";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(27, 169);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 16);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Harga Jual";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(27, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Harga Beli";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(27, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Stok Minimal";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(27, 62);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Stok";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(27, 26);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 16);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Nama Produk";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.txtSatuanProduk);
             this.panel1.Controls.Add(this.txtBrowseGambar);
             this.panel1.Controls.Add(this.btnBrowseGambar);
             this.panel1.Controls.Add(this.txtHargaJual);
@@ -411,79 +343,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
-            // 
-            // txtBrowseGambar
-            // 
-            this.txtBrowseGambar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBrowseGambar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBrowseGambar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBrowseGambar.Location = new System.Drawing.Point(22, 203);
-            this.txtBrowseGambar.Name = "txtBrowseGambar";
-            this.txtBrowseGambar.Size = new System.Drawing.Size(433, 22);
-            this.txtBrowseGambar.TabIndex = 16;
-            // 
-            // btnBrowseGambar
-            // 
-            this.btnBrowseGambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
-            this.btnBrowseGambar.FlatAppearance.BorderSize = 0;
-            this.btnBrowseGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseGambar.ForeColor = System.Drawing.Color.Silver;
-            this.btnBrowseGambar.Location = new System.Drawing.Point(461, 203);
-            this.btnBrowseGambar.Name = "btnBrowseGambar";
-            this.btnBrowseGambar.Size = new System.Drawing.Size(75, 20);
-            this.btnBrowseGambar.TabIndex = 15;
-            this.btnBrowseGambar.Text = "Browse";
-            this.btnBrowseGambar.UseVisualStyleBackColor = false;
-            // 
-            // txtHargaJual
-            // 
-            this.txtHargaJual.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHargaJual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHargaJual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHargaJual.Location = new System.Drawing.Point(22, 164);
-            this.txtHargaJual.Name = "txtHargaJual";
-            this.txtHargaJual.Size = new System.Drawing.Size(514, 22);
-            this.txtHargaJual.TabIndex = 14;
-            // 
-            // txtHargaBeli
-            // 
-            this.txtHargaBeli.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHargaBeli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHargaBeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHargaBeli.Location = new System.Drawing.Point(22, 128);
-            this.txtHargaBeli.Name = "txtHargaBeli";
-            this.txtHargaBeli.Size = new System.Drawing.Size(514, 22);
-            this.txtHargaBeli.TabIndex = 13;
-            // 
-            // txtStokMinimal
-            // 
-            this.txtStokMinimal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStokMinimal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStokMinimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStokMinimal.Location = new System.Drawing.Point(22, 94);
-            this.txtStokMinimal.Name = "txtStokMinimal";
-            this.txtStokMinimal.Size = new System.Drawing.Size(514, 22);
-            this.txtStokMinimal.TabIndex = 12;
-            // 
-            // txtStok
-            // 
-            this.txtStok.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStok.Location = new System.Drawing.Point(22, 57);
-            this.txtStok.Name = "txtStok";
-            this.txtStok.Size = new System.Drawing.Size(514, 22);
-            this.txtStok.TabIndex = 11;
-            // 
-            // txtNamaProduk
-            // 
-            this.txtNamaProduk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaProduk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaProduk.Location = new System.Drawing.Point(22, 21);
-            this.txtNamaProduk.Name = "txtNamaProduk";
-            this.txtNamaProduk.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaProduk.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -504,6 +363,173 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(24, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Satuan Produk";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(24, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Gambar";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(24, 177);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 16);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Harga Jual";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(24, 145);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Harga Beli";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(24, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Stok Minimal";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(24, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 16);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Stok";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(24, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 16);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Nama Produk";
+            // 
+            // txtSatuanProduk
+            // 
+            this.txtSatuanProduk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSatuanProduk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSatuanProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSatuanProduk.Location = new System.Drawing.Point(22, 111);
+            this.txtSatuanProduk.Name = "txtSatuanProduk";
+            this.txtSatuanProduk.Size = new System.Drawing.Size(514, 22);
+            this.txtSatuanProduk.TabIndex = 18;
+            // 
+            // txtBrowseGambar
+            // 
+            this.txtBrowseGambar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBrowseGambar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBrowseGambar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrowseGambar.Location = new System.Drawing.Point(23, 205);
+            this.txtBrowseGambar.Name = "txtBrowseGambar";
+            this.txtBrowseGambar.Size = new System.Drawing.Size(433, 22);
+            this.txtBrowseGambar.TabIndex = 17;
+            // 
+            // btnBrowseGambar
+            // 
+            this.btnBrowseGambar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
+            this.btnBrowseGambar.FlatAppearance.BorderSize = 0;
+            this.btnBrowseGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseGambar.ForeColor = System.Drawing.Color.Silver;
+            this.btnBrowseGambar.Location = new System.Drawing.Point(462, 205);
+            this.btnBrowseGambar.Name = "btnBrowseGambar";
+            this.btnBrowseGambar.Size = new System.Drawing.Size(75, 20);
+            this.btnBrowseGambar.TabIndex = 16;
+            this.btnBrowseGambar.Text = "Browse";
+            this.btnBrowseGambar.UseVisualStyleBackColor = false;
+            // 
+            // txtHargaJual
+            // 
+            this.txtHargaJual.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHargaJual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHargaJual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHargaJual.Location = new System.Drawing.Point(23, 174);
+            this.txtHargaJual.Name = "txtHargaJual";
+            this.txtHargaJual.Size = new System.Drawing.Size(514, 22);
+            this.txtHargaJual.TabIndex = 15;
+            // 
+            // txtHargaBeli
+            // 
+            this.txtHargaBeli.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHargaBeli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHargaBeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHargaBeli.Location = new System.Drawing.Point(23, 142);
+            this.txtHargaBeli.Name = "txtHargaBeli";
+            this.txtHargaBeli.Size = new System.Drawing.Size(514, 22);
+            this.txtHargaBeli.TabIndex = 14;
+            // 
+            // txtStokMinimal
+            // 
+            this.txtStokMinimal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStokMinimal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStokMinimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStokMinimal.Location = new System.Drawing.Point(22, 81);
+            this.txtStokMinimal.Name = "txtStokMinimal";
+            this.txtStokMinimal.Size = new System.Drawing.Size(514, 22);
+            this.txtStokMinimal.TabIndex = 13;
+            // 
+            // txtStok
+            // 
+            this.txtStok.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStok.Location = new System.Drawing.Point(22, 50);
+            this.txtStok.Name = "txtStok";
+            this.txtStok.Size = new System.Drawing.Size(514, 22);
+            this.txtStok.TabIndex = 12;
+            // 
+            // txtNamaProduk
+            // 
+            this.txtNamaProduk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaProduk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaProduk.Location = new System.Drawing.Point(22, 19);
+            this.txtNamaProduk.Name = "txtNamaProduk";
+            this.txtNamaProduk.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaProduk.TabIndex = 11;
             // 
             // FormUbahProduk
             // 
@@ -564,12 +590,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtSatuanProduk;
         private System.Windows.Forms.TextBox txtBrowseGambar;
         private System.Windows.Forms.Button btnBrowseGambar;
         private System.Windows.Forms.TextBox txtHargaJual;

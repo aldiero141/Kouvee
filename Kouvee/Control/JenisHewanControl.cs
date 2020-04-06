@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateJenisHewan(JenisHewan jenisHewan)
         {
             jhDAO.makeConnection();
-            jhDAO.CreateJenisHewan();
+            jhDAO.CreateJenisHewan(jenisHewan);
             jhDAO.closeConnection();
         }
 

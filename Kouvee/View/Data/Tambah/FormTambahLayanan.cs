@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kouvee.Models;
+using Kouvee.Control;
 
 namespace Kouvee.View.Data.Tambah
 {
     public partial class FormTambahLayanan : Form
     {
+        Layanan layanan;
         public FormTambahLayanan()
         {
             InitializeComponent();
@@ -20,6 +23,11 @@ namespace Kouvee.View.Data.Tambah
         private void buttonKembali_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

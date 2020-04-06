@@ -54,7 +54,7 @@
             // 
             // panelMenuTampil
             // 
-            this.panelMenuTampil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
+            this.panelMenuTampil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
             this.panelMenuTampil.Controls.Add(this.buttonTampilKembali);
             this.panelMenuTampil.Controls.Add(this.buttonTampilUkuranHewan);
             this.panelMenuTampil.Controls.Add(this.buttonTampilSupplier);
@@ -79,7 +79,7 @@
             this.buttonTampilKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilKembali.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilKembali.Location = new System.Drawing.Point(0, 480);
+            this.buttonTampilKembali.Location = new System.Drawing.Point(0, 470);
             this.buttonTampilKembali.Name = "buttonTampilKembali";
             this.buttonTampilKembali.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilKembali.Size = new System.Drawing.Size(200, 50);
@@ -97,7 +97,7 @@
             this.buttonTampilUkuranHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilUkuranHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilUkuranHewan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilUkuranHewan.Location = new System.Drawing.Point(0, 430);
+            this.buttonTampilUkuranHewan.Location = new System.Drawing.Point(0, 420);
             this.buttonTampilUkuranHewan.Name = "buttonTampilUkuranHewan";
             this.buttonTampilUkuranHewan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilUkuranHewan.Size = new System.Drawing.Size(200, 50);
@@ -115,7 +115,7 @@
             this.buttonTampilSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilSupplier.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilSupplier.Location = new System.Drawing.Point(0, 380);
+            this.buttonTampilSupplier.Location = new System.Drawing.Point(0, 370);
             this.buttonTampilSupplier.Name = "buttonTampilSupplier";
             this.buttonTampilSupplier.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilSupplier.Size = new System.Drawing.Size(200, 50);
@@ -133,7 +133,7 @@
             this.buttonTampilProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilProduk.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilProduk.Location = new System.Drawing.Point(0, 330);
+            this.buttonTampilProduk.Location = new System.Drawing.Point(0, 320);
             this.buttonTampilProduk.Name = "buttonTampilProduk";
             this.buttonTampilProduk.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilProduk.Size = new System.Drawing.Size(200, 50);
@@ -151,7 +151,7 @@
             this.buttonTampilPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilPegawai.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilPegawai.Location = new System.Drawing.Point(0, 280);
+            this.buttonTampilPegawai.Location = new System.Drawing.Point(0, 270);
             this.buttonTampilPegawai.Name = "buttonTampilPegawai";
             this.buttonTampilPegawai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilPegawai.Size = new System.Drawing.Size(200, 50);
@@ -169,7 +169,7 @@
             this.buttonTampilLayanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilLayanan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilLayanan.Location = new System.Drawing.Point(0, 230);
+            this.buttonTampilLayanan.Location = new System.Drawing.Point(0, 220);
             this.buttonTampilLayanan.Name = "buttonTampilLayanan";
             this.buttonTampilLayanan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilLayanan.Size = new System.Drawing.Size(200, 50);
@@ -187,7 +187,7 @@
             this.buttonTampilJenisHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilJenisHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilJenisHewan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilJenisHewan.Location = new System.Drawing.Point(0, 180);
+            this.buttonTampilJenisHewan.Location = new System.Drawing.Point(0, 170);
             this.buttonTampilJenisHewan.Name = "buttonTampilJenisHewan";
             this.buttonTampilJenisHewan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilJenisHewan.Size = new System.Drawing.Size(200, 50);
@@ -205,7 +205,7 @@
             this.buttonTampilHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilHewan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilHewan.Location = new System.Drawing.Point(0, 130);
+            this.buttonTampilHewan.Location = new System.Drawing.Point(0, 120);
             this.buttonTampilHewan.Name = "buttonTampilHewan";
             this.buttonTampilHewan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilHewan.Size = new System.Drawing.Size(200, 50);
@@ -223,7 +223,7 @@
             this.buttonTampilCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampilCustomer.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampilCustomer.Location = new System.Drawing.Point(0, 80);
+            this.buttonTampilCustomer.Location = new System.Drawing.Point(0, 70);
             this.buttonTampilCustomer.Name = "buttonTampilCustomer";
             this.buttonTampilCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampilCustomer.Size = new System.Drawing.Size(200, 50);
@@ -240,18 +240,18 @@
             this.panelTitleTampil.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleTampil.Location = new System.Drawing.Point(0, 0);
             this.panelTitleTampil.Name = "panelTitleTampil";
-            this.panelTitleTampil.Size = new System.Drawing.Size(200, 80);
+            this.panelTitleTampil.Size = new System.Drawing.Size(200, 70);
             this.panelTitleTampil.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(45, 28);
+            this.label1.Location = new System.Drawing.Point(50, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tampil Data";
             // 
@@ -262,7 +262,7 @@
             this.panelTampilData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTampilData.Location = new System.Drawing.Point(0, 0);
             this.panelTampilData.Name = "panelTampilData";
-            this.panelTampilData.Size = new System.Drawing.Size(798, 562);
+            this.panelTampilData.Size = new System.Drawing.Size(798, 564);
             this.panelTampilData.TabIndex = 2;
             // 
             // dataGridViewTampil
@@ -274,7 +274,7 @@
             this.dataGridViewTampil.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTampil.Name = "dataGridViewTampil";
             this.dataGridViewTampil.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewTampil.Size = new System.Drawing.Size(798, 562);
+            this.dataGridViewTampil.Size = new System.Drawing.Size(798, 564);
             this.dataGridViewTampil.TabIndex = 0;
             // 
             // panelCariData
@@ -283,9 +283,9 @@
             this.panelCariData.Controls.Add(this.txtCari);
             this.panelCariData.Controls.Add(this.button9);
             this.panelCariData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCariData.Location = new System.Drawing.Point(0, 562);
+            this.panelCariData.Location = new System.Drawing.Point(0, 564);
             this.panelCariData.Name = "panelCariData";
-            this.panelCariData.Size = new System.Drawing.Size(798, 24);
+            this.panelCariData.Size = new System.Drawing.Size(798, 22);
             this.panelCariData.TabIndex = 1;
             // 
             // txtCari
@@ -308,7 +308,7 @@
             this.button9.ForeColor = System.Drawing.Color.Silver;
             this.button9.Location = new System.Drawing.Point(740, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(58, 24);
+            this.button9.Size = new System.Drawing.Size(58, 22);
             this.button9.TabIndex = 1;
             this.button9.Text = "Cari";
             this.button9.UseVisualStyleBackColor = false;

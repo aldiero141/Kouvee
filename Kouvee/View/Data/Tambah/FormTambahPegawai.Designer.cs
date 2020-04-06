@@ -66,19 +66,21 @@
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtJabatan = new System.Windows.Forms.TextBox();
+            this.comboBoxJabatan = new System.Windows.Forms.ComboBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtNomorTelponPegawai = new System.Windows.Forms.TextBox();
-            this.txtTanggalLahirPegawai = new System.Windows.Forms.TextBox();
             this.txtAlamatPegawai = new System.Windows.Forms.TextBox();
             this.txtNamaPegawai = new System.Windows.Forms.TextBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.dateTimePickerPegawai = new System.Windows.Forms.DateTimePicker();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -146,6 +148,7 @@
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // buttonKembali
             // 
@@ -514,6 +517,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
@@ -524,13 +528,25 @@
             this.panel4.Size = new System.Drawing.Size(145, 246);
             this.panel4.TabIndex = 3;
             // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(25, 195);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 16);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Password";
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(25, 183);
+            this.label11.Location = new System.Drawing.Point(25, 161);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 16);
             this.label11.TabIndex = 6;
@@ -542,7 +558,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(25, 150);
+            this.label7.Location = new System.Drawing.Point(25, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 16);
             this.label7.TabIndex = 4;
@@ -554,7 +570,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(25, 116);
+            this.label8.Location = new System.Drawing.Point(25, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 16);
             this.label8.TabIndex = 3;
@@ -566,7 +582,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(25, 79);
+            this.label9.Location = new System.Drawing.Point(25, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 2;
@@ -578,7 +594,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(25, 43);
+            this.label10.Location = new System.Drawing.Point(25, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 16);
             this.label10.TabIndex = 1;
@@ -587,9 +603,10 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel5.Controls.Add(this.txtJabatan);
+            this.panel5.Controls.Add(this.dateTimePickerPegawai);
+            this.panel5.Controls.Add(this.comboBoxJabatan);
+            this.panel5.Controls.Add(this.txtPassword);
             this.panel5.Controls.Add(this.txtNomorTelponPegawai);
-            this.panel5.Controls.Add(this.txtTanggalLahirPegawai);
             this.panel5.Controls.Add(this.txtAlamatPegawai);
             this.panel5.Controls.Add(this.txtNamaPegawai);
             this.panel5.Location = new System.Drawing.Point(205, 180);
@@ -597,42 +614,41 @@
             this.panel5.Size = new System.Drawing.Size(558, 246);
             this.panel5.TabIndex = 2;
             // 
-            // txtJabatan
+            // comboBoxJabatan
             // 
-            this.txtJabatan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtJabatan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtJabatan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJabatan.Location = new System.Drawing.Point(18, 182);
-            this.txtJabatan.Name = "txtJabatan";
-            this.txtJabatan.Size = new System.Drawing.Size(514, 22);
-            this.txtJabatan.TabIndex = 7;
+            this.comboBoxJabatan.DisplayMember = "Admin";
+            this.comboBoxJabatan.FormattingEnabled = true;
+            this.comboBoxJabatan.Location = new System.Drawing.Point(18, 159);
+            this.comboBoxJabatan.Name = "comboBoxJabatan";
+            this.comboBoxJabatan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJabatan.TabIndex = 9;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(18, 193);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(514, 22);
+            this.txtPassword.TabIndex = 8;
             // 
             // txtNomorTelponPegawai
             // 
             this.txtNomorTelponPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomorTelponPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomorTelponPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomorTelponPegawai.Location = new System.Drawing.Point(18, 146);
+            this.txtNomorTelponPegawai.Location = new System.Drawing.Point(18, 126);
             this.txtNomorTelponPegawai.Name = "txtNomorTelponPegawai";
             this.txtNomorTelponPegawai.Size = new System.Drawing.Size(514, 22);
             this.txtNomorTelponPegawai.TabIndex = 5;
-            // 
-            // txtTanggalLahirPegawai
-            // 
-            this.txtTanggalLahirPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTanggalLahirPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTanggalLahirPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTanggalLahirPegawai.Location = new System.Drawing.Point(18, 112);
-            this.txtTanggalLahirPegawai.Name = "txtTanggalLahirPegawai";
-            this.txtTanggalLahirPegawai.Size = new System.Drawing.Size(514, 22);
-            this.txtTanggalLahirPegawai.TabIndex = 4;
             // 
             // txtAlamatPegawai
             // 
             this.txtAlamatPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAlamatPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAlamatPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlamatPegawai.Location = new System.Drawing.Point(18, 75);
+            this.txtAlamatPegawai.Location = new System.Drawing.Point(18, 60);
             this.txtAlamatPegawai.Name = "txtAlamatPegawai";
             this.txtAlamatPegawai.Size = new System.Drawing.Size(514, 22);
             this.txtAlamatPegawai.TabIndex = 3;
@@ -642,7 +658,7 @@
             this.txtNamaPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNamaPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNamaPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaPegawai.Location = new System.Drawing.Point(18, 39);
+            this.txtNamaPegawai.Location = new System.Drawing.Point(18, 28);
             this.txtNamaPegawai.Name = "txtNamaPegawai";
             this.txtNamaPegawai.Size = new System.Drawing.Size(514, 22);
             this.txtNamaPegawai.TabIndex = 2;
@@ -667,6 +683,17 @@
             this.pictureBox19.TabIndex = 6;
             this.pictureBox19.TabStop = false;
             // 
+            // dateTimePickerPegawai
+            // 
+            this.dateTimePickerPegawai.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerPegawai.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPegawai.Location = new System.Drawing.Point(18, 93);
+            this.dateTimePickerPegawai.Name = "dateTimePickerPegawai";
+            this.dateTimePickerPegawai.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerPegawai.TabIndex = 10;
+            this.dateTimePickerPegawai.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
             // FormTambahPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,6 +703,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormTambahPegawai";
             this.Text = "FormTambahPegawai";
+            this.Load += new System.EventHandler(this.FormTambahPegawai_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);
@@ -757,12 +785,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtNomorTelponPegawai;
-        private System.Windows.Forms.TextBox txtTanggalLahirPegawai;
         private System.Windows.Forms.TextBox txtAlamatPegawai;
         private System.Windows.Forms.TextBox txtNamaPegawai;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.TextBox txtJabatan;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.ComboBox comboBoxJabatan;
+        private System.Windows.Forms.DateTimePicker dateTimePickerPegawai;
     }
 }

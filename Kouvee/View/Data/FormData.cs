@@ -26,18 +26,11 @@ namespace Kouvee
             CustomizeDesign();
         }
 
-        //private void btnSupplier_Click(object sender, EventArgs e)
-        //{
-        //    stat = "supplier";
-        //    var list = new SupplierControl();
-        //    dataGridRead.DataSource = list.ShowSupplier();
-        //}
-
         #region Submenu Customizer
         private void CustomizeDesign()
         {
             panelTambahSubmenu.Visible = false;
-            
+            //panelTampilSubmenu.Visible = false;
             panelUbahSubmenu.Visible = false;
             panelHapusSubmenu.Visible = false;
         }
@@ -56,6 +49,10 @@ namespace Kouvee
             {
                 panelHapusSubmenu.Visible = false;
             }
+            //if (panelTampilSubmenu.Visible == true)
+            //{
+            //    panelTampilSubmenu.Visible = false;
+            //}
         }
 
         private void showSubmenu(Panel submenu)
@@ -70,6 +67,23 @@ namespace Kouvee
                 submenu.Visible = false;
             }
         }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         #endregion
 
         #region Menu Tambah
@@ -81,54 +95,36 @@ namespace Kouvee
         private void buttonTambahCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahCustomer());
-            //
-            // Code tambah
-            //
             hideSubmenu();
         }
 
         private void buttonTambahHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonTambahJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahJenisHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonTambahLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahLayanan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonTambahPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahPegawai());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonTambahProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahProduk());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
         
@@ -136,18 +132,12 @@ namespace Kouvee
         private void buttonTambahSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahSupplier());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonTambahUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahUkuranHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
         #endregion
@@ -155,8 +145,12 @@ namespace Kouvee
         #region Menu Tampil
         private void buttonTampil_Click(object sender, EventArgs e)
         {
+            //showSubmenu(panelTampilSubmenu);
             openChildForm(new FormTampil());
+            hideSubmenu();
         }
+
+
         #endregion
 
         #region Menu Ubah
@@ -168,72 +162,48 @@ namespace Kouvee
         private void buttonUbahCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahCustomer());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahJenisHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahLayanan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahPegawai());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahProduk());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahSupplier());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonUbahUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahUkuranHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
         #endregion
@@ -247,98 +217,55 @@ namespace Kouvee
         private void buttonHapusCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusCustomer());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusJenisHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusLayanan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusPegawai());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusProduk());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusSupplier());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
 
         private void buttonHapusUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusUkuranHewan());
-            //
-            // Code 
-            //
             hideSubmenu();
         }
         #endregion
 
-        #region Keluar
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        #endregion
-
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
-        { 
-            if(activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
         }
         
     }

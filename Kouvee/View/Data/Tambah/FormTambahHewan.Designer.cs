@@ -46,15 +46,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTanggalLahirHewan = new System.Windows.Forms.TextBox();
+            this.dateTimePickerHewan = new System.Windows.Forms.DateTimePicker();
             this.txtNamaHewan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
+            this.comboBoxNamaPelanggan = new System.Windows.Forms.ComboBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -269,6 +271,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -277,13 +280,25 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(25, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Jenis Hewan";
+            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(25, 146);
+            this.label5.Location = new System.Drawing.Point(24, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 16);
             this.label5.TabIndex = 3;
@@ -295,11 +310,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(25, 109);
+            this.label4.Location = new System.Drawing.Point(25, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(114, 16);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Jenis Hewan";
+            this.label4.Text = "Nama Pelanggan";
             // 
             // label3
             // 
@@ -307,39 +322,41 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(25, 73);
+            this.label3.Location = new System.Drawing.Point(25, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Nama";
+            this.label3.Text = "Nama Hewan";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxNamaPelanggan);
             this.panel1.Controls.Add(this.comboBoxJenisHewan);
-            this.panel1.Controls.Add(this.txtTanggalLahirHewan);
+            this.panel1.Controls.Add(this.dateTimePickerHewan);
             this.panel1.Controls.Add(this.txtNamaHewan);
             this.panel1.Location = new System.Drawing.Point(205, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
-            // txtTanggalLahirHewan
+            // dateTimePickerHewan
             // 
-            this.txtTanggalLahirHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTanggalLahirHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTanggalLahirHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTanggalLahirHewan.Location = new System.Drawing.Point(20, 144);
-            this.txtTanggalLahirHewan.Name = "txtTanggalLahirHewan";
-            this.txtTanggalLahirHewan.Size = new System.Drawing.Size(514, 22);
-            this.txtTanggalLahirHewan.TabIndex = 4;
+            this.dateTimePickerHewan.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerHewan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerHewan.Location = new System.Drawing.Point(20, 167);
+            this.dateTimePickerHewan.Name = "dateTimePickerHewan";
+            this.dateTimePickerHewan.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerHewan.TabIndex = 6;
+            this.dateTimePickerHewan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
             // 
             // txtNamaHewan
             // 
             this.txtNamaHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNamaHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNamaHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaHewan.Location = new System.Drawing.Point(20, 71);
+            this.txtNamaHewan.Location = new System.Drawing.Point(20, 54);
             this.txtNamaHewan.Name = "txtNamaHewan";
             this.txtNamaHewan.Size = new System.Drawing.Size(514, 22);
             this.txtNamaHewan.TabIndex = 2;
@@ -367,10 +384,18 @@
             // comboBoxJenisHewan
             // 
             this.comboBoxJenisHewan.FormattingEnabled = true;
-            this.comboBoxJenisHewan.Location = new System.Drawing.Point(20, 108);
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(20, 130);
             this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
             this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJenisHewan.TabIndex = 9;
+            this.comboBoxJenisHewan.TabIndex = 7;
+            // 
+            // comboBoxNamaPelanggan
+            // 
+            this.comboBoxNamaPelanggan.FormattingEnabled = true;
+            this.comboBoxNamaPelanggan.Location = new System.Drawing.Point(20, 92);
+            this.comboBoxNamaPelanggan.Name = "comboBoxNamaPelanggan";
+            this.comboBoxNamaPelanggan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxNamaPelanggan.TabIndex = 8;
             // 
             // FormTambahHewan
             // 
@@ -422,14 +447,16 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTanggalLahirHewan;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHewan;
         private System.Windows.Forms.TextBox txtNamaHewan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBoxNamaPelanggan;
         private System.Windows.Forms.ComboBox comboBoxJenisHewan;
     }
 }

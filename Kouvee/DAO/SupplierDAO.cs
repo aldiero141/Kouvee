@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     public class SupplierDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -46,9 +46,21 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void CreateSupplier()
+        public void CreateSupplier(Supplier S)
         {
-
+            string sql = "INSERT INTO supplier(ID_PEGAWAI, NAMA_SUPPLIER, ALAMAT_SUPPLIER, PHONE_SUPPLIER) " +
+               "VALUES('" + S.ID_Pegawai + "','" + S.Nama_Supplier + "','" + S.Alamat_Supplier + "','" + S.Phone_Supplier + "');";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<Supplier> ShowSupplier()
@@ -68,7 +80,10 @@ namespace Kouvee.DAO
                             result.GetString("Nama_Supplier"),
                             result.GetString("Alamat_Supplier"),
                             result.GetString("Phone_Supplier"),
-                            result.GetInt32("ID_Pegawai"));
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetDateTime("Create_At_Supplier"),
+                            result.GetDateTime("Update_At_Supplier"),
+                            result.GetDateTime("Delete_At_Supplier"));
                         SupplierList.Add(S);
                     }
                 }

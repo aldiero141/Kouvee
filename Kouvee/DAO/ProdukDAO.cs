@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     class ProdukDAO
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -68,10 +68,14 @@ namespace Kouvee.DAO
                             result.GetString("Nama_Produk"),
                             result.GetInt32("Stock"),
                             result.GetInt32("Min_Stock"),
+                            result.GetString("Satuan_Produk"),
                             result.GetInt32("Harga_Beli"),
                             result.GetInt32("Harga_Jual"),
                             result.GetString("Gambar"),
-                            result.GetInt32("ID_Pegawai"));
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetDateTime("Create_At_Produk"),
+                            result.GetDateTime("Update_At_Produk"),
+                            result.GetDateTime("Delete_At_Produk"));
                         ProdukList.Add(Pr);
                     }
                 }

@@ -16,7 +16,7 @@ namespace Kouvee.DAO
 {
     public class CustomerDAO 
     {
-        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;";
+        public static string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
         public void makeConnection()
@@ -46,9 +46,22 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void CreateCustomer()
+        public void CreateCustomer(Customer C)
         {
-            
+            string sql = "INSERT INTO pelanggan(ID_PEGAWAI, NAMA_PELANGGAN, PHONE_PELANGGAN, TGL_LAHIR_PELANGGAN, ALAMAT_PELANGGAN) " +
+                "VALUES('" + C.ID_Pegawai + "','" + C.Nama_Pelanggan + "','" + C.Phone_Pelanggan + "','" + C.Tgl_Lahir_Pelanggan + "','" + C.Alamat_Pelanggan + "');";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<Customer> ShowCustomer()
@@ -69,7 +82,10 @@ namespace Kouvee.DAO
                             result.GetString("Alamat_Pelanggan"),
                             result.GetString("Tgl_Lahir_Pelanggan"),
                             result.GetString("Phone_Pelanggan"),
-                            result.GetInt32("ID_Pegawai"));
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetDateTime("Create_At_Pelanggan"),
+                            result.GetDateTime("Update_At_Pelanggan"),
+                            result.GetDateTime("Delete_At_Pelanggan"));
                         CustomerList.Add(C);
                     }
                 }

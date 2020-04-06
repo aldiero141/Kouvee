@@ -21,5 +21,18 @@ namespace Kouvee.View.Data.Ubah
         {
             this.Close();
         }
+
+        private void FormUbahPegawai_Load(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("name");
+            table.Columns.Add("value");
+            table.Rows.Add("Admin", "Admin");
+            table.Rows.Add("CS", "CS");
+            table.Rows.Add("Kasir", "Kasir");
+
+            comboBoxJabatan.DataSource = table;
+            comboBoxJabatan.DisplayMember = "username";
+        }
     }
 }

@@ -503,6 +503,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormTambahProduk";
             this.Text = "FormTambahProduk";
+            this.Load += new System.EventHandler(this.FormTambahProduk_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

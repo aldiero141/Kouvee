@@ -31,5 +31,10 @@ namespace Kouvee.View.Data.Tambah
         {
 
         }
+
+        private void FormTambahProduk_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

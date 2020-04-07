@@ -73,6 +73,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dateTimePickerPegawai = new System.Windows.Forms.DateTimePicker();
             this.comboBoxJabatan = new System.Windows.Forms.ComboBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtNomorTelponPegawai = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.txtNamaPegawai = new System.Windows.Forms.TextBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.dateTimePickerPegawai = new System.Windows.Forms.DateTimePicker();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -614,9 +614,21 @@
             this.panel5.Size = new System.Drawing.Size(558, 246);
             this.panel5.TabIndex = 2;
             // 
+            // dateTimePickerPegawai
+            // 
+            this.dateTimePickerPegawai.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerPegawai.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPegawai.Location = new System.Drawing.Point(18, 93);
+            this.dateTimePickerPegawai.Name = "dateTimePickerPegawai";
+            this.dateTimePickerPegawai.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerPegawai.TabIndex = 10;
+            this.dateTimePickerPegawai.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
             // comboBoxJabatan
             // 
             this.comboBoxJabatan.DisplayMember = "Admin";
+            this.comboBoxJabatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJabatan.FormattingEnabled = true;
             this.comboBoxJabatan.Location = new System.Drawing.Point(18, 159);
             this.comboBoxJabatan.Name = "comboBoxJabatan";
@@ -682,17 +694,6 @@
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 6;
             this.pictureBox19.TabStop = false;
-            // 
-            // dateTimePickerPegawai
-            // 
-            this.dateTimePickerPegawai.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerPegawai.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerPegawai.Location = new System.Drawing.Point(18, 93);
-            this.dateTimePickerPegawai.Name = "dateTimePickerPegawai";
-            this.dateTimePickerPegawai.Size = new System.Drawing.Size(514, 22);
-            this.dateTimePickerPegawai.TabIndex = 10;
-            this.dateTimePickerPegawai.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
             // 
             // FormTambahPegawai
             // 

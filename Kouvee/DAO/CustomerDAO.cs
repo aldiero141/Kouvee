@@ -98,14 +98,74 @@ namespace Kouvee.DAO
             return CustomerList;
         }
 
-        public void UpdateCustomer()
+        public void UpdateCustomer(Customer C, String namaCustomer)
         {
-            
+            string sql = "UPDATE pelanggan SET NAMA_PELANGGAN = '" + C.Nama_Pelanggan + "',ALAMAT_PELANGGAN ='" + C.Alamat_Pelanggan + "',TGL_LAHIR_PELANGGAN ='"
+                     + C.Tgl_Lahir_Pelanggan + "',PHONE_PELANGGAN =" + C.Phone_Pelanggan + ",ID_PEGAWAI ='" + C.ID_Pegawai + "'"
+                     + " WHERE NAMA_PELANGGAN = '" + namaCustomer + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteCustomer()
+        public void DeleteCustomer(String namaCustomer)
         {
+            string sql = "DELETE FROM pelanggan WHERE NAMA_PELANGGAN = '" + namaCustomer + "';";
             
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
         }
+
+        public Customer SearchCustomer(String namaCustomer)
+        {
+            string sql = "SELECT * FROM pelanggan WHERE NAMA_PELANGGAN = '" + namaCustomer + "';";
+            Customer customer = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        customer = new Customer(
+                             result.GetInt32("ID_Pelanggan"),
+                             result.GetString("Nama_Pelanggan"),
+                             result.GetString("Alamat_Pelanggan"),
+                             result.GetString("Tgl_Lahir_Pelanggan"),
+                             result.GetString("Phone_Pelanggan"),
+                             result.GetInt32("ID_Pegawai"),
+                             result.GetDateTime("Create_At_Pelanggan"),
+                             result.GetDateTime("Update_At_Pelanggan"),
+                             result.GetDateTime("Delete_At_Pelanggan"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return customer;
+        }
+
     }
 }

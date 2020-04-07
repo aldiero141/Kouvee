@@ -48,8 +48,18 @@ namespace Kouvee.DAO
         }
         public void CreateLayanan(Layanan L)
         {
-            string sql = "INSERT INTO layanan(ID_UKURAN, ID_PEGAWAI, ID_JENISHEWAN, NAMA_LAYANAN, HARGA_LAYANAN ) " +
-                "VALUES('" + L.ID_Ukuran + "','" + L.ID_Pegawai + "','" + L.ID_JenisHewan + "','" + L.Nama_Layanan + "','" + L.Harga_Layanan + "');";
+            string sql = "INSERT INTO layanan(ID_PEGAWAI, ID_JENISHEWAN, ID_UKURAN, NAMA_LAYANAN, HARGA_LAYANAN) "
+                         + "VALUES('"
+                         + L.ID_Pegawai
+                         + "',(SELECT ID_JENISHEWAN FROM jenis_hewan WHERE JENISHEWAN = '"
+                         + L.JenisHewan
+                         + "'),(SELECT ID_UKURAN FROM ukuran WHERE UKURAN = '"
+                         + L.Ukuran
+                         + "'),'"
+                         + L.Nama_Layanan
+                         + "','"
+                         + L.Harga_Layanan
+                         + "');";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);

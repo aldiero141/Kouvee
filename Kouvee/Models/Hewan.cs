@@ -8,6 +8,15 @@ namespace Kouvee.Models
 {
     public class Hewan
     {
+        public Hewan(string nama_Pelanggan, string jenisHewan, int iD_Pegawai, string nama_Hewan, string tgl_Lahir_Hewan)
+        {
+            Nama_Pelanggan = nama_Pelanggan;
+            JenisHewan = jenisHewan;
+            ID_Pegawai = iD_Pegawai;
+            Nama_Hewan = nama_Hewan;
+            Tgl_Lahir_Hewan = tgl_Lahir_Hewan;
+        }
+
         public Hewan(int iD_Jenis, int iD_Pelanggan, int iD_Pegawai, string nama_Hewan, string tgl_Lahir_Hewan)
         {
             ID_Jenis = iD_Jenis;
@@ -29,6 +38,9 @@ namespace Kouvee.Models
             Update_At_Hewan = update_At_Hewan;
             Delete_At_Hewan = delete_At_Hewan;
         }
+
+        public string Nama_Pelanggan { get; set; }
+        public string JenisHewan { get; set; }
 
         public int ID_Hewan { get; set; }
         public int ID_Jenis { get; set; }

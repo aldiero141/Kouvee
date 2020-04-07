@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateProduk(Produk produk)
         {
             prDAO.makeConnection();
-            prDAO.CreateProduk();
+            prDAO.CreateProduk(produk);
             prDAO.closeConnection();
         }
 

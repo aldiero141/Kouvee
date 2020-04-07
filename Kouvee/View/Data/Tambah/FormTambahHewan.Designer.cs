@@ -51,12 +51,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxNamaPelanggan = new System.Windows.Forms.ComboBox();
+            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
             this.dateTimePickerHewan = new System.Windows.Forms.DateTimePicker();
             this.txtNamaHewan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
-            this.comboBoxNamaPelanggan = new System.Windows.Forms.ComboBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -340,6 +340,24 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
+            // comboBoxNamaPelanggan
+            // 
+            this.comboBoxNamaPelanggan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNamaPelanggan.FormattingEnabled = true;
+            this.comboBoxNamaPelanggan.Location = new System.Drawing.Point(20, 92);
+            this.comboBoxNamaPelanggan.Name = "comboBoxNamaPelanggan";
+            this.comboBoxNamaPelanggan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxNamaPelanggan.TabIndex = 8;
+            // 
+            // comboBoxJenisHewan
+            // 
+            this.comboBoxJenisHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJenisHewan.FormattingEnabled = true;
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(20, 130);
+            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
+            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJenisHewan.TabIndex = 7;
+            // 
             // dateTimePickerHewan
             // 
             this.dateTimePickerHewan.CustomFormat = "yyyy-MM-dd";
@@ -381,22 +399,6 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // comboBoxJenisHewan
-            // 
-            this.comboBoxJenisHewan.FormattingEnabled = true;
-            this.comboBoxJenisHewan.Location = new System.Drawing.Point(20, 130);
-            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
-            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJenisHewan.TabIndex = 7;
-            // 
-            // comboBoxNamaPelanggan
-            // 
-            this.comboBoxNamaPelanggan.FormattingEnabled = true;
-            this.comboBoxNamaPelanggan.Location = new System.Drawing.Point(20, 92);
-            this.comboBoxNamaPelanggan.Name = "comboBoxNamaPelanggan";
-            this.comboBoxNamaPelanggan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxNamaPelanggan.TabIndex = 8;
-            // 
             // FormTambahHewan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +408,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormTambahHewan";
             this.Text = "FormTambahHewan";
+            this.Load += new System.EventHandler(this.FormTambahHewan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

@@ -49,6 +49,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,10 +60,6 @@
             this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
             this.txtHargaLayanan = new System.Windows.Forms.TextBox();
             this.txtNamaLayanan = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -318,74 +318,6 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.comboBoxUkuran);
-            this.panel1.Controls.Add(this.comboBoxJenisHewan);
-            this.panel1.Controls.Add(this.txtHargaLayanan);
-            this.panel1.Controls.Add(this.txtNamaLayanan);
-            this.panel1.Location = new System.Drawing.Point(205, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 246);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // comboBoxUkuran
-            // 
-            this.comboBoxUkuran.FormattingEnabled = true;
-            this.comboBoxUkuran.Location = new System.Drawing.Point(22, 169);
-            this.comboBoxUkuran.Name = "comboBoxUkuran";
-            this.comboBoxUkuran.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxUkuran.TabIndex = 14;
-            // 
-            // comboBoxJenisHewan
-            // 
-            this.comboBoxJenisHewan.FormattingEnabled = true;
-            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 133);
-            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
-            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJenisHewan.TabIndex = 13;
-            // 
-            // txtHargaLayanan
-            // 
-            this.txtHargaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHargaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHargaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHargaLayanan.Location = new System.Drawing.Point(22, 93);
-            this.txtHargaLayanan.Name = "txtHargaLayanan";
-            this.txtHargaLayanan.Size = new System.Drawing.Size(514, 22);
-            this.txtHargaLayanan.TabIndex = 12;
-            // 
-            // txtNamaLayanan
-            // 
-            this.txtNamaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaLayanan.Location = new System.Drawing.Point(22, 57);
-            this.txtNamaLayanan.Name = "txtNamaLayanan";
-            this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaLayanan.TabIndex = 11;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -433,6 +365,76 @@
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nama Layanan";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxUkuran);
+            this.panel1.Controls.Add(this.comboBoxJenisHewan);
+            this.panel1.Controls.Add(this.txtHargaLayanan);
+            this.panel1.Controls.Add(this.txtNamaLayanan);
+            this.panel1.Location = new System.Drawing.Point(205, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 246);
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // comboBoxUkuran
+            // 
+            this.comboBoxUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUkuran.FormattingEnabled = true;
+            this.comboBoxUkuran.Location = new System.Drawing.Point(22, 169);
+            this.comboBoxUkuran.Name = "comboBoxUkuran";
+            this.comboBoxUkuran.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxUkuran.TabIndex = 14;
+            // 
+            // comboBoxJenisHewan
+            // 
+            this.comboBoxJenisHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJenisHewan.FormattingEnabled = true;
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 133);
+            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
+            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJenisHewan.TabIndex = 13;
+            // 
+            // txtHargaLayanan
+            // 
+            this.txtHargaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHargaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHargaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHargaLayanan.Location = new System.Drawing.Point(22, 93);
+            this.txtHargaLayanan.Name = "txtHargaLayanan";
+            this.txtHargaLayanan.Size = new System.Drawing.Size(514, 22);
+            this.txtHargaLayanan.TabIndex = 12;
+            // 
+            // txtNamaLayanan
+            // 
+            this.txtNamaLayanan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaLayanan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaLayanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaLayanan.Location = new System.Drawing.Point(22, 57);
+            this.txtNamaLayanan.Name = "txtNamaLayanan";
+            this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaLayanan.TabIndex = 11;
             // 
             // FormUbahLayanan
             // 
@@ -493,13 +495,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBoxUkuran;
-        private System.Windows.Forms.ComboBox comboBoxJenisHewan;
-        private System.Windows.Forms.TextBox txtHargaLayanan;
-        private System.Windows.Forms.TextBox txtNamaLayanan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxUkuran;
+        private System.Windows.Forms.ComboBox comboBoxJenisHewan;
+        private System.Windows.Forms.TextBox txtHargaLayanan;
+        private System.Windows.Forms.TextBox txtNamaLayanan;
     }
 }

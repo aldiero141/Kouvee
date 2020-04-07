@@ -22,7 +22,7 @@ namespace Kouvee.Control
         public void CreateHewan(Hewan hewan)
         {
             cDAO.makeConnection();
-            cDAO.CreateHewan();
+            cDAO.CreateHewan(hewan);
             cDAO.closeConnection();
         }
 

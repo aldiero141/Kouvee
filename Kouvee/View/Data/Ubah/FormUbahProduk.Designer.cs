@@ -49,9 +49,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,6 +56,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtSatuanProduk = new System.Windows.Forms.TextBox();
             this.txtBrowseGambar = new System.Windows.Forms.TextBox();
             this.btnBrowseGambar = new System.Windows.Forms.Button();
@@ -67,6 +65,8 @@
             this.txtStokMinimal = new System.Windows.Forms.TextBox();
             this.txtStok = new System.Windows.Forms.TextBox();
             this.txtNamaProduk = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -328,42 +328,6 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.txtSatuanProduk);
-            this.panel1.Controls.Add(this.txtBrowseGambar);
-            this.panel1.Controls.Add(this.btnBrowseGambar);
-            this.panel1.Controls.Add(this.txtHargaJual);
-            this.panel1.Controls.Add(this.txtHargaBeli);
-            this.panel1.Controls.Add(this.txtStokMinimal);
-            this.panel1.Controls.Add(this.txtStok);
-            this.panel1.Controls.Add(this.txtNamaProduk);
-            this.panel1.Location = new System.Drawing.Point(205, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 246);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -448,6 +412,22 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Nama Produk";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.txtSatuanProduk);
+            this.panel1.Controls.Add(this.txtBrowseGambar);
+            this.panel1.Controls.Add(this.btnBrowseGambar);
+            this.panel1.Controls.Add(this.txtHargaJual);
+            this.panel1.Controls.Add(this.txtHargaBeli);
+            this.panel1.Controls.Add(this.txtStokMinimal);
+            this.panel1.Controls.Add(this.txtStok);
+            this.panel1.Controls.Add(this.txtNamaProduk);
+            this.panel1.Location = new System.Drawing.Point(205, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 246);
+            this.panel1.TabIndex = 2;
+            // 
             // txtSatuanProduk
             // 
             this.txtSatuanProduk.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -476,7 +456,7 @@
             this.btnBrowseGambar.ForeColor = System.Drawing.Color.Silver;
             this.btnBrowseGambar.Location = new System.Drawing.Point(462, 205);
             this.btnBrowseGambar.Name = "btnBrowseGambar";
-            this.btnBrowseGambar.Size = new System.Drawing.Size(75, 20);
+            this.btnBrowseGambar.Size = new System.Drawing.Size(75, 22);
             this.btnBrowseGambar.TabIndex = 16;
             this.btnBrowseGambar.Text = "Browse";
             this.btnBrowseGambar.UseVisualStyleBackColor = false;
@@ -530,6 +510,26 @@
             this.txtNamaProduk.Name = "txtNamaProduk";
             this.txtNamaProduk.Size = new System.Drawing.Size(514, 22);
             this.txtNamaProduk.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // FormUbahProduk
             // 

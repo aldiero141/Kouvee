@@ -47,9 +47,32 @@ namespace Kouvee.DAO
             }
         }
 
-        public void CreateHewan()
+        public void CreateHewan(Hewan H)
         {
+            string sql = "INSERT INTO hewan(ID_PEGAWAI, ID_PELANGGAN, ID_JenisHewan, NAMA_HEWAN, TGL_LAHIR_HEWAN) "
+                         + "VALUES('"
+                         + H.ID_Pegawai
+                         + "',(SELECT ID_PELANGGAN FROM pelanggan WHERE NAMA_PELANGGAN = '"
+                         + H.Nama_Pelanggan
+                         + "'),(SELECT ID_JENISHEWAN FROM jenis_hewan WHERE JENISHEWAN = '"
+                         + H.JenisHewan
+                         + "'),'"
+                         + H.Nama_Hewan
+                         + "','"
+                         + H.Tgl_Lahir_Hewan
+                         + "');";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public List<Hewan> ShowHewan()

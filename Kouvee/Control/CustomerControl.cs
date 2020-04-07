@@ -26,17 +26,17 @@ namespace Kouvee.Control
             cDAO.closeConnection();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateCustomer(Customer customer, string namaCustomer)
         {
             cDAO.makeConnection();
-            cDAO.UpdateCustomer();
+            cDAO.UpdateCustomer(customer,namaCustomer);
             cDAO.closeConnection();
         }
 
-        public void DeleteCustomer(string Nama_Pelanggan)
+        public void DeleteCustomer(string namaCustomer)
         {
             cDAO.makeConnection();
-            cDAO.DeleteCustomer();
+            cDAO.DeleteCustomer(namaCustomer);
             cDAO.closeConnection();
         }
 
@@ -46,6 +46,15 @@ namespace Kouvee.Control
             List<Customer> CustomerData = cDAO.ShowCustomer();
             cDAO.closeConnection();
             return CustomerData;
+        }
+
+        public Customer SearchCustomer(String nama)
+        {
+            Customer customer = null;
+            cDAO.makeConnection();
+            customer=cDAO.SearchCustomer(nama);
+            cDAO.closeConnection();
+            return customer;
         }
     }
 }

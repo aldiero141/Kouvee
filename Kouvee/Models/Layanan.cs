@@ -8,6 +8,15 @@ namespace Kouvee.Models
 {
     public class Layanan
     {
+        public Layanan(string ukuran, string jenisHewan, int iD_Pegawai, string nama_Layanan, int harga_Layanan)
+        {
+            Ukuran = ukuran;
+            JenisHewan = jenisHewan;
+            ID_Pegawai = iD_Pegawai;
+            Nama_Layanan = nama_Layanan;
+            Harga_Layanan = harga_Layanan;
+        }
+
         public Layanan(int iD_Ukuran, int iD_Pegawai, int iD_JenisHewan, string nama_Layanan, int harga_Layanan)
         {
             ID_Ukuran = iD_Ukuran;
@@ -30,6 +39,8 @@ namespace Kouvee.Models
             Delete_At_Layanan = delete_At_Layanan;
         }
 
+        public string Ukuran { get; set; }
+        public string JenisHewan { get; set; }
         public int ID_Layanan { get; set; }
         public int ID_Ukuran { get; set; }
         public int ID_Pegawai { get; set; }

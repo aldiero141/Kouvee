@@ -46,7 +46,7 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
-        public void CreateProduk()
+        public void CreateProduk(Produk P)
         {
 
         }

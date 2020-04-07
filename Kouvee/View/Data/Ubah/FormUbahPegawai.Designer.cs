@@ -49,21 +49,21 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dateTimePickerPegawai = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxJabatan = new System.Windows.Forms.ComboBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtNomorTelponPegawai = new System.Windows.Forms.TextBox();
+            this.txtAlamatPegawai = new System.Windows.Forms.TextBox();
+            this.txtNamaPegawai = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtNomorTelponPegawai = new System.Windows.Forms.TextBox();
-            this.txtTanggalLahirPegawai = new System.Windows.Forms.TextBox();
-            this.txtAlamatPegawai = new System.Windows.Forms.TextBox();
-            this.txtNamaPegawai = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBoxJabatan = new System.Windows.Forms.ComboBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -324,6 +324,101 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.dateTimePickerPegawai);
+            this.panel1.Controls.Add(this.comboBoxJabatan);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtNomorTelponPegawai);
+            this.panel1.Controls.Add(this.txtAlamatPegawai);
+            this.panel1.Controls.Add(this.txtNamaPegawai);
+            this.panel1.Location = new System.Drawing.Point(205, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 246);
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dateTimePickerPegawai
+            // 
+            this.dateTimePickerPegawai.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerPegawai.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPegawai.Location = new System.Drawing.Point(22, 95);
+            this.dateTimePickerPegawai.Name = "dateTimePickerPegawai";
+            this.dateTimePickerPegawai.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerPegawai.TabIndex = 16;
+            this.dateTimePickerPegawai.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
+            // comboBoxJabatan
+            // 
+            this.comboBoxJabatan.DisplayMember = "Admin";
+            this.comboBoxJabatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJabatan.FormattingEnabled = true;
+            this.comboBoxJabatan.Location = new System.Drawing.Point(22, 161);
+            this.comboBoxJabatan.Name = "comboBoxJabatan";
+            this.comboBoxJabatan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJabatan.TabIndex = 15;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(22, 195);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(514, 22);
+            this.txtPassword.TabIndex = 14;
+            // 
+            // txtNomorTelponPegawai
+            // 
+            this.txtNomorTelponPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNomorTelponPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomorTelponPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomorTelponPegawai.Location = new System.Drawing.Point(22, 128);
+            this.txtNomorTelponPegawai.Name = "txtNomorTelponPegawai";
+            this.txtNomorTelponPegawai.Size = new System.Drawing.Size(514, 22);
+            this.txtNomorTelponPegawai.TabIndex = 13;
+            // 
+            // txtAlamatPegawai
+            // 
+            this.txtAlamatPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAlamatPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAlamatPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlamatPegawai.Location = new System.Drawing.Point(22, 62);
+            this.txtAlamatPegawai.Name = "txtAlamatPegawai";
+            this.txtAlamatPegawai.Size = new System.Drawing.Size(514, 22);
+            this.txtAlamatPegawai.TabIndex = 12;
+            // 
+            // txtNamaPegawai
+            // 
+            this.txtNamaPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaPegawai.Location = new System.Drawing.Point(22, 30);
+            this.txtNamaPegawai.Name = "txtNamaPegawai";
+            this.txtNamaPegawai.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaPegawai.TabIndex = 11;
+            // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -396,98 +491,6 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "Nama";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.comboBoxJabatan);
-            this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Controls.Add(this.txtNomorTelponPegawai);
-            this.panel1.Controls.Add(this.txtTanggalLahirPegawai);
-            this.panel1.Controls.Add(this.txtAlamatPegawai);
-            this.panel1.Controls.Add(this.txtNamaPegawai);
-            this.panel1.Location = new System.Drawing.Point(205, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 246);
-            this.panel1.TabIndex = 2;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(22, 195);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(514, 22);
-            this.txtPassword.TabIndex = 14;
-            // 
-            // txtNomorTelponPegawai
-            // 
-            this.txtNomorTelponPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNomorTelponPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomorTelponPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomorTelponPegawai.Location = new System.Drawing.Point(22, 128);
-            this.txtNomorTelponPegawai.Name = "txtNomorTelponPegawai";
-            this.txtNomorTelponPegawai.Size = new System.Drawing.Size(514, 22);
-            this.txtNomorTelponPegawai.TabIndex = 12;
-            // 
-            // txtTanggalLahirPegawai
-            // 
-            this.txtTanggalLahirPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTanggalLahirPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTanggalLahirPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTanggalLahirPegawai.Location = new System.Drawing.Point(22, 95);
-            this.txtTanggalLahirPegawai.Name = "txtTanggalLahirPegawai";
-            this.txtTanggalLahirPegawai.Size = new System.Drawing.Size(514, 22);
-            this.txtTanggalLahirPegawai.TabIndex = 11;
-            // 
-            // txtAlamatPegawai
-            // 
-            this.txtAlamatPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAlamatPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAlamatPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlamatPegawai.Location = new System.Drawing.Point(22, 62);
-            this.txtAlamatPegawai.Name = "txtAlamatPegawai";
-            this.txtAlamatPegawai.Size = new System.Drawing.Size(514, 22);
-            this.txtAlamatPegawai.TabIndex = 10;
-            // 
-            // txtNamaPegawai
-            // 
-            this.txtNamaPegawai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaPegawai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaPegawai.Location = new System.Drawing.Point(22, 30);
-            this.txtNamaPegawai.Name = "txtNamaPegawai";
-            this.txtNamaPegawai.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaPegawai.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // comboBoxJabatan
-            // 
-            this.comboBoxJabatan.FormattingEnabled = true;
-            this.comboBoxJabatan.Location = new System.Drawing.Point(22, 163);
-            this.comboBoxJabatan.Name = "comboBoxJabatan";
-            this.comboBoxJabatan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJabatan.TabIndex = 15;
-            // 
             // FormUbahPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,17 +551,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerPegawai;
+        private System.Windows.Forms.ComboBox comboBoxJabatan;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtNomorTelponPegawai;
+        private System.Windows.Forms.TextBox txtAlamatPegawai;
+        private System.Windows.Forms.TextBox txtNamaPegawai;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtNomorTelponPegawai;
-        private System.Windows.Forms.TextBox txtTanggalLahirPegawai;
-        private System.Windows.Forms.TextBox txtAlamatPegawai;
-        private System.Windows.Forms.TextBox txtNamaPegawai;
-        private System.Windows.Forms.ComboBox comboBoxJabatan;
     }
 }

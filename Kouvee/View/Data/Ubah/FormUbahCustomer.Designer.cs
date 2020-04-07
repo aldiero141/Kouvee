@@ -47,6 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePickerPelanggan = new System.Windows.Forms.DateTimePicker();
+            this.txtNomorTelponPelanggan = new System.Windows.Forms.TextBox();
+            this.txtAlamatPelanggan = new System.Windows.Forms.TextBox();
+            this.txtNamaPelanggan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide = new System.Windows.Forms.Panel();
@@ -56,10 +60,6 @@
             this.panelTitleTambah = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerPelanggan = new System.Windows.Forms.DateTimePicker();
-            this.txtNomorTelponPelanggan = new System.Windows.Forms.TextBox();
-            this.txtAlamatPelanggan = new System.Windows.Forms.TextBox();
-            this.txtNamaPelanggan = new System.Windows.Forms.TextBox();
             this.panelUbahInputan.SuspendLayout();
             this.panelCariData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -134,6 +134,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -287,6 +288,47 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
+            // dateTimePickerPelanggan
+            // 
+            this.dateTimePickerPelanggan.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerPelanggan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPelanggan.Location = new System.Drawing.Point(22, 129);
+            this.dateTimePickerPelanggan.Name = "dateTimePickerPelanggan";
+            this.dateTimePickerPelanggan.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerPelanggan.TabIndex = 10;
+            this.dateTimePickerPelanggan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
+            // txtNomorTelponPelanggan
+            // 
+            this.txtNomorTelponPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNomorTelponPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomorTelponPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomorTelponPelanggan.Location = new System.Drawing.Point(22, 166);
+            this.txtNomorTelponPelanggan.Name = "txtNomorTelponPelanggan";
+            this.txtNomorTelponPelanggan.Size = new System.Drawing.Size(514, 22);
+            this.txtNomorTelponPelanggan.TabIndex = 9;
+            // 
+            // txtAlamatPelanggan
+            // 
+            this.txtAlamatPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAlamatPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAlamatPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlamatPelanggan.Location = new System.Drawing.Point(22, 95);
+            this.txtAlamatPelanggan.Name = "txtAlamatPelanggan";
+            this.txtAlamatPelanggan.Size = new System.Drawing.Size(514, 22);
+            this.txtAlamatPelanggan.TabIndex = 8;
+            // 
+            // txtNamaPelanggan
+            // 
+            this.txtNamaPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaPelanggan.Location = new System.Drawing.Point(22, 59);
+            this.txtNamaPelanggan.Name = "txtNamaPelanggan";
+            this.txtNamaPelanggan.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaPelanggan.TabIndex = 7;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -344,6 +386,7 @@
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonKembali
             // 
@@ -398,47 +441,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ubah";
             // 
-            // dateTimePickerPelanggan
-            // 
-            this.dateTimePickerPelanggan.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerPelanggan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerPelanggan.Location = new System.Drawing.Point(22, 129);
-            this.dateTimePickerPelanggan.Name = "dateTimePickerPelanggan";
-            this.dateTimePickerPelanggan.Size = new System.Drawing.Size(514, 22);
-            this.dateTimePickerPelanggan.TabIndex = 10;
-            this.dateTimePickerPelanggan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
-            // 
-            // txtNomorTelponPelanggan
-            // 
-            this.txtNomorTelponPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNomorTelponPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomorTelponPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomorTelponPelanggan.Location = new System.Drawing.Point(22, 166);
-            this.txtNomorTelponPelanggan.Name = "txtNomorTelponPelanggan";
-            this.txtNomorTelponPelanggan.Size = new System.Drawing.Size(514, 22);
-            this.txtNomorTelponPelanggan.TabIndex = 9;
-            // 
-            // txtAlamatPelanggan
-            // 
-            this.txtAlamatPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAlamatPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAlamatPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlamatPelanggan.Location = new System.Drawing.Point(22, 95);
-            this.txtAlamatPelanggan.Name = "txtAlamatPelanggan";
-            this.txtAlamatPelanggan.Size = new System.Drawing.Size(514, 22);
-            this.txtAlamatPelanggan.TabIndex = 8;
-            // 
-            // txtNamaPelanggan
-            // 
-            this.txtNamaPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaPelanggan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaPelanggan.Location = new System.Drawing.Point(22, 59);
-            this.txtNamaPelanggan.Name = "txtNamaPelanggan";
-            this.txtNamaPelanggan.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaPelanggan.TabIndex = 7;
-            // 
             // FormUbahCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +450,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormUbahCustomer";
             this.Text = "FormUbahCustomer";
+            this.Load += new System.EventHandler(this.FormUbahCustomer_Load);
             this.panelUbahInputan.ResumeLayout(false);
             this.panelCariData.ResumeLayout(false);
             this.panelCariData.PerformLayout();

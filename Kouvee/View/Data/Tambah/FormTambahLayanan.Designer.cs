@@ -46,17 +46,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.comboBoxUkuran = new System.Windows.Forms.ComboBox();
+            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
             this.txtHargaLayanan = new System.Windows.Forms.TextBox();
             this.txtNamaLayanan = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
-            this.comboBoxUkuran = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -280,6 +280,30 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(25, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ukuran";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(25, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Jenis Hewan";
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -316,25 +340,23 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
-            // pictureBox1
+            // comboBoxUkuran
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.comboBoxUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUkuran.FormattingEnabled = true;
+            this.comboBoxUkuran.Location = new System.Drawing.Point(22, 171);
+            this.comboBoxUkuran.Name = "comboBoxUkuran";
+            this.comboBoxUkuran.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxUkuran.TabIndex = 10;
             // 
-            // pictureBox2
+            // comboBoxJenisHewan
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.comboBoxJenisHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJenisHewan.FormattingEnabled = true;
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 135);
+            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
+            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJenisHewan.TabIndex = 9;
             // 
             // txtHargaLayanan
             // 
@@ -356,45 +378,25 @@
             this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
             this.txtNamaLayanan.TabIndex = 7;
             // 
-            // label5
+            // pictureBox1
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(25, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ukuran";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // pictureBox2
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(25, 135);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Jenis Hewan";
-            // 
-            // comboBoxJenisHewan
-            // 
-            this.comboBoxJenisHewan.FormattingEnabled = true;
-            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 135);
-            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
-            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJenisHewan.TabIndex = 9;
-            // 
-            // comboBoxUkuran
-            // 
-            this.comboBoxUkuran.FormattingEnabled = true;
-            this.comboBoxUkuran.Location = new System.Drawing.Point(22, 171);
-            this.comboBoxUkuran.Name = "comboBoxUkuran";
-            this.comboBoxUkuran.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxUkuran.TabIndex = 10;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // FormTambahLayanan
             // 
@@ -405,6 +407,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormTambahLayanan";
             this.Text = "FormTambahLayanan";
+            this.Load += new System.EventHandler(this.FormTambahLayanan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

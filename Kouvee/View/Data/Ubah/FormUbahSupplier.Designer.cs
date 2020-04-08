@@ -114,6 +114,7 @@
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonKembali
             // 
@@ -223,6 +224,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -421,6 +423,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormUbahSupplier";
             this.Text = "FormUbahSupplier";
+            this.Load += new System.EventHandler(this.FormUbahSupplier_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

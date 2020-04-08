@@ -41,7 +41,6 @@ namespace Kouvee.Models
 
         public string Nama_Pelanggan { get; set; }
         public string JenisHewan { get; set; }
-
         public int ID_Hewan { get; set; }
         public int ID_Jenis { get; set; }
         //public int ID_Ukuran { get; set; }

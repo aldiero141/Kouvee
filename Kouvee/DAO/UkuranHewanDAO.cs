@@ -95,14 +95,71 @@ namespace Kouvee.DAO
             return UkuranHewanList;
         }
 
-        public void UpdateUkuranHewan()
+        public void UpdateUkuranHewan(UkuranHewan uH, String namaUkuran)
         {
+            string sql = "UPDATE ukuran SET UKURAN = '" + uH.Ukuran +"'"
+                     + " WHERE UKURAN = '" + namaUkuran + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteUkuranHewan()
+        public void DeleteUkuranHewan(String namaUkuran)
         {
+            string sql = "UPDATE ukuran SET DELETE_AT_UKURAN = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE UKURAN = '" + namaUkuran + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
         }
+
+        public UkuranHewan SearchUkuran(String namaUkuran)
+        {
+            string sql = "SELECT * FROM ukuran WHERE Ukuran = '" + namaUkuran + "';";
+            UkuranHewan ukuranHewan = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        ukuranHewan = new UkuranHewan(
+                             result.GetInt32("ID_Ukuran"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetString("Ukuran"),
+                            result.GetDateTime("Create_At_Ukuran"),
+                            result.GetDateTime("Update_At_Ukuran"),
+                            result.GetDateTime("Delete_At_Ukuran"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return ukuranHewan;
+        }
+
     }
 }

@@ -26,14 +26,14 @@ namespace Kouvee.Control
             cDAO.closeConnection();
         }
 
-        public void UpdateCustomer(Customer customer, string namaCustomer)
+        public void UpdateCustomer(Customer customer, String namaCustomer)
         {
             cDAO.makeConnection();
             cDAO.UpdateCustomer(customer,namaCustomer);
             cDAO.closeConnection();
         }
 
-        public void DeleteCustomer(string namaCustomer)
+        public void DeleteCustomer(String namaCustomer)
         {
             cDAO.makeConnection();
             cDAO.DeleteCustomer(namaCustomer);

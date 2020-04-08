@@ -26,17 +26,17 @@ namespace Kouvee.Control
             jhDAO.closeConnection();
         }
 
-        public void UpdateJenisHewan(JenisHewan jenisHewan)
+        public void UpdateJenisHewan(JenisHewan jenisHewan, String namaJenis)
         {
             jhDAO.makeConnection();
-            jhDAO.UpdateJenisHewan();
+            jhDAO.UpdateJenisHewan(jenisHewan,namaJenis);
             jhDAO.closeConnection();
         }
 
-        public void DeleteJenisHewan(string Jenis_Hewan)
+        public void DeleteJenisHewan(String namaJenis)
         {
             jhDAO.makeConnection();
-            jhDAO.DeleteJenisHewan();
+            jhDAO.DeleteJenisHewan(namaJenis);
             jhDAO.closeConnection();
         }
 
@@ -47,5 +47,15 @@ namespace Kouvee.Control
             jhDAO.closeConnection();
             return JenisHewanData;
         }
+
+        public JenisHewan SearchJenisHewan(String nama)
+        {
+            JenisHewan jenisHewan = null;
+            jhDAO.makeConnection();
+            jenisHewan = jhDAO.SearchJenisHewan(nama);
+            jhDAO.closeConnection();
+            return jenisHewan;
+        }
+
     }
 }

@@ -22,50 +22,67 @@ namespace Kouvee.View.Data.Tampil
 
         private void buttonTampilCustomer_Click(object sender, EventArgs e)
         {
-            var list = new CustomerControl();
-            dataGridViewTampil.DataSource = list.ShowCustomer();
+            var ctrl = new CustomerControl();
+            dataGridViewTampil.DataSource = ctrl.ShowCustomer();
         }
 
         private void buttonTampilHewan_Click(object sender, EventArgs e)
         {
-            var list = new HewanControl();
-            dataGridViewTampil.DataSource = list.ShowHewan();
+            var ctrl = new HewanControl();
+            dataGridViewTampil.DataSource = ctrl.ShowHewan();
+
+            for (int i = 0; i<dataGridViewTampil.Columns.Count; i++) 
+            {
+                string str = dataGridViewTampil.Columns[i].HeaderText;
+                if (str == "Nama_Pelanggan" || str == "JenisHewan")
+                {
+                    dataGridViewTampil.Columns[i].Visible = false;
+                }
+            }
         }
 
         private void buttonTampilJenisHewan_Click(object sender, EventArgs e)
         {
-            var list = new JenisHewanControl();
-            dataGridViewTampil.DataSource = list.ShowJenisHewan();
+            var ctrl = new JenisHewanControl();
+            dataGridViewTampil.DataSource = ctrl.ShowJenisHewan();
         }
 
         private void buttonTampilLayanan_Click(object sender, EventArgs e)
         {
-            var list = new LayananControl();
-            dataGridViewTampil.DataSource = list.ShowLayanan();
+            var ctrl = new LayananControl();
+            dataGridViewTampil.DataSource = ctrl.ShowLayanan();
+            for (int i = 0; i < dataGridViewTampil.Columns.Count; i++)
+            {
+                string str = dataGridViewTampil.Columns[i].HeaderText;
+                if (str == "Ukuran" || str == "JenisHewan")
+                {
+                    dataGridViewTampil.Columns[i].Visible = false;
+                }
+            }
         }
 
         private void buttonTampilPegawai_Click(object sender, EventArgs e)
         {
-            var list = new PegawaiControl();
-            dataGridViewTampil.DataSource = list.ShowPegawai();
+            var ctrl = new PegawaiControl();
+            dataGridViewTampil.DataSource = ctrl.ShowPegawai();
         }
 
         private void buttonTampilProduk_Click(object sender, EventArgs e)
         {
-            var list = new ProdukControl();
-            dataGridViewTampil.DataSource = list.ShowProduk();
+            var ctrl = new ProdukControl();
+            dataGridViewTampil.DataSource = ctrl.ShowProduk();
         }
 
         private void buttonTampilSupplier_Click(object sender, EventArgs e)
         {
-            var list = new SupplierControl();
-            dataGridViewTampil.DataSource = list.ShowSupplier();
+            var ctrl = new SupplierControl();
+            dataGridViewTampil.DataSource = ctrl.ShowSupplier();
         }
 
         private void buttonTampilUkuranHewan_Click(object sender, EventArgs e)
         {
-            var list = new UkuranHewanControl();
-            dataGridViewTampil.DataSource = list.ShowUkuranHewan();
+            var ctrl = new UkuranHewanControl();
+            dataGridViewTampil.DataSource = ctrl.ShowUkuranHewan();
         }
 
         private void buttonTampilKembali_Click(object sender, EventArgs e)

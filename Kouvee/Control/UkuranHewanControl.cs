@@ -26,17 +26,17 @@ namespace Kouvee.Control
             ukDAO.closeConnection();
         }
 
-        public void UpdateUkuranHewan(UkuranHewan ukuranHewan)
+        public void UpdateUkuranHewan(UkuranHewan ukuranHewan, String ukuran)
         {
             ukDAO.makeConnection();
-            ukDAO.UpdateUkuranHewan();
+            ukDAO.UpdateUkuranHewan(ukuranHewan,ukuran);
             ukDAO.closeConnection();
         }
 
-        public void DeleteUkuranHewan(string ukuran)
+        public void DeleteUkuranHewan(String ukuran)
         {
             ukDAO.makeConnection();
-            ukDAO.DeleteUkuranHewan();
+            ukDAO.DeleteUkuranHewan(ukuran);
             ukDAO.closeConnection();
         }
 
@@ -46,6 +46,15 @@ namespace Kouvee.Control
             List<UkuranHewan> UkuranHewanData = ukDAO.ShowUkuranHewan();
             ukDAO.closeConnection();
             return UkuranHewanData;
+        }
+
+        public UkuranHewan SearchUkuran(String nama)
+        {
+            UkuranHewan ukuranHewan = null;
+            ukDAO.makeConnection();
+            ukuranHewan = ukDAO.SearchUkuran(nama);
+            ukDAO.closeConnection();
+            return ukuranHewan;
         }
     }
     

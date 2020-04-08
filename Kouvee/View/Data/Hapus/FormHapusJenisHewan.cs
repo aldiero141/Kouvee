@@ -7,14 +7,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kouvee.Control;
+using Kouvee.Models;
 
 namespace Kouvee.View.Data.Hapus
 {
     public partial class FormHapusJenisHewan : Form
     {
+        JenisHewan jenisHewan;
         public FormHapusJenisHewan()
         {
             InitializeComponent();
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            var list = new JenisHewanControl();
+            try
+            {
+                if (txtCari.Text != null && list.SearchJenisHewan(txtCari.Text) != null)
+                {
+                    jenisHewan = list.SearchJenisHewan(txtCari.Text);
+                    txtJenisHewan.Text = jenisHewan.Jenis_Hewan;
+                }
+                else
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void FormHapusJenisHewan_Load(object sender, EventArgs e)
+        {
+            txtJenisHewan.Enabled = false;
+        }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var list = new JenisHewanControl();
+                list.DeleteJenisHewan(txtCari.Text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void buttonKembali_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

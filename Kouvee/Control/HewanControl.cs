@@ -17,35 +17,44 @@ namespace Kouvee.Control
 {
     class HewanControl
     {
-        private HewanDAO cDAO = new HewanDAO();
+        private HewanDAO hDAO = new HewanDAO();
 
         public void CreateHewan(Hewan hewan)
         {
-            cDAO.makeConnection();
-            cDAO.CreateHewan(hewan);
-            cDAO.closeConnection();
+            hDAO.makeConnection();
+            hDAO.CreateHewan(hewan);
+            hDAO.closeConnection();
         }
 
-        public void UpdateHewan(Hewan hewan)
+        public void UpdateHewan(Hewan hewan, String namaHewan)
         {
-            cDAO.makeConnection();
-            cDAO.UpdateHewan();
-            cDAO.closeConnection();
+            hDAO.makeConnection();
+            hDAO.UpdateHewan(hewan,namaHewan);
+            hDAO.closeConnection();
         }
 
         public void DeleteHewan(string Nama_Hewan)
         {
-            cDAO.makeConnection();
-            cDAO.DeleteHewan();
-            cDAO.closeConnection();
+            hDAO.makeConnection();
+            hDAO.DeleteHewan(Nama_Hewan);
+            hDAO.closeConnection();
         }
 
         public List<Hewan> ShowHewan()
         {
-            cDAO.makeConnection();
-            List<Hewan> HewanData = cDAO.ShowHewan();
-            cDAO.closeConnection();
+            hDAO.makeConnection();
+            List<Hewan> HewanData = hDAO.ShowHewan();
+            hDAO.closeConnection();
             return HewanData;
+        }
+
+        public Hewan SearchHewan(String nama)
+        {
+            Hewan hewan = null;
+            hDAO.makeConnection();
+            hewan = hDAO.SearchHewan(nama);
+            hDAO.closeConnection();
+            return hewan;
         }
     }
 }

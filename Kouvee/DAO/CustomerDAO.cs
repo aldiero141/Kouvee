@@ -119,8 +119,9 @@ namespace Kouvee.DAO
 
         public void DeleteCustomer(String namaCustomer)
         {
-            string sql = "DELETE FROM pelanggan WHERE NAMA_PELANGGAN = '" + namaCustomer + "';";
-            
+            string sql = "UPDATE pelanggan SET DELETE_AT_PELANGGAN = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE NAMA_PELANGGAN = '" + namaCustomer + "';";
+
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);

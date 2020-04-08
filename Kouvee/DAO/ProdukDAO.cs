@@ -48,6 +48,19 @@ namespace Kouvee.DAO
         }
         public void CreateProduk(Produk P)
         {
+            string sql = "";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
 
         }
 
@@ -88,14 +101,39 @@ namespace Kouvee.DAO
             return ProdukList;
         }
 
-        public void UpdateProduk()
+        public void UpdateProduk(Produk P, String namaProduk)
         {
+            string sql = "";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteProduk()
+        public void DeleteProduk(String namaProduk)
         {
+            string sql = "UPDATE produk SET DELETE_AT_PRODUK = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE NAMA_PRODUK = '" + namaProduk + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

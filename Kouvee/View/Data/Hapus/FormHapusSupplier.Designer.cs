@@ -114,6 +114,7 @@
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // buttonKembali
             // 
@@ -131,6 +132,7 @@
             this.buttonKembali.Text = "Kembali";
             this.buttonKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
             // panelTitleHapus
             // 
@@ -222,6 +224,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -423,6 +426,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormHapusSupplier";
             this.Text = "FormHapusSupplier";
+            this.Load += new System.EventHandler(this.FormHapusSupplier_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleHapus.ResumeLayout(false);

@@ -51,9 +51,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtJenisHewan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtJenisHewan = new System.Windows.Forms.TextBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -110,6 +110,7 @@
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonKembali
             // 
@@ -219,6 +220,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -330,6 +332,16 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
+            // txtJenisHewan
+            // 
+            this.txtJenisHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtJenisHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJenisHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJenisHewan.Location = new System.Drawing.Point(22, 112);
+            this.txtJenisHewan.Name = "txtJenisHewan";
+            this.txtJenisHewan.Size = new System.Drawing.Size(514, 22);
+            this.txtJenisHewan.TabIndex = 3;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -350,16 +362,6 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // txtJenisHewan
-            // 
-            this.txtJenisHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtJenisHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtJenisHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJenisHewan.Location = new System.Drawing.Point(22, 112);
-            this.txtJenisHewan.Name = "txtJenisHewan";
-            this.txtJenisHewan.Size = new System.Drawing.Size(514, 22);
-            this.txtJenisHewan.TabIndex = 3;
-            // 
             // FormUbahJenisHewan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +371,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormUbahJenisHewan";
             this.Text = "FormUbahJenisHewan";
+            this.Load += new System.EventHandler(this.FormUbahJenisHewan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

@@ -12,7 +12,6 @@ using System.Windows;
 using System.Numerics;
 using System.Windows.Documents;
 
-
 namespace Kouvee.DAO
 {
     public class JenisHewanDAO
@@ -95,14 +94,70 @@ namespace Kouvee.DAO
             return JenisHewanList;
         }
 
-        public void UpdateJenisHewan()
+        public void UpdateJenisHewan(JenisHewan jH, String namaJenis)
         {
+            string sql = "UPDATE jenis_hewan SET JENISHEWAN = '" + jH.Jenis_Hewan + "'"
+                     + " WHERE JENISHEWAN = '" + namaJenis + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteJenisHewan()
+        public void DeleteJenisHewan(String namaJenis)
         {
+            string sql = "UPDATE jenis_hewan SET DELETE_AT_JHEWAN = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE JENISHEWAN = '" + namaJenis + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Delete...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public JenisHewan SearchJenisHewan(String namaJenis)
+        {
+            string sql = "SELECT * FROM jenis_hewan WHERE JENISHEWAN = '" + namaJenis + "';";
+            JenisHewan jenisHewan = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        jenisHewan = new JenisHewan(
+                            result.GetInt32("ID_JenisHewan"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetString("JenisHewan"),
+                            result.GetDateTime("Create_At_Jhewan"),
+                            result.GetDateTime("Update_At_Jhewan"),
+                            result.GetDateTime("Delete_At_Jhewan"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return jenisHewan;
         }
     }
 }

@@ -26,17 +26,17 @@ namespace Kouvee.Control
             sDAO.closeConnection();
         }
 
-        public void UpdateSupplier(Supplier supplier)
+        public void UpdateSupplier(Supplier supplier, String namaSupplier)
         {
             sDAO.makeConnection();
-            sDAO.UpdateSupplier();
+            sDAO.UpdateSupplier(supplier,namaSupplier);
             sDAO.closeConnection();
         }
 
-        public void DeleteSupplier(string Nama_Supplier)
+        public void DeleteSupplier(String namaSupplier)
         {
             sDAO.makeConnection();
-            sDAO.DeleteSupplier();
+            sDAO.DeleteSupplier(namaSupplier);
             sDAO.closeConnection();
         }
 
@@ -46,6 +46,15 @@ namespace Kouvee.Control
             List<Supplier> SupplierData = sDAO.ShowSupplier();
             sDAO.closeConnection();
             return SupplierData;
+        }
+
+        public Supplier SearchSupplier(String nama)
+        {
+            Supplier supplier = null;
+            sDAO.makeConnection();
+            supplier = sDAO.SearchSupplier(nama);
+            sDAO.closeConnection();
+            return supplier;
         }
     }
 }

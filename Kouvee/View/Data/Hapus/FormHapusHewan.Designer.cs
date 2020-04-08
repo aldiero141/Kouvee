@@ -49,17 +49,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBoxNamaPelanggan = new System.Windows.Forms.ComboBox();
-            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerHewan = new System.Windows.Forms.DateTimePicker();
-            this.txtNamaHewan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxNamaPelanggan = new System.Windows.Forms.ComboBox();
+            this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerHewan = new System.Windows.Forms.DateTimePicker();
+            this.txtNamaHewan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleHapus.SuspendLayout();
@@ -116,6 +116,7 @@
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // buttonKembali
             // 
@@ -133,6 +134,7 @@
             this.buttonKembali.Text = "Kembali";
             this.buttonKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
             // panelTitleHapus
             // 
@@ -224,6 +226,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -317,77 +320,6 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.comboBoxNamaPelanggan);
-            this.panel1.Controls.Add(this.comboBoxJenisHewan);
-            this.panel1.Controls.Add(this.dateTimePickerHewan);
-            this.panel1.Controls.Add(this.txtNamaHewan);
-            this.panel1.Location = new System.Drawing.Point(205, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 246);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // comboBoxNamaPelanggan
-            // 
-            this.comboBoxNamaPelanggan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxNamaPelanggan.FormattingEnabled = true;
-            this.comboBoxNamaPelanggan.Location = new System.Drawing.Point(22, 94);
-            this.comboBoxNamaPelanggan.Name = "comboBoxNamaPelanggan";
-            this.comboBoxNamaPelanggan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxNamaPelanggan.TabIndex = 12;
-            // 
-            // comboBoxJenisHewan
-            // 
-            this.comboBoxJenisHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxJenisHewan.FormattingEnabled = true;
-            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 132);
-            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
-            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
-            this.comboBoxJenisHewan.TabIndex = 11;
-            // 
-            // dateTimePickerHewan
-            // 
-            this.dateTimePickerHewan.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerHewan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerHewan.Location = new System.Drawing.Point(22, 169);
-            this.dateTimePickerHewan.Name = "dateTimePickerHewan";
-            this.dateTimePickerHewan.Size = new System.Drawing.Size(514, 22);
-            this.dateTimePickerHewan.TabIndex = 10;
-            this.dateTimePickerHewan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
-            // 
-            // txtNamaHewan
-            // 
-            this.txtNamaHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNamaHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNamaHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaHewan.Location = new System.Drawing.Point(22, 56);
-            this.txtNamaHewan.Name = "txtNamaHewan";
-            this.txtNamaHewan.Size = new System.Drawing.Size(514, 22);
-            this.txtNamaHewan.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -436,6 +368,77 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Nama Hewan";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxNamaPelanggan);
+            this.panel1.Controls.Add(this.comboBoxJenisHewan);
+            this.panel1.Controls.Add(this.dateTimePickerHewan);
+            this.panel1.Controls.Add(this.txtNamaHewan);
+            this.panel1.Location = new System.Drawing.Point(205, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 246);
+            this.panel1.TabIndex = 2;
+            // 
+            // comboBoxNamaPelanggan
+            // 
+            this.comboBoxNamaPelanggan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNamaPelanggan.FormattingEnabled = true;
+            this.comboBoxNamaPelanggan.Location = new System.Drawing.Point(22, 94);
+            this.comboBoxNamaPelanggan.Name = "comboBoxNamaPelanggan";
+            this.comboBoxNamaPelanggan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxNamaPelanggan.TabIndex = 12;
+            // 
+            // comboBoxJenisHewan
+            // 
+            this.comboBoxJenisHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJenisHewan.FormattingEnabled = true;
+            this.comboBoxJenisHewan.Location = new System.Drawing.Point(22, 132);
+            this.comboBoxJenisHewan.Name = "comboBoxJenisHewan";
+            this.comboBoxJenisHewan.Size = new System.Drawing.Size(514, 21);
+            this.comboBoxJenisHewan.TabIndex = 11;
+            // 
+            // dateTimePickerHewan
+            // 
+            this.dateTimePickerHewan.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerHewan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerHewan.Location = new System.Drawing.Point(22, 169);
+            this.dateTimePickerHewan.Name = "dateTimePickerHewan";
+            this.dateTimePickerHewan.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerHewan.TabIndex = 10;
+            this.dateTimePickerHewan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
+            // txtNamaHewan
+            // 
+            this.txtNamaHewan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamaHewan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNamaHewan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamaHewan.Location = new System.Drawing.Point(22, 56);
+            this.txtNamaHewan.Name = "txtNamaHewan";
+            this.txtNamaHewan.Size = new System.Drawing.Size(514, 22);
+            this.txtNamaHewan.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormHapusHewan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +448,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormHapusHewan";
             this.Text = "FormHapusHewan";
+            this.Load += new System.EventHandler(this.FormHapusHewan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleHapus.ResumeLayout(false);

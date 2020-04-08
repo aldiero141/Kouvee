@@ -107,14 +107,75 @@ namespace Kouvee.DAO
             return LayananList;
         }
 
-        public void UpdateLayanan()
+        public void UpdateLayanan(Layanan L, String namaLayanan)
         {
+            string sql = "UPDATE layanan SET Nama_Layanan = '" + L.Nama_Layanan + "',HARGA_LAYANAN ='" + L.Harga_Layanan
+                     + "',ID_UKURAN = (SELECT ID_UKURAN FROM ukuran WHERE UKURAN = '" + L.Ukuran
+                     + "') ,ID_JENISHEWAN = (SELECT ID_JENISHEWAN FROM jenis_hewan WHERE JENISHEWAN = '" + L.JenisHewan + "')"
+                     + " WHERE Nama_Layanan = '" + namaLayanan + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteLayanan()
+        public void DeleteLayanan(String namaLayanan)
         {
+            string sql = "UPDATE layanan SET DELETE_AT_LAYANAN = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE Nama_Layanan = '" + namaLayanan + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public Layanan SearchLayanan(String namaLayanan)
+        {
+            string sql = "SELECT * FROM layanan WHERE Nama_Layanan = '" + namaLayanan + "';";
+            Layanan layanan = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        layanan = new Layanan(
+                            result.GetInt32("ID_Layanan"),
+                            result.GetInt32("ID_Ukuran"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetInt32("ID_JenisHewan"),
+                            result.GetString("Nama_Layanan"),
+                            result.GetInt32("Harga_Layanan"),
+                            result.GetDateTime("Create_At_Layanan"),
+                            result.GetDateTime("Update_At_Layanan"),
+                            result.GetDateTime("Delete_At_Layanan"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return layanan;
         }
     }
 }

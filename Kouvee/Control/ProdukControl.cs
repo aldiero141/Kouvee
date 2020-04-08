@@ -26,17 +26,17 @@ namespace Kouvee.Control
             prDAO.closeConnection();
         }
 
-        public void UpdateProduk(Produk produk)
+        public void UpdateProduk(Produk produk, String Nama_Produk)
         {
             prDAO.makeConnection();
-            prDAO.UpdateProduk();
+            prDAO.UpdateProduk(produk, Nama_Produk);
             prDAO.closeConnection();
         }
 
-        public void DeleteProduk(string Nama_Produk)
+        public void DeleteProduk(String Nama_Produk)
         {
             prDAO.makeConnection();
-            prDAO.DeleteProduk();
+            prDAO.DeleteProduk(Nama_Produk);
             prDAO.closeConnection();
         }
 

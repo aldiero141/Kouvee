@@ -49,17 +49,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxUkuran = new System.Windows.Forms.ComboBox();
             this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
             this.txtHargaLayanan = new System.Windows.Forms.TextBox();
             this.txtNamaLayanan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleHapus.SuspendLayout();
@@ -116,6 +116,7 @@
             this.buttonHapus.Text = "Hapus";
             this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
             // buttonKembali
             // 
@@ -133,6 +134,7 @@
             this.buttonKembali.Text = "Kembali";
             this.buttonKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
             // panelTitleHapus
             // 
@@ -224,6 +226,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -317,38 +320,6 @@
             this.panel2.Size = new System.Drawing.Size(145, 246);
             this.panel2.TabIndex = 3;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.comboBoxUkuran);
-            this.panel1.Controls.Add(this.comboBoxJenisHewan);
-            this.panel1.Controls.Add(this.txtHargaLayanan);
-            this.panel1.Controls.Add(this.txtNamaLayanan);
-            this.panel1.Location = new System.Drawing.Point(205, 214);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 246);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -397,6 +368,18 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Nama Layanan";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxUkuran);
+            this.panel1.Controls.Add(this.comboBoxJenisHewan);
+            this.panel1.Controls.Add(this.txtHargaLayanan);
+            this.panel1.Controls.Add(this.txtNamaLayanan);
+            this.panel1.Location = new System.Drawing.Point(205, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 246);
+            this.panel1.TabIndex = 2;
+            // 
             // comboBoxUkuran
             // 
             this.comboBoxUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -435,6 +418,26 @@
             this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
             this.txtNamaLayanan.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormHapusLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,6 +447,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormHapusLayanan";
             this.Text = "FormHapusLayanan";
+            this.Load += new System.EventHandler(this.FormHapusLayanan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleHapus.ResumeLayout(false);

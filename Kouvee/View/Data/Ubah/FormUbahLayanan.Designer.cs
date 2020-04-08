@@ -54,12 +54,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBoxUkuran = new System.Windows.Forms.ComboBox();
             this.comboBoxJenisHewan = new System.Windows.Forms.ComboBox();
             this.txtHargaLayanan = new System.Windows.Forms.TextBox();
             this.txtNamaLayanan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -116,6 +116,7 @@
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonKembali
             // 
@@ -225,6 +226,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // pictureBox6
             // 
@@ -378,26 +380,6 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // comboBoxUkuran
             // 
             this.comboBoxUkuran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -436,6 +418,26 @@
             this.txtNamaLayanan.Size = new System.Drawing.Size(514, 22);
             this.txtNamaLayanan.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormUbahLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +447,7 @@
             this.Controls.Add(this.panelSide);
             this.Name = "FormUbahLayanan";
             this.Text = "FormUbahLayanan";
+            this.Load += new System.EventHandler(this.FormUbahLayanan_Load);
             this.panelSide.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
             this.panelTitleTambah.ResumeLayout(false);

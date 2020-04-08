@@ -96,14 +96,73 @@ namespace Kouvee.DAO
             return SupplierList;
         }
 
-        public void UpdateSupplier()
+        public void UpdateSupplier(Supplier S, String namaSupplier)
         {
+            string sql = "UPDATE supplier SET Nama_Supplier = '" + S.Nama_Supplier + "',Alamat_Supplier ='" 
+                     + S.Alamat_Supplier + "',Phone_Supplier ='"+ S.Alamat_Supplier + "'"
+                     + " WHERE Nama_Supplier = '" + namaSupplier + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteSupplier()
+        public void DeleteSupplier(String namaSupplier)
         {
+            string sql = "UPDATE supplier SET DELETE_AT_SUPPLIER = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE Nama_Supplier = '" + namaSupplier + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public Supplier SearchSupplier(String namaSupplier)
+        {
+            string sql = "SELECT * FROM supplier WHERE Nama_Supplier = '" + namaSupplier + "';";
+            Supplier supplier = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        supplier = new Supplier(
+                            result.GetInt32("ID_Supplier"),
+                            result.GetString("Nama_Supplier"),
+                            result.GetString("Alamat_Supplier"),
+                            result.GetString("Phone_Supplier"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetDateTime("Create_At_Supplier"),
+                            result.GetDateTime("Update_At_Supplier"),
+                            result.GetDateTime("Delete_At_Supplier"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return supplier;
         }
     }
 }

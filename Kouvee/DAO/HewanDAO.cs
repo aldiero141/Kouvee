@@ -49,7 +49,7 @@ namespace Kouvee.DAO
 
         public void CreateHewan(Hewan H)
         {
-            string sql = "INSERT INTO hewan(ID_PEGAWAI, ID_PELANGGAN, ID_JenisHewan, NAMA_HEWAN, TGL_LAHIR_HEWAN) "
+            string sql = "INSERT INTO hewan(ID_PEGAWAI, ID_PELANGGAN, ID_JENISHEWAN, NAMA_HEWAN, TGL_LAHIR_HEWAN) "
                          + "VALUES('"
                          + H.ID_Pegawai
                          + "',(SELECT ID_PELANGGAN FROM pelanggan WHERE NAMA_PELANGGAN = '"
@@ -79,6 +79,7 @@ namespace Kouvee.DAO
         {
             string sql = "SELECT * FROM hewan";
             List<Hewan> HewanList = new List<Hewan>();
+
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -110,14 +111,76 @@ namespace Kouvee.DAO
             return HewanList;
         }
 
-        public void UpdateHewan()
+        public void UpdateHewan(Hewan H, String namaHewan)
         {
+            string sql = "UPDATE hewan SET NAMA_HEWAN = '" + H.Nama_Hewan +"',TGL_LAHIR_HEWAN ='" + H.Tgl_Lahir_Hewan  
+                     + "',ID_PELANGGAN = (SELECT ID_PELANGGAN FROM pelanggan WHERE NAMA_PELANGGAN = '" + H.Nama_Pelanggan
+                     + "') ,ID_JENISHEWAN = (SELECT ID_JENISHEWAN FROM jenis_hewan WHERE JENISHEWAN = '" + H.JenisHewan + "')"
+                     + " WHERE NAMA_HEWAN = '" + namaHewan + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeleteHewan()
+        public void DeleteHewan(String namaHewan)
         {
+            string sql = "UPDATE hewan SET DELETE_AT_HEWAN = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE NAMA_HEWAN = '" + namaHewan + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public Hewan SearchHewan(String namaHewan)
+        {
+            string sql = "SELECT * FROM hewan WHERE NAMA_HEWAN = '" + namaHewan + "';";
+            Hewan hewan = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        hewan = new Hewan(
+                            result.GetInt32("ID_Hewan"),
+                            result.GetInt32("ID_JenisHewan"),
+                            //result.GetInt32("ID_Ukuran"),
+                            result.GetInt32("ID_Pelanggan"),
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetString("Nama_Hewan"),
+                            result.GetString("Tgl_Lahir_Hewan"),
+                            result.GetDateTime("Create_At_Hewan"),
+                            result.GetDateTime("Update_At_Hewan"),
+                            result.GetDateTime("Delete_At_Hewan"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return hewan;
         }
     }
 }

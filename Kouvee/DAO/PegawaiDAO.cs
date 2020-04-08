@@ -99,14 +99,75 @@ namespace Kouvee.DAO
             return PegawaiList;
         }
 
-        public void UpdatePegawai()
+        public void UpdatePegawai(Pegawai P, String namaPegawai)
         {
+            string sql = "UPDATE pegawai SET NAMA_PEGAWAI = '" + P.Nama_Pegawai + "',TGL_LAHIR_PEGAWAI ='" + P.Tgl_Lahir_Pegawai + "',PHONE_PEGAWAI ='"
+                     + P.Phone_Pegawai + "',ALAMAT_PEGAWAI ='" + P.Alamat_Pegawai + "',JABATAN ='" + P.Jabatan + "',PASSWORD ='" + P.Password + "'"
+                     + " WHERE NAMA_PEGAWAI = '" + namaPegawai + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
 
-        public void DeletePegawai()
+        public void DeletePegawai(String namaPegawai)
         {
+            string sql = "UPDATE pegawai SET DELETE_AT_PEGAWAI = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                     + " WHERE NAMA_PEGAWAI = '" + namaPegawai + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public Pegawai SearchPegawai(String namaPegawai)
+        {
+            string sql = "SELECT * FROM pegawai WHERE NAMA_PEGAWAI = '" + namaPegawai + "';";
+            Pegawai pegawai = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        pegawai = new Pegawai(
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetString("Nama_Pegawai"),
+                            result.GetString("Alamat_Pegawai"),
+                            result.GetString("Tgl_Lahir_Pegawai"),
+                            result.GetString("Phone_Pegawai"),
+                            result.GetString("Jabatan"),
+                            result.GetString("Password"),
+                            result.GetDateTime("Create_At_Pegawai"),
+                            result.GetDateTime("Update_At_Pegawai"),
+                            result.GetDateTime("Delete_At_Pegawai"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return pegawai;
         }
     }
 }

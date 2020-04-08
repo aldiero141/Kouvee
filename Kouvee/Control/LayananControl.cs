@@ -26,17 +26,17 @@ namespace Kouvee.Control
             lDAO.closeConnection();
         }
 
-        public void UpdateLayanan(Layanan layanan)
+        public void UpdateLayanan(Layanan layanan, String namaLayanan)
         {
             lDAO.makeConnection();
-            lDAO.UpdateLayanan();
+            lDAO.UpdateLayanan(layanan,namaLayanan);
             lDAO.closeConnection();
         }
 
-        public void DeleteLayanan(string Nama_Layanan)
+        public void DeleteLayanan(String namaLayanan)
         {
             lDAO.makeConnection();
-            lDAO.DeleteLayanan();
+            lDAO.DeleteLayanan(namaLayanan);
             lDAO.closeConnection();
         }
 
@@ -46,6 +46,14 @@ namespace Kouvee.Control
             List<Layanan> LayananData = lDAO.ShowLayanan();
             lDAO.closeConnection();
             return LayananData;
+        }
+        public Layanan SearchLayanan(String nama)
+        {
+            Layanan layanan = null;
+            lDAO.makeConnection();
+            layanan = lDAO.SearchLayanan(nama);
+            lDAO.closeConnection();
+            return layanan;
         }
     }
 }

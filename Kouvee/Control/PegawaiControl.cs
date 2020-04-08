@@ -26,17 +26,17 @@ namespace Kouvee.Control
             pDAO.closeConnection();
         }
 
-        public void UpdatePegawai(Pegawai pegawai)
+        public void UpdatePegawai(Pegawai pegawai, String namaPegawai)
         {
             pDAO.makeConnection();
-            pDAO.UpdatePegawai();
+            pDAO.UpdatePegawai(pegawai,namaPegawai);
             pDAO.closeConnection();
         }
 
-        public void DeletePegawai(string Nama_Pegawai)
+        public void DeletePegawai(String namaPegawai)
         {
             pDAO.makeConnection();
-            pDAO.DeletePegawai();
+            pDAO.DeletePegawai(namaPegawai);
             pDAO.closeConnection();
         }
 
@@ -46,6 +46,15 @@ namespace Kouvee.Control
             List<Pegawai> PegawaiData = pDAO.ShowPegawai();
             pDAO.closeConnection();
             return PegawaiData;
+        }
+
+        public Pegawai SearchPegawai(String nama)
+        {
+            Pegawai pegawai = null;
+            pDAO.makeConnection();
+            pegawai = pDAO.SearchPegawai(nama);
+            pDAO.closeConnection();
+            return pegawai;
         }
     }
 }

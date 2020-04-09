@@ -5,11 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Control;
 using Kouvee.Models;
 using Kouvee.View;
+using Kouvee.Exceptions;
 
 namespace Kouvee.View.Data.Tambah
 {
@@ -27,18 +29,44 @@ namespace Kouvee.View.Data.Tambah
             try
             {
                 var list = new CustomerControl();
-                customer = new Customer(txtNamaPelanggan.Text, txtNomorTelponPelanggan.Text, dateTimePickerPelanggan.Text, txtAlamatPelanggan.Text, FormLogin.id_pegawai);
+
+                if (string.IsNullOrEmpty(txtNamaPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Pelanggan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtAlamatPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Alamat Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNomorTelponPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Nomor Telpon Kosong");
+                    throw null;
+                }
+
+                customer = new Customer(txtNamaPelanggan.Text, txtAlamatPelanggan.Text, dateTimePickerPelanggan.Text, txtNomorTelponPelanggan.Text, FormLogin.id_pegawai);
+                ValidateNumberOnly(txtNomorTelponPelanggan.Text);
                 list.CreateCustomer(customer);
             }
-            catch (Exception ex)
+            catch (NumberOnlyException ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
             }
         }
 
         private void buttonKembali_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
+            }
         }
     }
 }

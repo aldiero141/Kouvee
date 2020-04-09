@@ -26,6 +26,23 @@ namespace Kouvee.View.Data.Tambah
         {
             try
             {
+
+                if (string.IsNullOrEmpty(txtNamaHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Hewan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxNamaPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Pelanggan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxJenisHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Jenis Hewan Kosong");
+                    throw null;
+                }
+
                 var list = new HewanControl();
                 hewan = new Hewan(comboBoxNamaPelanggan.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaHewan.Text, dateTimePickerHewan.Text);
                 list.CreateHewan(hewan);

@@ -29,6 +29,12 @@ namespace Kouvee.View.Data.Tambah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtJenisHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Jenis Hewan Kosong");
+                    throw null;
+                }
+
                 var list = new JenisHewanControl();
                 jenisHewan = new JenisHewan(FormLogin.id_pegawai,txtJenisHewan.Text);
                 list.CreateJenisHewan(jenisHewan);

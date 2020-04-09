@@ -25,6 +25,12 @@ namespace Kouvee.View.Data.Hapus
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+
                 var list = new LayananControl();
                 list.DeleteLayanan(txtCari.Text);
             }

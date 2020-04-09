@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
+using System.Text.RegularExpressions;
+using Kouvee.Exceptions;
 
 namespace Kouvee.View.Data.Tambah
 {
@@ -29,13 +31,48 @@ namespace Kouvee.View.Data.Tambah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtNamaPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtAlamatPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Alamat Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNomorTelponPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Nomor Telpon Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxJabatan.Text.Trim()))
+                {
+                    MessageBox.Show("Jabatan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
+                {
+                    MessageBox.Show("Password Kosong");
+                    throw null;
+                }
+
                 var list = new PegawaiControl();
                 pegawai = new Pegawai(txtNamaPegawai.Text, txtAlamatPegawai.Text, dateTimePickerPegawai.Text, txtNomorTelponPegawai.Text, comboBoxJabatan.Text, txtPassword.Text);
+                ValidateNumberOnly(txtNomorTelponPegawai.Text);
                 list.CreatePegawai(pegawai);
             }
-            catch (Exception ex)
+            catch (NumberOnlyException ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
             }
         }
 

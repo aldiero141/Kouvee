@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
 using Kouvee.View;
+using Kouvee.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace Kouvee.View.Data.Ubah
 {
@@ -60,17 +62,48 @@ namespace Kouvee.View.Data.Ubah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNamaSupplier.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Supplier Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtAlamatSupplier.Text.Trim()))
+                {
+                    MessageBox.Show("Alamat Supplier Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNomorTelponSupplier.Text.Trim()))
+                {
+                    MessageBox.Show("Nomor Telpon Pegawai Kosong");
+                    throw null;
+                }
+                
+
                 var list = new SupplierControl();
                 supplier = new Supplier(txtNamaSupplier.Text, txtAlamatSupplier.Text, txtNomorTelponSupplier.Text, FormLogin.id_pegawai);
+                ValidateNumberOnly(txtNomorTelponSupplier.Text);
                 list.UpdateSupplier(supplier, txtCari.Text);
 
                 txtNamaSupplier.Enabled = false;
                 txtAlamatSupplier.Enabled = false;
                 txtNomorTelponSupplier.Enabled = false;
             }
-            catch (Exception ex)
+            catch (NumberOnlyException ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
             }
         }
 

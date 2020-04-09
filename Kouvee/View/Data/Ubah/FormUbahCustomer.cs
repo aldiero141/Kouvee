@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
 using Kouvee.View;
+using System.Text.RegularExpressions;
+using Kouvee.Exceptions;
 
 namespace Kouvee.View.Data.Ubah
 {
@@ -31,18 +33,48 @@ namespace Kouvee.View.Data.Ubah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNamaPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Pelanggan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtAlamatPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Alamat Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNomorTelponPelanggan.Text.Trim()))
+                {
+                    MessageBox.Show("Nomor Telpon Kosong");
+                    throw null;
+                }
+                
                 var list = new CustomerControl();
                 customer = new Customer(txtNamaPelanggan.Text, txtAlamatPelanggan.Text, dateTimePickerPelanggan.Text, txtNomorTelponPelanggan.Text, FormLogin.id_pegawai);
                 list.UpdateCustomer(customer,txtCari.Text);
-                
+                ValidateNumberOnly(txtNomorTelponPelanggan.Text);
+
                 txtNamaPelanggan.Enabled = false;
                 txtAlamatPelanggan.Enabled = false;
                 txtNomorTelponPelanggan.Enabled = false;
                 dateTimePickerPelanggan.Enabled = false;
             }
-            catch (Exception ex)
+            catch (NumberOnlyException ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
             }
         }
 
@@ -74,9 +106,8 @@ namespace Kouvee.View.Data.Ubah
             {
 
             }
-           
         }
-
+       
         private void FormUbahCustomer_Load(object sender, EventArgs e)
         {
             txtNamaPelanggan.Enabled = false;

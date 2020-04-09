@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
-
+using Kouvee.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace Kouvee.View.Data.Ubah
 {
@@ -84,8 +85,40 @@ namespace Kouvee.View.Data.Ubah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNamaPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtAlamatPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Alamat Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNomorTelponPegawai.Text.Trim()))
+                {
+                    MessageBox.Show("Nomor Telpon Pegawai Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxJabatan.Text.Trim()))
+                {
+                    MessageBox.Show("Jabatan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
+                {
+                    MessageBox.Show("Password Kosong");
+                    throw null;
+                }
+                
                 var list = new PegawaiControl();
                 pegawai = new Pegawai(txtNamaPegawai.Text, txtAlamatPegawai.Text, dateTimePickerPegawai.Text, txtNomorTelponPegawai.Text, comboBoxJabatan.Text, txtPassword.Text);
+                ValidateNumberOnly(txtNomorTelponPegawai.Text);
                 list.UpdatePegawai(pegawai, txtCari.Text);
 
                 txtNamaPegawai.Enabled = false;
@@ -98,6 +131,13 @@ namespace Kouvee.View.Data.Ubah
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
             }
         }
     }

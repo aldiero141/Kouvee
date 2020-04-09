@@ -51,6 +51,17 @@ namespace Kouvee.View.Data.Ubah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtJenisHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Jenis Hewan Kosong");
+                    throw null;
+                }
+                
                 var list = new JenisHewanControl();
                 jenisHewan = new JenisHewan(FormLogin.id_pegawai,txtJenisHewan.Text);
                 list.UpdateJenisHewan(jenisHewan, txtCari.Text);

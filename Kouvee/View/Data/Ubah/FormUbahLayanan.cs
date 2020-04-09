@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
 using MySql.Data.MySqlClient;
+using Kouvee.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace Kouvee.View.Data.Ubah
 {
@@ -155,8 +157,35 @@ namespace Kouvee.View.Data.Ubah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtCari.Text.Trim()))
+                {
+                    MessageBox.Show("Text Pencarian Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxUkuran.Text.Trim()))
+                {
+                    MessageBox.Show("Ukuran Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(comboBoxJenisHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Jenis Hewan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtNamaLayanan.Text.Trim()))
+                {
+                    MessageBox.Show("Nama Layanan Kosong");
+                    throw null;
+                }
+                if (string.IsNullOrEmpty(txtHargaLayanan.Text.Trim()))
+                {
+                    MessageBox.Show("Harga Layanan Kosong");
+                    throw null;
+                }
+                
                 var list = new LayananControl();
                 layanan = new Layanan(comboBoxUkuran.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaLayanan.Text, Int32.Parse(txtHargaLayanan.Text));
+                ValidateNumberOnly(txtHargaLayanan.Text);
                 list.UpdateLayanan(layanan, txtCari.Text);
 
                 txtNamaLayanan.Enabled = false;
@@ -164,9 +193,17 @@ namespace Kouvee.View.Data.Ubah
                 comboBoxUkuran.Enabled = false;
                 comboBoxJenisHewan.Enabled = false;
             }
-            catch (Exception ex)
+            catch (NumberOnlyException ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void ValidateNumberOnly(String number)
+        {
+            if (!Regex.Match(number, @"^[0-9]+$").Success)
+            {
+                throw (new NumberOnlyException());
             }
         }
 

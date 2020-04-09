@@ -44,7 +44,7 @@
             this.dataGridViewTampil = new System.Windows.Forms.DataGridView();
             this.panelCariData = new System.Windows.Forms.Panel();
             this.txtCari = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnCari = new System.Windows.Forms.Button();
             this.panelMenuTampil.SuspendLayout();
             this.panelTitleTampil.SuspendLayout();
             this.panelTampilData.SuspendLayout();
@@ -281,7 +281,7 @@
             // 
             this.panelCariData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(1)))), ((int)(((byte)(42)))));
             this.panelCariData.Controls.Add(this.txtCari);
-            this.panelCariData.Controls.Add(this.button9);
+            this.panelCariData.Controls.Add(this.btnCari);
             this.panelCariData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelCariData.Location = new System.Drawing.Point(0, 564);
             this.panelCariData.Name = "panelCariData";
@@ -298,20 +298,21 @@
             this.txtCari.Size = new System.Drawing.Size(740, 22);
             this.txtCari.TabIndex = 2;
             // 
-            // button9
+            // btnCari
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Silver;
-            this.button9.Location = new System.Drawing.Point(740, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(58, 22);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Cari";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnCari.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCari.FlatAppearance.BorderSize = 0;
+            this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.ForeColor = System.Drawing.Color.Silver;
+            this.btnCari.Location = new System.Drawing.Point(740, 0);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(58, 22);
+            this.btnCari.TabIndex = 1;
+            this.btnCari.Text = "Cari";
+            this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // FormTampil
             // 
@@ -351,7 +352,7 @@
         private System.Windows.Forms.DataGridView dataGridViewTampil;
         private System.Windows.Forms.Panel panelCariData;
         private System.Windows.Forms.TextBox txtCari;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.Button buttonTampilKembali;
     }
 }

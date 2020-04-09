@@ -70,6 +70,7 @@
     <Compile Include="DAO\ProdukDAO.cs" />
     <Compile Include="DAO\SupplierDAO.cs" />
     <Compile Include="DAO\UkuranHewanDAO.cs" />
+    <Compile Include="Exceptions\NumberOnlyException.cs" />
     <Compile Include="View\Data\FormData.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,6 +29,12 @@ namespace Kouvee.View.Data.Tambah
         {
             try
             {
+                if (string.IsNullOrEmpty(txtUkuranHewan.Text.Trim()))
+                {
+                    MessageBox.Show("Ukuran Hewan Kosong");
+                    throw null;
+                }
+                
                 var list = new UkuranHewanControl();
                 ukuranHewan = new UkuranHewan(FormLogin.id_pegawai, txtUkuranHewan.Text);
                 list.CreateUkuranHewan(ukuranHewan);

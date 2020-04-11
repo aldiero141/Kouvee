@@ -214,9 +214,9 @@
             this.btnCari.FlatAppearance.BorderSize = 0;
             this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCari.ForeColor = System.Drawing.Color.Silver;
-            this.btnCari.Location = new System.Drawing.Point(657, 8);
+            this.btnCari.Location = new System.Drawing.Point(657, 7);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(57, 20);
+            this.btnCari.Size = new System.Drawing.Size(57, 21);
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;

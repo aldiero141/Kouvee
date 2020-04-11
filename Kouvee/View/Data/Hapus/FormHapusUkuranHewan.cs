@@ -33,8 +33,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new UkuranHewanControl();
                 list.DeleteUkuranHewan(txtCari.Text);
-
-                txtUkuranHewan.Enabled = false;
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -49,18 +49,21 @@ namespace Kouvee.View.Data.Hapus
             {
                 if (txtCari.Text != null && list.SearchUkuran(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
+
                     ukuranHewan = list.SearchUkuran(txtCari.Text);
                     txtUkuranHewan.Text = ukuranHewan.Ukuran;
                     txtUkuranHewan.Enabled = true;
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -71,6 +74,7 @@ namespace Kouvee.View.Data.Hapus
 
         private void FormHapusUkuranHewan_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtUkuranHewan.Enabled = false;
         }
     }

@@ -27,6 +27,7 @@ namespace Kouvee.View.Data.Hapus
             {
                 if (txtCari.Text != null && list.SearchPegawai(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
                     pegawai = list.SearchPegawai(txtCari.Text);
 
                     txtNamaPegawai.Text = pegawai.Nama_Pegawai;
@@ -38,7 +39,8 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-                    Console.WriteLine("test");
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
             catch (Exception ex)
@@ -59,6 +61,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new PegawaiControl();
                 list.DeletePegawai(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -83,6 +87,7 @@ namespace Kouvee.View.Data.Hapus
             comboBoxJabatan.DataSource = table;
             comboBoxJabatan.DisplayMember = "name";
 
+            buttonHapus.Enabled = false;
             txtNamaPegawai.Enabled = false;
             txtAlamatPegawai.Enabled = false;
             txtNomorTelponPegawai.Enabled = false;

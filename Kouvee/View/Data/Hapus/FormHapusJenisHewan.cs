@@ -27,22 +27,26 @@ namespace Kouvee.View.Data.Hapus
             {
                 if (txtCari.Text != null && list.SearchJenisHewan(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
+
                     jenisHewan = list.SearchJenisHewan(txtCari.Text);
                     txtJenisHewan.Text = jenisHewan.Jenis_Hewan;
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
         private void FormHapusJenisHewan_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtJenisHewan.Enabled = false;
         }
 
@@ -58,6 +62,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new JenisHewanControl();
                 list.DeleteJenisHewan(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {

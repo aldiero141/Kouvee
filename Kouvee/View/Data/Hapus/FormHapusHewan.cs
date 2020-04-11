@@ -28,6 +28,8 @@ namespace Kouvee.View.Data.Hapus
             {
                 if (txtCari.Text != null && list.SearchHewan(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
+
                     hewan = list.SearchHewan(txtCari.Text);
                     txtNamaHewan.Text = hewan.Nama_Hewan;
                     dateTimePickerHewan.Value = DateTime.Parse(hewan.Tgl_Lahir_Hewan);
@@ -79,12 +81,13 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -100,6 +103,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new HewanControl();
                 list.DeleteHewan(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -115,6 +120,7 @@ namespace Kouvee.View.Data.Hapus
 
         private void FormHapusHewan_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtNamaHewan.Enabled = false;
             dateTimePickerHewan.Enabled = false;
             comboBoxNamaPelanggan.Enabled = false;

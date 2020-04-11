@@ -38,6 +38,7 @@ namespace Kouvee.View.Data.Tambah
                 var list = new JenisHewanControl();
                 jenisHewan = new JenisHewan(FormLogin.id_pegawai,txtJenisHewan.Text);
                 list.CreateJenisHewan(jenisHewan);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (Exception ex)
             {

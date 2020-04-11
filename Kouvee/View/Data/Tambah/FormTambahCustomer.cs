@@ -49,10 +49,16 @@ namespace Kouvee.View.Data.Tambah
                 customer = new Customer(txtNamaPelanggan.Text, txtAlamatPelanggan.Text, dateTimePickerPelanggan.Text, txtNomorTelponPelanggan.Text, FormLogin.id_pegawai);
                 ValidateNumberOnly(txtNomorTelponPelanggan.Text);
                 list.CreateCustomer(customer);
+
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (NumberOnlyException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
 

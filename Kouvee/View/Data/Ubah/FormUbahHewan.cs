@@ -33,6 +33,8 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (txtCari.Text != null && list.SearchHewan(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
+
                     hewan = list.SearchHewan(txtCari.Text);
                     txtNamaHewan.Text = hewan.Nama_Hewan;
                     dateTimePickerHewan.Value = DateTime.Parse(hewan.Tgl_Lahir_Hewan);
@@ -89,12 +91,13 @@ namespace Kouvee.View.Data.Ubah
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -132,6 +135,9 @@ namespace Kouvee.View.Data.Ubah
                 dateTimePickerHewan.Enabled = false;
                 comboBoxNamaPelanggan.Enabled = false;
                 comboBoxJenisHewan.Enabled = false;
+
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -141,6 +147,7 @@ namespace Kouvee.View.Data.Ubah
 
         private void FormUbahHewan_Load(object sender, EventArgs e)
         {
+            buttonUbah.Enabled = false;
             txtNamaHewan.Enabled = false;
             dateTimePickerHewan.Enabled = false;
             comboBoxNamaPelanggan.Enabled = false;

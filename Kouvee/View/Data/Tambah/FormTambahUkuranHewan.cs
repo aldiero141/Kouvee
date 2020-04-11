@@ -38,6 +38,7 @@ namespace Kouvee.View.Data.Tambah
                 var list = new UkuranHewanControl();
                 ukuranHewan = new UkuranHewan(FormLogin.id_pegawai, txtUkuranHewan.Text);
                 list.CreateUkuranHewan(ukuranHewan);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (Exception ex)
             {

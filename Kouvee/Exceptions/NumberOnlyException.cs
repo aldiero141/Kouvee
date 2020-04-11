@@ -11,7 +11,7 @@ namespace Kouvee.Exceptions
     {
         public NumberOnlyException()
         {
-            System.Windows.Forms.MessageBox.Show("Hanya Boleh Angka");
+            System.Windows.Forms.MessageBox.Show("Field Hanya Boleh Angka");
         }
     }
 }

@@ -23,11 +23,13 @@ namespace Kouvee.View.Data.Hapus
 
         private void btnCari_Click(object sender, EventArgs e)
         {
+            
             var list = new CustomerControl();
             try
             {
                 if (txtCari.Text != null && list.SearchCustomer(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
                     customer = list.SearchCustomer(txtCari.Text);
                     txtNamaPelanggan.Text = customer.Nama_Pelanggan;
                     txtAlamatPelanggan.Text = customer.Alamat_Pelanggan;
@@ -36,12 +38,14 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    buttonHapus.Enabled = false;
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -57,6 +61,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new CustomerControl();
                 list.DeleteCustomer(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -69,6 +75,7 @@ namespace Kouvee.View.Data.Hapus
         }
         private void FormHapusCustomer_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtNamaPelanggan.Enabled = false;
             txtAlamatPelanggan.Enabled = false;
             txtNomorTelponPelanggan.Enabled = false;

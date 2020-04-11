@@ -33,6 +33,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new LayananControl();
                 list.DeleteLayanan(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -42,12 +44,13 @@ namespace Kouvee.View.Data.Hapus
 
         private void btnCari_Click(object sender, EventArgs e)
         {
-            var list = new LayananControl();
+           var list = new LayananControl();
             try
             {
 
                 if (txtCari.Text != null && list.SearchLayanan(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
                     layanan = list.SearchLayanan(txtCari.Text);
                     txtNamaLayanan.Text = layanan.Nama_Layanan;
                     txtHargaLayanan.Text = System.Convert.ToString(layanan.Harga_Layanan);
@@ -99,12 +102,13 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -115,6 +119,7 @@ namespace Kouvee.View.Data.Hapus
 
         private void FormHapusLayanan_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtHargaLayanan.Enabled = false;
             txtNamaLayanan.Enabled = false;
             comboBoxUkuran.Enabled = false;

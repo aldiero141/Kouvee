@@ -61,8 +61,13 @@ namespace Kouvee.View.Data.Tambah
                 pegawai = new Pegawai(txtNamaPegawai.Text, txtAlamatPegawai.Text, dateTimePickerPegawai.Text, txtNomorTelponPegawai.Text, comboBoxJabatan.Text, txtPassword.Text);
                 ValidateNumberOnly(txtNomorTelponPegawai.Text);
                 list.CreatePegawai(pegawai);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

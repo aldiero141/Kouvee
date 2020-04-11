@@ -324,6 +324,7 @@
             this.Controls.Add(this.panelMenuTampil);
             this.Name = "FormTampil";
             this.Text = "FormTampil";
+            this.Load += new System.EventHandler(this.FormTampil_Load);
             this.panelMenuTampil.ResumeLayout(false);
             this.panelTitleTampil.ResumeLayout(false);
             this.panelTitleTampil.PerformLayout();

@@ -25,6 +25,7 @@ namespace Kouvee.View.Data.Ubah
 
         private void FormUbahLayanan_Load(object sender, EventArgs e)
         {
+            buttonUbah.Enabled = false;
             txtHargaLayanan.Enabled = false;
             txtNamaLayanan.Enabled = false;
             comboBoxUkuran.Enabled = false;
@@ -88,6 +89,7 @@ namespace Kouvee.View.Data.Ubah
                
                 if (txtCari.Text != null && list.SearchLayanan(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
                     layanan = list.SearchLayanan(txtCari.Text);
                     txtNamaLayanan.Text = layanan.Nama_Layanan;
                     txtHargaLayanan.Text = System.Convert.ToString(layanan.Harga_Layanan);
@@ -144,12 +146,13 @@ namespace Kouvee.View.Data.Ubah
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -184,16 +187,23 @@ namespace Kouvee.View.Data.Ubah
                 }
                 
                 var list = new LayananControl();
-                layanan = new Layanan(comboBoxUkuran.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaLayanan.Text, Int32.Parse(txtHargaLayanan.Text));
                 ValidateNumberOnly(txtHargaLayanan.Text);
+                layanan = new Layanan(comboBoxUkuran.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaLayanan.Text, Int32.Parse(txtHargaLayanan.Text));
                 list.UpdateLayanan(layanan, txtCari.Text);
 
                 txtNamaLayanan.Enabled = false;
                 txtHargaLayanan.Enabled = false;
                 comboBoxUkuran.Enabled = false;
                 comboBoxJenisHewan.Enabled = false;
+
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

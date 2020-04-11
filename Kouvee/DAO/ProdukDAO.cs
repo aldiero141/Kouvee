@@ -11,6 +11,8 @@ using System.Data;
 using System.Windows;
 using System.Numerics;
 using System.Windows.Documents;
+using System.IO;
+using System.Drawing;
 
 namespace Kouvee.DAO
 {
@@ -48,20 +50,21 @@ namespace Kouvee.DAO
         }
         public void CreateProduk(Produk P)
         {
-            string sql = "";
+            string sql = "INSERT INTO produk(ID_PEGAWAI, NAMA_PRODUK, STOCK, MIN_STOCK, SATUAN_PRODUK, HARGA_BELI, HARGA_JUAL, GAMBAR_BLOB) " +
+              "VALUES('" + P.ID_Pegawai + "','" + P.Nama_Produk + "','" + P.Stock + "','" + P.Min_Stock + "','"
+              + P.Satuan_Produk + "','" + P.Harga_BeliProduk + "','" + P.Harga_JualProduk + "','" + P.Gambar_Blob + "');";
 
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteReader();
-                Console.WriteLine("Data Deleted...");
+                Console.WriteLine("Data Created...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Failed to delete...");
+                Console.WriteLine("Failed to create...");
                 Console.WriteLine(ex.ToString());
             }
-
         }
 
         public List<Produk> ShowProduk()
@@ -76,7 +79,7 @@ namespace Kouvee.DAO
                 {
                     while (result.Read())
                     {
-                        Produk Pr = new Produk(
+                        Produk P = new Produk(
                             result.GetInt32("ID_Produk"),
                             result.GetString("Nama_Produk"),
                             result.GetInt32("Stock"),
@@ -84,12 +87,14 @@ namespace Kouvee.DAO
                             result.GetString("Satuan_Produk"),
                             result.GetInt32("Harga_Beli"),
                             result.GetInt32("Harga_Jual"),
-                            result.GetString("Gambar"),
+                            (byte[])result["Gambar_Blob"],
                             result.GetInt32("ID_Pegawai"),
                             result.GetDateTime("Create_At_Produk"),
                             result.GetDateTime("Update_At_Produk"),
                             result.GetDateTime("Delete_At_Produk"));
-                        ProdukList.Add(Pr);
+                        ProdukList.Add(P);
+                        Console.WriteLine((byte[])result["Gambar_Blob"]);
+
                     }
                 }
             }
@@ -101,19 +106,42 @@ namespace Kouvee.DAO
             return ProdukList;
         }
 
+        public DataTable ShowProduk2()
+        {
+            string sql = "SELECT * FROM produk";
+            DataTable table = new DataTable();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(table);
+                da.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return table;
+        }
+
         public void UpdateProduk(Produk P, String namaProduk)
         {
-            string sql = "";
+            string sql = "UPDATE produk SET NAMA_PRODUK = '" + P.Nama_Produk +"',ID_PEGAWAI ='" + P.ID_Pegawai
+                + "',STOCK ='" + P.Stock +"',MIN_STOCK ='" + P.Min_Stock
+                + "',SATUAN_PRODUK ='" + P.Satuan_Produk +"',HARGA_BELI ='" + P.Harga_BeliProduk
+                + "',HARGA_JUAL ='" + P.Harga_JualProduk +"',GAMBAR_BLOB ='" + P.Gambar_Blob + "'"
+                + " WHERE NAMA_PRODUK = '" + namaProduk + "';";
 
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteReader();
-                Console.WriteLine("Data Deleted...");
+                Console.WriteLine("Data Update...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Failed to delete...");
+                Console.WriteLine("Failed to update...");
                 Console.WriteLine(ex.ToString());
             }
         }
@@ -134,6 +162,42 @@ namespace Kouvee.DAO
                 Console.WriteLine("Failed to delete...");
                 Console.WriteLine(ex.ToString());
             }
+        }
+
+        public Produk SearchProduk(String namaProduk)
+        {
+            string sql = "SELECT * FROM produk WHERE NAMA_PRODUK = '" + namaProduk + "';";
+            Produk produk = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        Produk Pr = new Produk(
+                            result.GetInt32("ID_Produk"),
+                            result.GetString("Nama_Produk"),
+                            result.GetInt32("Stock"),
+                            result.GetInt32("Min_Stock"),
+                            result.GetString("Satuan_Produk"),
+                            result.GetInt32("Harga_Beli"),
+                            result.GetInt32("Harga_Jual"),
+                            (byte[])result["Gambar_Blob"],
+                            result.GetInt32("ID_Pegawai"),
+                            result.GetDateTime("Create_At_Produk"),
+                            result.GetDateTime("Update_At_Produk"),
+                            result.GetDateTime("Delete_At_Produk"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return produk;
         }
     }
 }

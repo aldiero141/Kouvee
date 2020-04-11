@@ -54,11 +54,16 @@ namespace Kouvee.View.Data.Tambah
                 }
 
                 var list = new LayananControl();
-                layanan = new Layanan(comboBoxUkuran.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaLayanan.Text, Int32.Parse(txtHargaLayanan.Text));
                 ValidateNumberOnly(txtHargaLayanan.Text);
+                layanan = new Layanan(comboBoxUkuran.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaLayanan.Text, Int32.Parse(txtHargaLayanan.Text));
                 list.CreateLayanan(layanan);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

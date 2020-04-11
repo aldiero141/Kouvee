@@ -51,8 +51,13 @@ namespace Kouvee.View.Data.Tambah
                 supplier = new Supplier(txtNamaSupplier.Text, txtAlamatSupplier.Text, txtNomorTelponSupplier.Text, FormLogin.id_pegawai);
                 ValidateNumberOnly(txtNomorTelponSupplier.Text);
                 list.CreateSupplier(supplier);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

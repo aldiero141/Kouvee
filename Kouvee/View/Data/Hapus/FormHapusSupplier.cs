@@ -28,6 +28,8 @@ namespace Kouvee.View.Data.Hapus
             {
                 if (txtCari.Text != null && list.SearchSupplier(txtCari.Text) != null)
                 {
+                    buttonHapus.Enabled = true;
+
                     supplier = list.SearchSupplier(txtCari.Text);
 
                     txtNamaSupplier.Text = supplier.Nama_Supplier;
@@ -36,12 +38,13 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -57,6 +60,8 @@ namespace Kouvee.View.Data.Hapus
 
                 var list = new SupplierControl();
                 list.DeleteSupplier(txtCari.Text);
+                MessageBox.Show("Data Berhasil Dihapus");
+                buttonHapus.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -71,6 +76,7 @@ namespace Kouvee.View.Data.Hapus
 
         private void FormHapusSupplier_Load(object sender, EventArgs e)
         {
+            buttonHapus.Enabled = false;
             txtNamaSupplier.Enabled = false;
             txtAlamatSupplier.Enabled = false;
             txtNomorTelponSupplier.Enabled = false;

@@ -36,6 +36,7 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (txtCari.Text != null && list.SearchSupplier(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
                     supplier = list.SearchSupplier(txtCari.Text);
 
                     txtNamaSupplier.Text = supplier.Nama_Supplier;
@@ -49,12 +50,13 @@ namespace Kouvee.View.Data.Ubah
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -92,8 +94,15 @@ namespace Kouvee.View.Data.Ubah
                 txtNamaSupplier.Enabled = false;
                 txtAlamatSupplier.Enabled = false;
                 txtNomorTelponSupplier.Enabled = false;
+
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
@@ -109,6 +118,7 @@ namespace Kouvee.View.Data.Ubah
 
         private void FormUbahSupplier_Load(object sender, EventArgs e)
         {
+            buttonUbah.Enabled = false;
             txtNamaSupplier.Enabled = false;
             txtAlamatSupplier.Enabled = false;
             txtNomorTelponSupplier.Enabled = false;

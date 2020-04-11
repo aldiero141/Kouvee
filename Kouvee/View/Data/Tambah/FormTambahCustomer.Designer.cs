@@ -51,12 +51,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePickerPelanggan = new System.Windows.Forms.DateTimePicker();
             this.txtNomorTelponPelanggan = new System.Windows.Forms.TextBox();
             this.txtAlamatPelanggan = new System.Windows.Forms.TextBox();
             this.txtNamaPelanggan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dateTimePickerPelanggan = new System.Windows.Forms.DateTimePicker();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
@@ -340,6 +340,17 @@
             this.panel1.Size = new System.Drawing.Size(558, 246);
             this.panel1.TabIndex = 2;
             // 
+            // dateTimePickerPelanggan
+            // 
+            this.dateTimePickerPelanggan.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerPelanggan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPelanggan.Location = new System.Drawing.Point(20, 124);
+            this.dateTimePickerPelanggan.Name = "dateTimePickerPelanggan";
+            this.dateTimePickerPelanggan.Size = new System.Drawing.Size(514, 22);
+            this.dateTimePickerPelanggan.TabIndex = 6;
+            this.dateTimePickerPelanggan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
+            // 
             // txtNomorTelponPelanggan
             // 
             this.txtNomorTelponPelanggan.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -389,17 +400,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
-            // 
-            // dateTimePickerPelanggan
-            // 
-            this.dateTimePickerPelanggan.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerPelanggan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerPelanggan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerPelanggan.Location = new System.Drawing.Point(20, 124);
-            this.dateTimePickerPelanggan.Name = "dateTimePickerPelanggan";
-            this.dateTimePickerPelanggan.Size = new System.Drawing.Size(514, 22);
-            this.dateTimePickerPelanggan.TabIndex = 6;
-            this.dateTimePickerPelanggan.Value = new System.DateTime(2020, 4, 12, 0, 0, 0, 0);
             // 
             // FormTambahCustomer
             // 

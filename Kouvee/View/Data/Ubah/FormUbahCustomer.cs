@@ -63,8 +63,15 @@ namespace Kouvee.View.Data.Ubah
                 txtAlamatPelanggan.Enabled = false;
                 txtNomorTelponPelanggan.Enabled = false;
                 dateTimePickerPelanggan.Enabled = false;
+
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (NumberOnlyException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
@@ -85,6 +92,7 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (txtCari.Text != null && list.SearchCustomer(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
                     customer = list.SearchCustomer(txtCari.Text);
 
                     txtNamaPelanggan.Text = customer.Nama_Pelanggan;
@@ -99,12 +107,13 @@ namespace Kouvee.View.Data.Ubah
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
        
@@ -114,6 +123,7 @@ namespace Kouvee.View.Data.Ubah
             txtAlamatPelanggan.Enabled = false; 
             txtNomorTelponPelanggan.Enabled = false;
             dateTimePickerPelanggan.Enabled = false;
+            buttonUbah.Enabled = false;
         }
     }
 }

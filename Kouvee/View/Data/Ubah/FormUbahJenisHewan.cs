@@ -32,18 +32,20 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (txtCari.Text != null && list.SearchJenisHewan(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
                     jenisHewan = list.SearchJenisHewan(txtCari.Text);
                     txtJenisHewan.Text = jenisHewan.Jenis_Hewan;
                     txtJenisHewan.Enabled = true;
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -66,6 +68,9 @@ namespace Kouvee.View.Data.Ubah
                 jenisHewan = new JenisHewan(FormLogin.id_pegawai,txtJenisHewan.Text);
                 list.UpdateJenisHewan(jenisHewan, txtCari.Text);
                 txtJenisHewan.Enabled = false;
+
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -76,6 +81,7 @@ namespace Kouvee.View.Data.Ubah
         private void FormUbahJenisHewan_Load(object sender, EventArgs e)
         {
             txtJenisHewan.Enabled = false;
+            buttonUbah.Enabled = false;
         }
     }
 }

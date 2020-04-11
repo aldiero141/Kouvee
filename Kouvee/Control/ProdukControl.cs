@@ -47,5 +47,21 @@ namespace Kouvee.Control
             prDAO.closeConnection();
             return ProdukData;
         }
+        public DataTable ShowProduk2()
+        {
+            prDAO.makeConnection();
+            DataTable ProdukData = prDAO.ShowProduk2();
+            prDAO.closeConnection();
+            return ProdukData;
+        }
+
+        public Produk SearchProduk(String nama)
+        {
+            Produk produk = null;
+            prDAO.makeConnection();
+            produk = prDAO.SearchProduk(nama);
+            prDAO.closeConnection();
+            return produk;
+        }
     }
 }

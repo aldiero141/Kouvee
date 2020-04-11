@@ -46,6 +46,7 @@ namespace Kouvee.View.Data.Tambah
                 var list = new HewanControl();
                 hewan = new Hewan(comboBoxNamaPelanggan.Text, comboBoxJenisHewan.Text, FormLogin.id_pegawai, txtNamaHewan.Text, dateTimePickerHewan.Text);
                 list.CreateHewan(hewan);
+                MessageBox.Show("Data Berhasil Ditambah");
             }
             catch (Exception ex)
             {

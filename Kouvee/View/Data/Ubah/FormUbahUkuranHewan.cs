@@ -33,18 +33,20 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (txtCari.Text != null && list.SearchUkuran(txtCari.Text) != null)
                 {
+                    buttonUbah.Enabled = true;
                     ukuranHewan = list.SearchUkuran(txtCari.Text);
                     txtUkuranHewan.Text = ukuranHewan.Ukuran;
                     txtUkuranHewan.Enabled = true;
                 }
                 else
                 {
-
+                    MessageBox.Show("Pencarian Tidak Ditemukan");
+                    throw null;
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -67,7 +69,8 @@ namespace Kouvee.View.Data.Ubah
                 ukuranHewan = new UkuranHewan(FormLogin.id_pegawai, txtUkuranHewan.Text);
                 list.UpdateUkuranHewan(ukuranHewan, txtCari.Text);
 
-                txtUkuranHewan.Enabled = false;
+                MessageBox.Show("Data Berhasil Diubah");
+                buttonUbah.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -77,6 +80,7 @@ namespace Kouvee.View.Data.Ubah
 
         private void FormUbahUkuranHewan_Load(object sender, EventArgs e)
         {
+            buttonUbah.Enabled = false;
             txtUkuranHewan.Enabled = false;
         }
     }

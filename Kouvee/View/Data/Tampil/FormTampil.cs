@@ -234,8 +234,7 @@ namespace Kouvee.View.Data.Tampil
                     MySqlDataAdapter da = new MySqlDataAdapter(command);
                     DataTable table = new DataTable();
                     da.Fill(table);
-                    dataGridViewTampil.RowTemplate.Height = 100;
-                    dataGridViewTampil.AllowUserToAddRows = false;
+                    
                     if (table.Rows.Count == 0)
                     {
                         MessageBox.Show("Pencarian Tidak Ditemukan");
@@ -291,6 +290,9 @@ namespace Kouvee.View.Data.Tampil
 
         private void FormTampil_Load(object sender, EventArgs e)
         {
+            dataGridViewTampil.RowTemplate.Height = 100;
+            dataGridViewTampil.AllowUserToAddRows = false;
+            dataGridViewTampil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             txtCari.Enabled = false;
             btnCari.Enabled = false;
         }

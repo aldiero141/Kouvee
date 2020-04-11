@@ -67,6 +67,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelNotif = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnCashier = new System.Windows.Forms.Button();
             this.labelTitle2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSidemenu.SuspendLayout();
@@ -108,11 +110,9 @@
             this.buttonKeluar.ForeColor = System.Drawing.Color.Silver;
             this.buttonKeluar.Location = new System.Drawing.Point(0, 1019);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.buttonKeluar.Size = new System.Drawing.Size(233, 40);
             this.buttonKeluar.TabIndex = 19;
             this.buttonKeluar.Text = "Keluar";
-            this.buttonKeluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
@@ -142,7 +142,7 @@
             this.buttonHapusUkuranHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusUkuranHewan.Location = new System.Drawing.Point(0, 210);
             this.buttonHapusUkuranHewan.Name = "buttonHapusUkuranHewan";
-            this.buttonHapusUkuranHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusUkuranHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusUkuranHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusUkuranHewan.TabIndex = 7;
             this.buttonHapusUkuranHewan.Text = "Ukuran Hewan";
@@ -159,7 +159,7 @@
             this.buttonHapusSupplier.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusSupplier.Location = new System.Drawing.Point(0, 180);
             this.buttonHapusSupplier.Name = "buttonHapusSupplier";
-            this.buttonHapusSupplier.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusSupplier.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusSupplier.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusSupplier.TabIndex = 6;
             this.buttonHapusSupplier.Text = "Supplier";
@@ -176,7 +176,7 @@
             this.buttonHapusProduk.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusProduk.Location = new System.Drawing.Point(0, 150);
             this.buttonHapusProduk.Name = "buttonHapusProduk";
-            this.buttonHapusProduk.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusProduk.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusProduk.TabIndex = 5;
             this.buttonHapusProduk.Text = "Produk";
@@ -193,7 +193,7 @@
             this.buttonHapusPegawai.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusPegawai.Location = new System.Drawing.Point(0, 120);
             this.buttonHapusPegawai.Name = "buttonHapusPegawai";
-            this.buttonHapusPegawai.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusPegawai.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusPegawai.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusPegawai.TabIndex = 4;
             this.buttonHapusPegawai.Text = "Pegawai";
@@ -210,7 +210,7 @@
             this.buttonHapusLayanan.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusLayanan.Location = new System.Drawing.Point(0, 90);
             this.buttonHapusLayanan.Name = "buttonHapusLayanan";
-            this.buttonHapusLayanan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusLayanan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusLayanan.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusLayanan.TabIndex = 3;
             this.buttonHapusLayanan.Text = "Layanan";
@@ -227,7 +227,7 @@
             this.buttonHapusJenisHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusJenisHewan.Location = new System.Drawing.Point(0, 60);
             this.buttonHapusJenisHewan.Name = "buttonHapusJenisHewan";
-            this.buttonHapusJenisHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusJenisHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusJenisHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusJenisHewan.TabIndex = 2;
             this.buttonHapusJenisHewan.Text = "Jenis Hewan";
@@ -244,7 +244,7 @@
             this.buttonHapusHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusHewan.Location = new System.Drawing.Point(0, 30);
             this.buttonHapusHewan.Name = "buttonHapusHewan";
-            this.buttonHapusHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusHewan.TabIndex = 1;
             this.buttonHapusHewan.Text = "Hewan";
@@ -261,7 +261,7 @@
             this.buttonHapusCustomer.ForeColor = System.Drawing.Color.Silver;
             this.buttonHapusCustomer.Location = new System.Drawing.Point(0, 0);
             this.buttonHapusCustomer.Name = "buttonHapusCustomer";
-            this.buttonHapusCustomer.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonHapusCustomer.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonHapusCustomer.Size = new System.Drawing.Size(233, 30);
             this.buttonHapusCustomer.TabIndex = 0;
             this.buttonHapusCustomer.Text = "Customer";
@@ -277,13 +277,16 @@
             this.buttonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.ForeColor = System.Drawing.Color.Silver;
+            this.buttonHapus.Image = global::Kouvee.Properties.Resources.rubbish;
+            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHapus.Location = new System.Drawing.Point(0, 730);
             this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.buttonHapus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonHapus.Size = new System.Drawing.Size(233, 40);
             this.buttonHapus.TabIndex = 17;
-            this.buttonHapus.Text = "Hapus";
+            this.buttonHapus.Text = "   Hapus";
             this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHapus.UseVisualStyleBackColor = false;
             this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
             // 
@@ -313,7 +316,7 @@
             this.buttonUbahUkuranHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahUkuranHewan.Location = new System.Drawing.Point(0, 210);
             this.buttonUbahUkuranHewan.Name = "buttonUbahUkuranHewan";
-            this.buttonUbahUkuranHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahUkuranHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahUkuranHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahUkuranHewan.TabIndex = 7;
             this.buttonUbahUkuranHewan.Text = "Ukuran Hewan";
@@ -330,7 +333,7 @@
             this.buttonUbahSupplier.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahSupplier.Location = new System.Drawing.Point(0, 180);
             this.buttonUbahSupplier.Name = "buttonUbahSupplier";
-            this.buttonUbahSupplier.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahSupplier.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahSupplier.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahSupplier.TabIndex = 6;
             this.buttonUbahSupplier.Text = "Supplier";
@@ -347,7 +350,7 @@
             this.buttonUbahProduk.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahProduk.Location = new System.Drawing.Point(0, 150);
             this.buttonUbahProduk.Name = "buttonUbahProduk";
-            this.buttonUbahProduk.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahProduk.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahProduk.TabIndex = 5;
             this.buttonUbahProduk.Text = "Produk";
@@ -364,7 +367,7 @@
             this.buttonUbahPegawai.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahPegawai.Location = new System.Drawing.Point(0, 120);
             this.buttonUbahPegawai.Name = "buttonUbahPegawai";
-            this.buttonUbahPegawai.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahPegawai.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahPegawai.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahPegawai.TabIndex = 4;
             this.buttonUbahPegawai.Text = "Pegawai";
@@ -381,7 +384,7 @@
             this.buttonUbahLayanan.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahLayanan.Location = new System.Drawing.Point(0, 90);
             this.buttonUbahLayanan.Name = "buttonUbahLayanan";
-            this.buttonUbahLayanan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahLayanan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahLayanan.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahLayanan.TabIndex = 3;
             this.buttonUbahLayanan.Text = "Layanan";
@@ -398,7 +401,7 @@
             this.buttonUbahJenisHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahJenisHewan.Location = new System.Drawing.Point(0, 60);
             this.buttonUbahJenisHewan.Name = "buttonUbahJenisHewan";
-            this.buttonUbahJenisHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahJenisHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahJenisHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahJenisHewan.TabIndex = 2;
             this.buttonUbahJenisHewan.Text = "Jenis Hewan";
@@ -415,7 +418,7 @@
             this.buttonUbahHewan.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahHewan.Location = new System.Drawing.Point(0, 30);
             this.buttonUbahHewan.Name = "buttonUbahHewan";
-            this.buttonUbahHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahHewan.TabIndex = 1;
             this.buttonUbahHewan.Text = "Hewan";
@@ -432,7 +435,7 @@
             this.buttonUbahCustomer.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahCustomer.Location = new System.Drawing.Point(0, 0);
             this.buttonUbahCustomer.Name = "buttonUbahCustomer";
-            this.buttonUbahCustomer.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonUbahCustomer.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahCustomer.Size = new System.Drawing.Size(233, 30);
             this.buttonUbahCustomer.TabIndex = 0;
             this.buttonUbahCustomer.Text = "Customer";
@@ -448,13 +451,16 @@
             this.buttonUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUbah.ForeColor = System.Drawing.Color.Silver;
+            this.buttonUbah.Image = global::Kouvee.Properties.Resources.pencil;
+            this.buttonUbah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUbah.Location = new System.Drawing.Point(0, 441);
             this.buttonUbah.Name = "buttonUbah";
-            this.buttonUbah.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.buttonUbah.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonUbah.Size = new System.Drawing.Size(233, 40);
             this.buttonUbah.TabIndex = 15;
-            this.buttonUbah.Text = "Ubah";
+            this.buttonUbah.Text = "   Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUbah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUbah.UseVisualStyleBackColor = false;
             this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
@@ -466,13 +472,16 @@
             this.buttonTampil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTampil.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTampil.Image = global::Kouvee.Properties.Resources.information;
+            this.buttonTampil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTampil.Location = new System.Drawing.Point(0, 401);
             this.buttonTampil.Name = "buttonTampil";
-            this.buttonTampil.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.buttonTampil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTampil.Size = new System.Drawing.Size(233, 40);
             this.buttonTampil.TabIndex = 3;
-            this.buttonTampil.Text = "Tampil";
+            this.buttonTampil.Text = "   Tampil";
             this.buttonTampil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTampil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTampil.UseVisualStyleBackColor = false;
             this.buttonTampil.Click += new System.EventHandler(this.buttonTampil_Click);
             // 
@@ -500,9 +509,10 @@
             this.buttonTambahUkuranHewan.FlatAppearance.BorderSize = 0;
             this.buttonTambahUkuranHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahUkuranHewan.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahUkuranHewan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahUkuranHewan.Location = new System.Drawing.Point(0, 210);
             this.buttonTambahUkuranHewan.Name = "buttonTambahUkuranHewan";
-            this.buttonTambahUkuranHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahUkuranHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahUkuranHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahUkuranHewan.TabIndex = 7;
             this.buttonTambahUkuranHewan.Text = "Ukuran Hewan";
@@ -517,9 +527,10 @@
             this.buttonTambahSupplier.FlatAppearance.BorderSize = 0;
             this.buttonTambahSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahSupplier.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahSupplier.Location = new System.Drawing.Point(0, 180);
             this.buttonTambahSupplier.Name = "buttonTambahSupplier";
-            this.buttonTambahSupplier.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahSupplier.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahSupplier.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahSupplier.TabIndex = 6;
             this.buttonTambahSupplier.Text = "Supplier";
@@ -534,9 +545,10 @@
             this.buttonTambahProduk.FlatAppearance.BorderSize = 0;
             this.buttonTambahProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahProduk.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahProduk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahProduk.Location = new System.Drawing.Point(0, 150);
             this.buttonTambahProduk.Name = "buttonTambahProduk";
-            this.buttonTambahProduk.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahProduk.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahProduk.TabIndex = 5;
             this.buttonTambahProduk.Text = "Produk";
@@ -551,9 +563,10 @@
             this.buttonTambahPegawai.FlatAppearance.BorderSize = 0;
             this.buttonTambahPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahPegawai.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahPegawai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahPegawai.Location = new System.Drawing.Point(0, 120);
             this.buttonTambahPegawai.Name = "buttonTambahPegawai";
-            this.buttonTambahPegawai.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahPegawai.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahPegawai.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahPegawai.TabIndex = 4;
             this.buttonTambahPegawai.Text = "Pegawai";
@@ -568,9 +581,10 @@
             this.buttonTambahLayanan.FlatAppearance.BorderSize = 0;
             this.buttonTambahLayanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahLayanan.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahLayanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahLayanan.Location = new System.Drawing.Point(0, 90);
             this.buttonTambahLayanan.Name = "buttonTambahLayanan";
-            this.buttonTambahLayanan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahLayanan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahLayanan.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahLayanan.TabIndex = 3;
             this.buttonTambahLayanan.Text = "Layanan";
@@ -585,9 +599,10 @@
             this.buttonTambahJenisHewan.FlatAppearance.BorderSize = 0;
             this.buttonTambahJenisHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahJenisHewan.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahJenisHewan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahJenisHewan.Location = new System.Drawing.Point(0, 60);
             this.buttonTambahJenisHewan.Name = "buttonTambahJenisHewan";
-            this.buttonTambahJenisHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahJenisHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahJenisHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahJenisHewan.TabIndex = 2;
             this.buttonTambahJenisHewan.Text = "Jenis Hewan";
@@ -602,9 +617,10 @@
             this.buttonTambahHewan.FlatAppearance.BorderSize = 0;
             this.buttonTambahHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahHewan.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahHewan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahHewan.Location = new System.Drawing.Point(0, 30);
             this.buttonTambahHewan.Name = "buttonTambahHewan";
-            this.buttonTambahHewan.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahHewan.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahHewan.TabIndex = 1;
             this.buttonTambahHewan.Text = "Hewan";
@@ -619,9 +635,10 @@
             this.buttonTambahCustomer.FlatAppearance.BorderSize = 0;
             this.buttonTambahCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambahCustomer.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambahCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambahCustomer.Location = new System.Drawing.Point(0, 0);
             this.buttonTambahCustomer.Name = "buttonTambahCustomer";
-            this.buttonTambahCustomer.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.buttonTambahCustomer.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTambahCustomer.Size = new System.Drawing.Size(233, 30);
             this.buttonTambahCustomer.TabIndex = 0;
             this.buttonTambahCustomer.Text = "Customer";
@@ -637,13 +654,16 @@
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTambah.Image = global::Kouvee.Properties.Resources.more;
+            this.buttonTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTambah.Location = new System.Drawing.Point(0, 112);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.buttonTambah.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTambah.Size = new System.Drawing.Size(233, 40);
             this.buttonTambah.TabIndex = 1;
-            this.buttonTambah.Text = "Tambah";
+            this.buttonTambah.Text = "   Tambah";
             this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
@@ -692,6 +712,8 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panelChildForm.Controls.Add(this.btnReport);
+            this.panelChildForm.Controls.Add(this.btnCashier);
             this.panelChildForm.Controls.Add(this.labelTitle2);
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -699,6 +721,30 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1014, 625);
             this.panelChildForm.TabIndex = 6;
+            // 
+            // btnReport
+            // 
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Image = global::Kouvee.Properties.Resources.report__1_;
+            this.btnReport.Location = new System.Drawing.Point(942, 480);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(63, 64);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.UseVisualStyleBackColor = true;
+            // 
+            // btnCashier
+            // 
+            this.btnCashier.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCashier.FlatAppearance.BorderSize = 0;
+            this.btnCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnCashier.Image = global::Kouvee.Properties.Resources.cashier__1_;
+            this.btnCashier.Location = new System.Drawing.Point(942, 550);
+            this.btnCashier.Name = "btnCashier";
+            this.btnCashier.Size = new System.Drawing.Size(63, 64);
+            this.btnCashier.TabIndex = 2;
+            this.btnCashier.UseVisualStyleBackColor = true;
             // 
             // labelTitle2
             // 
@@ -792,6 +838,8 @@
         private System.Windows.Forms.Button buttonUbahHewan;
         private System.Windows.Forms.Button buttonUbahCustomer;
         private System.Windows.Forms.Button buttonUbah;
+        private System.Windows.Forms.Button btnCashier;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 

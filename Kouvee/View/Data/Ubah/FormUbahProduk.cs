@@ -139,10 +139,9 @@ namespace Kouvee.View.Data.Ubah
             cmd.Parameters.Add("@HARGA_BELI", MySqlDbType.Int32).Value = Int32.Parse(txtHargaBeli.Text);
             cmd.Parameters.Add("@HARGA_JUAL", MySqlDbType.Int32).Value = Int32.Parse(txtHargaJual.Text);
             cmd.Parameters.Add("@GAMBAR_BLOB", MySqlDbType.MediumBlob).Value = img;
-            if (cmd.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Data Berhasil Diubah");
-            }
+            cmd.ExecuteReader();
+            MessageBox.Show("Data Berhasil Diubah");
+           
             conn.Close();
 
             txtNamaProduk.Enabled = false;

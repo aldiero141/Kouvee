@@ -267,7 +267,7 @@
             // 
             // dataGridViewTampil
             // 
-            this.dataGridViewTampil.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(36)))), ((int)(((byte)(172)))));
+            this.dataGridViewTampil.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
             this.dataGridViewTampil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTampil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTampil.ImeMode = System.Windows.Forms.ImeMode.On;

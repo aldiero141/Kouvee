@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Control;
@@ -29,17 +30,22 @@ namespace Kouvee.View.Data.Tambah
 
                 if (string.IsNullOrEmpty(txtNamaHewan.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Hewan Kosong");
+                    MessageBox.Show("Nama Hewan Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtNamaHewan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Hewan Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(comboBoxNamaPelanggan.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Pelanggan Kosong");
+                    MessageBox.Show("Nama Pelanggan Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(comboBoxJenisHewan.Text.Trim()))
                 {
-                    MessageBox.Show("Jenis Hewan Kosong");
+                    MessageBox.Show("Jenis Hewan Tidak Boleh Kosong");
                     throw null;
                 }
 

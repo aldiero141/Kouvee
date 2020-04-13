@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Models;
 using Kouvee.Control;
+using System.Text.RegularExpressions;
 
 namespace Kouvee.View.Data.Tambah
 {
@@ -31,10 +32,15 @@ namespace Kouvee.View.Data.Tambah
             {
                 if (string.IsNullOrEmpty(txtUkuranHewan.Text.Trim()))
                 {
-                    MessageBox.Show("Ukuran Hewan Kosong");
+                    MessageBox.Show("Ukuran Hewan Tidak Boleh Kosong");
                     throw null;
                 }
-                
+                if (!Regex.Match(txtUkuranHewan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Ukuran Hewan Tidak Boleh Mengandung Angka");
+                    throw null;
+                }
+
                 var list = new UkuranHewanControl();
                 ukuranHewan = new UkuranHewan(FormLogin.id_pegawai, txtUkuranHewan.Text);
                 list.CreateUkuranHewan(ukuranHewan);

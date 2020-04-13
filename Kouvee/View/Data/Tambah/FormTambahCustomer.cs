@@ -32,19 +32,25 @@ namespace Kouvee.View.Data.Tambah
 
                 if (string.IsNullOrEmpty(txtNamaPelanggan.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Pelanggan Kosong");
+                    MessageBox.Show("Nama Pelanggan Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtNamaPelanggan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Pelanggan Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtAlamatPelanggan.Text.Trim()))
                 {
-                    MessageBox.Show("Alamat Kosong");
+                    MessageBox.Show("Alamat Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNomorTelponPelanggan.Text.Trim()))
                 {
-                    MessageBox.Show("Nomor Telpon Kosong");
+                    MessageBox.Show("Nomor Telpon Tidak Boleh Kosong");
                     throw null;
                 }
+                
 
                 customer = new Customer(txtNamaPelanggan.Text, txtAlamatPelanggan.Text, dateTimePickerPelanggan.Text, txtNomorTelponPelanggan.Text, FormLogin.id_pegawai);
                 ValidateNumberOnly(txtNomorTelponPelanggan.Text);

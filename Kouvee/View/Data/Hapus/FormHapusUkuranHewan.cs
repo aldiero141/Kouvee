@@ -53,7 +53,6 @@ namespace Kouvee.View.Data.Hapus
 
                     ukuranHewan = list.SearchUkuran(txtCari.Text);
                     txtUkuranHewan.Text = ukuranHewan.Ukuran;
-                    txtUkuranHewan.Enabled = true;
                 }
                 else
                 {

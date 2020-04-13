@@ -66,22 +66,27 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (string.IsNullOrEmpty(txtCari.Text.Trim()))
                 {
-                    MessageBox.Show("Text Pencarian Kosong");
+                    MessageBox.Show("Text Pencarian Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNamaSupplier.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Supplier Kosong");
+                    MessageBox.Show("Nama Supplier Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtNamaSupplier.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Supplier Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtAlamatSupplier.Text.Trim()))
                 {
-                    MessageBox.Show("Alamat Supplier Kosong");
+                    MessageBox.Show("Alamat Supplier Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNomorTelponSupplier.Text.Trim()))
                 {
-                    MessageBox.Show("Nomor Telpon Pegawai Kosong");
+                    MessageBox.Show("Nomor Telpon Pegawai Tidak Boleh Kosong");
                     throw null;
                 }
                 

@@ -180,6 +180,11 @@ namespace Kouvee.View.Data.Ubah
                     MessageBox.Show("Nama Layanan Kosong");
                     throw null;
                 }
+                if (!Regex.Match(txtNamaLayanan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Hewan Tidak Boleh Mengandung Angka");
+                    throw null;
+                }
                 if (string.IsNullOrEmpty(txtHargaLayanan.Text.Trim()))
                 {
                     MessageBox.Show("Harga Layanan Kosong");

@@ -18,7 +18,6 @@ namespace Kouvee.View.Data.Tambah
 {
     public partial class FormTambahProduk : Form
     {
-        Produk produk;
         public FormTambahProduk()
         {
             InitializeComponent();
@@ -62,6 +61,11 @@ namespace Kouvee.View.Data.Tambah
                 if (string.IsNullOrEmpty(txtSatuanProduk.Text.Trim()))
                 {
                     MessageBox.Show("Satuan Produk Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtSatuanProduk.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Satuan Produk Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtHargaBeli.Text.Trim()))

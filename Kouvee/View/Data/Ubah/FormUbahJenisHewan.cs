@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kouvee.Control;
@@ -58,12 +59,12 @@ namespace Kouvee.View.Data.Ubah
                     MessageBox.Show("Text Pencarian Kosong");
                     throw null;
                 }
-                if (string.IsNullOrEmpty(txtJenisHewan.Text.Trim()))
+                if (!Regex.Match(txtJenisHewan.Text, @"^[a-zA-Z]+$").Success)
                 {
-                    MessageBox.Show("Jenis Hewan Kosong");
+                    MessageBox.Show("Nama Hewan Tidak Boleh Mengandung Angka");
                     throw null;
                 }
-                
+
                 var list = new JenisHewanControl();
                 jenisHewan = new JenisHewan(FormLogin.id_pegawai,txtJenisHewan.Text);
                 list.UpdateJenisHewan(jenisHewan, txtCari.Text);

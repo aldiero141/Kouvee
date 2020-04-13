@@ -34,22 +34,27 @@ namespace Kouvee.View.Data.Tambah
             {
                 if (string.IsNullOrEmpty(comboBoxUkuran.Text.Trim()))
                 {
-                    MessageBox.Show("Ukuran Kosong");
+                    MessageBox.Show("Ukuran Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(comboBoxJenisHewan.Text.Trim()))
                 {
-                    MessageBox.Show("Jenis Hewan Kosong");
+                    MessageBox.Show("Jenis Hewan Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNamaLayanan.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Layanan Kosong");
+                    MessageBox.Show("Nama Layanan Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtNamaLayanan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Layanan Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtHargaLayanan.Text.Trim()))
                 {
-                    MessageBox.Show("Harga Layanan Kosong");
+                    MessageBox.Show("Harga Layanan Tidak Boleh Kosong");
                     throw null;
                 }
 

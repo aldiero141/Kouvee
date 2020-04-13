@@ -90,32 +90,37 @@ namespace Kouvee.View.Data.Ubah
             {
                 if (string.IsNullOrEmpty(txtCari.Text.Trim()))
                 {
-                    MessageBox.Show("Text Pencarian Kosong");
+                    MessageBox.Show("Text Pencarian Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNamaPegawai.Text.Trim()))
                 {
-                    MessageBox.Show("Nama Pegawai Kosong");
+                    MessageBox.Show("Nama Pegawai Tidak Boleh Kosong");
+                    throw null;
+                }
+                if (!Regex.Match(txtNamaPegawai.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Hewan Tidak Boleh Mengandung Angka");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtAlamatPegawai.Text.Trim()))
                 {
-                    MessageBox.Show("Alamat Pegawai Kosong");
+                    MessageBox.Show("Alamat Pegawai Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtNomorTelponPegawai.Text.Trim()))
                 {
-                    MessageBox.Show("Nomor Telpon Pegawai Kosong");
+                    MessageBox.Show("Nomor Telpon Pegawai Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(comboBoxJabatan.Text.Trim()))
                 {
-                    MessageBox.Show("Jabatan Kosong");
+                    MessageBox.Show("Jabatan Tidak Boleh Kosong");
                     throw null;
                 }
                 if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
                 {
-                    MessageBox.Show("Password Kosong");
+                    MessageBox.Show("Password Tidak Boleh Kosong");
                     throw null;
                 }
                 

@@ -43,6 +43,11 @@ namespace Kouvee.View.Data.Ubah
                     MessageBox.Show("Nama Pelanggan Kosong");
                     throw null;
                 }
+                if (!Regex.Match(txtNamaPelanggan.Text, @"^[a-zA-Z]+$").Success)
+                {
+                    MessageBox.Show("Nama Pelanggan Tidak Boleh Mengandung Angka");
+                    throw null;
+                }
                 if (string.IsNullOrEmpty(txtAlamatPelanggan.Text.Trim()))
                 {
                     MessageBox.Show("Alamat Kosong");

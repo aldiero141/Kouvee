@@ -97,6 +97,11 @@ namespace Kouvee.View.Data.Ubah
                 MessageBox.Show("Satuan Produk Tidak Boleh Kosong");
                 throw null;
             }
+            if (!Regex.Match(txtSatuanProduk.Text, @"^[a-zA-Z]+$").Success)
+            {
+                MessageBox.Show("Satuan Produk Tidak Boleh Mengandung Angka");
+                throw null;
+            }
             if (string.IsNullOrEmpty(txtHargaBeli.Text.Trim()))
             {
                 MessageBox.Show("Harga Beli Tidak Boleh Kosong");

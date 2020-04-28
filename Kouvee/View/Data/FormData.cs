@@ -14,6 +14,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using Kouvee.View.Data.Ubah;
 using Kouvee.View.Data.Hapus;
+using Kouvee.View.Transaksi;
 
 namespace Kouvee
 {
@@ -30,7 +31,6 @@ namespace Kouvee
         private void CustomizeDesign()
         {
             panelTambahSubmenu.Visible = false;
-            //panelTampilSubmenu.Visible = false;
             panelUbahSubmenu.Visible = false;
             panelHapusSubmenu.Visible = false;
         }
@@ -49,10 +49,6 @@ namespace Kouvee
             {
                 panelHapusSubmenu.Visible = false;
             }
-            //if (panelTampilSubmenu.Visible == true)
-            //{
-            //    panelTampilSubmenu.Visible = false;
-            //}
         }
 
         private void showSubmenu(Panel submenu)
@@ -267,6 +263,21 @@ namespace Kouvee
         {
             this.Close();
         }
-        
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCashier_Click(object sender, EventArgs e)
+        {
+            var form = new FormTransaksi();
+            var frm2 = new FormLogin();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Close(); };
+            form.Show();
+            this.Hide();
+        }
     }
 }

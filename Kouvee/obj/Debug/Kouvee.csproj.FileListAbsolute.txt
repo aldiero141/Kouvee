@@ -42,3 +42,12 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusPegawai.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusProduk.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusSupplier.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Data.Hapus.FormHapusUkuranHewan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.FormTransaksi.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Layanan.FormEditTransaksiLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Layanan.FormTambahTransaksiLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Layanan.FormTampilTransaksiLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormEditTransaksiProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormTambahTransaksiProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormTampilTransaksiProduk.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Pembayaran.FormPembayaranLayanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Pembayaran.FormPembayaranProduk.resources

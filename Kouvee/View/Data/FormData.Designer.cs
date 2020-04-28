@@ -40,7 +40,6 @@
             this.buttonHapusJenisHewan = new System.Windows.Forms.Button();
             this.buttonHapusHewan = new System.Windows.Forms.Button();
             this.buttonHapusCustomer = new System.Windows.Forms.Button();
-            this.buttonHapus = new System.Windows.Forms.Button();
             this.panelUbahSubmenu = new System.Windows.Forms.Panel();
             this.buttonUbahUkuranHewan = new System.Windows.Forms.Button();
             this.buttonUbahSupplier = new System.Windows.Forms.Button();
@@ -50,8 +49,6 @@
             this.buttonUbahJenisHewan = new System.Windows.Forms.Button();
             this.buttonUbahHewan = new System.Windows.Forms.Button();
             this.buttonUbahCustomer = new System.Windows.Forms.Button();
-            this.buttonUbah = new System.Windows.Forms.Button();
-            this.buttonTampil = new System.Windows.Forms.Button();
             this.panelTambahSubmenu = new System.Windows.Forms.Panel();
             this.buttonTambahUkuranHewan = new System.Windows.Forms.Button();
             this.buttonTambahSupplier = new System.Windows.Forms.Button();
@@ -61,24 +58,29 @@
             this.buttonTambahJenisHewan = new System.Windows.Forms.Button();
             this.buttonTambahHewan = new System.Windows.Forms.Button();
             this.buttonTambahCustomer = new System.Windows.Forms.Button();
-            this.buttonTambah = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelNotif = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnData = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
-            this.labelTitle2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonHapus = new System.Windows.Forms.Button();
+            this.buttonUbah = new System.Windows.Forms.Button();
+            this.buttonTampil = new System.Windows.Forms.Button();
+            this.buttonTambah = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSidemenu.SuspendLayout();
             this.panelHapusSubmenu.SuspendLayout();
             this.panelUbahSubmenu.SuspendLayout();
             this.panelTambahSubmenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelNotif.SuspendLayout();
             this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidemenu
@@ -269,27 +271,6 @@
             this.buttonHapusCustomer.UseVisualStyleBackColor = false;
             this.buttonHapusCustomer.Click += new System.EventHandler(this.buttonHapusCustomer_Click);
             // 
-            // buttonHapus
-            // 
-            this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.buttonHapus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHapus.FlatAppearance.BorderSize = 0;
-            this.buttonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.ForeColor = System.Drawing.Color.Silver;
-            this.buttonHapus.Image = global::Kouvee.Properties.Resources.rubbish;
-            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHapus.Location = new System.Drawing.Point(0, 730);
-            this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonHapus.Size = new System.Drawing.Size(233, 40);
-            this.buttonHapus.TabIndex = 17;
-            this.buttonHapus.Text = "   Hapus";
-            this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHapus.UseVisualStyleBackColor = false;
-            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
-            // 
             // panelUbahSubmenu
             // 
             this.panelUbahSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
@@ -442,48 +423,6 @@
             this.buttonUbahCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUbahCustomer.UseVisualStyleBackColor = false;
             this.buttonUbahCustomer.Click += new System.EventHandler(this.buttonUbahCustomer_Click);
-            // 
-            // buttonUbah
-            // 
-            this.buttonUbah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.buttonUbah.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonUbah.FlatAppearance.BorderSize = 0;
-            this.buttonUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUbah.ForeColor = System.Drawing.Color.Silver;
-            this.buttonUbah.Image = global::Kouvee.Properties.Resources.pencil;
-            this.buttonUbah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUbah.Location = new System.Drawing.Point(0, 441);
-            this.buttonUbah.Name = "buttonUbah";
-            this.buttonUbah.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonUbah.Size = new System.Drawing.Size(233, 40);
-            this.buttonUbah.TabIndex = 15;
-            this.buttonUbah.Text = "   Ubah";
-            this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUbah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonUbah.UseVisualStyleBackColor = false;
-            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
-            // 
-            // buttonTampil
-            // 
-            this.buttonTampil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.buttonTampil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTampil.FlatAppearance.BorderSize = 0;
-            this.buttonTampil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTampil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTampil.ForeColor = System.Drawing.Color.Silver;
-            this.buttonTampil.Image = global::Kouvee.Properties.Resources.information;
-            this.buttonTampil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTampil.Location = new System.Drawing.Point(0, 401);
-            this.buttonTampil.Name = "buttonTampil";
-            this.buttonTampil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonTampil.Size = new System.Drawing.Size(233, 40);
-            this.buttonTampil.TabIndex = 3;
-            this.buttonTampil.Text = "   Tampil";
-            this.buttonTampil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTampil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTampil.UseVisualStyleBackColor = false;
-            this.buttonTampil.Click += new System.EventHandler(this.buttonTampil_Click);
             // 
             // panelTambahSubmenu
             // 
@@ -646,6 +585,153 @@
             this.buttonTambahCustomer.UseVisualStyleBackColor = false;
             this.buttonTambahCustomer.Click += new System.EventHandler(this.buttonTambahCustomer_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
+            this.panelLogo.Controls.Add(this.pictureBox2);
+            this.panelLogo.Controls.Add(this.labelTitle);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(233, 112);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.labelTitle.Location = new System.Drawing.Point(94, 36);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(124, 38);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Kouvee";
+            // 
+            // panelNotif
+            // 
+            this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.panelNotif.Controls.Add(this.btnData);
+            this.panelNotif.Controls.Add(this.btnReport);
+            this.panelNotif.Controls.Add(this.btnCashier);
+            this.panelNotif.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelNotif.Location = new System.Drawing.Point(250, 625);
+            this.panelNotif.Name = "panelNotif";
+            this.panelNotif.Size = new System.Drawing.Size(1014, 56);
+            this.panelNotif.TabIndex = 5;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panelChildForm.Controls.Add(this.label2);
+            this.panelChildForm.Controls.Add(this.pictureBox3);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1014, 625);
+            this.panelChildForm.TabIndex = 6;
+            // 
+            // btnData
+            // 
+            this.btnData.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnData.FlatAppearance.BorderSize = 0;
+            this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnData.Image = global::Kouvee.Properties.Resources.database;
+            this.btnData.Location = new System.Drawing.Point(864, 3);
+            this.btnData.Name = "btnData";
+            this.btnData.Size = new System.Drawing.Size(54, 52);
+            this.btnData.TabIndex = 5;
+            this.btnData.UseVisualStyleBackColor = true;
+            // 
+            // btnReport
+            // 
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Image = global::Kouvee.Properties.Resources.report;
+            this.btnReport.Location = new System.Drawing.Point(913, 4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(50, 50);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnCashier
+            // 
+            this.btnCashier.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCashier.FlatAppearance.BorderSize = 0;
+            this.btnCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnCashier.Image = global::Kouvee.Properties.Resources.cashier__1_1;
+            this.btnCashier.Location = new System.Drawing.Point(957, 2);
+            this.btnCashier.Name = "btnCashier";
+            this.btnCashier.Size = new System.Drawing.Size(54, 52);
+            this.btnCashier.TabIndex = 2;
+            this.btnCashier.UseVisualStyleBackColor = true;
+            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
+            // 
+            // buttonHapus
+            // 
+            this.buttonHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.buttonHapus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHapus.FlatAppearance.BorderSize = 0;
+            this.buttonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHapus.ForeColor = System.Drawing.Color.Silver;
+            this.buttonHapus.Image = global::Kouvee.Properties.Resources.rubbish;
+            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapus.Location = new System.Drawing.Point(0, 730);
+            this.buttonHapus.Name = "buttonHapus";
+            this.buttonHapus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonHapus.Size = new System.Drawing.Size(233, 40);
+            this.buttonHapus.TabIndex = 17;
+            this.buttonHapus.Text = "   Hapus";
+            this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHapus.UseVisualStyleBackColor = false;
+            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
+            // 
+            // buttonUbah
+            // 
+            this.buttonUbah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.buttonUbah.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonUbah.FlatAppearance.BorderSize = 0;
+            this.buttonUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUbah.ForeColor = System.Drawing.Color.Silver;
+            this.buttonUbah.Image = global::Kouvee.Properties.Resources.pencil;
+            this.buttonUbah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUbah.Location = new System.Drawing.Point(0, 441);
+            this.buttonUbah.Name = "buttonUbah";
+            this.buttonUbah.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonUbah.Size = new System.Drawing.Size(233, 40);
+            this.buttonUbah.TabIndex = 15;
+            this.buttonUbah.Text = "   Ubah";
+            this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUbah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
+            // 
+            // buttonTampil
+            // 
+            this.buttonTampil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.buttonTampil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTampil.FlatAppearance.BorderSize = 0;
+            this.buttonTampil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTampil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTampil.ForeColor = System.Drawing.Color.Silver;
+            this.buttonTampil.Image = global::Kouvee.Properties.Resources.information;
+            this.buttonTampil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTampil.Location = new System.Drawing.Point(0, 401);
+            this.buttonTampil.Name = "buttonTampil";
+            this.buttonTampil.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonTampil.Size = new System.Drawing.Size(233, 40);
+            this.buttonTampil.TabIndex = 3;
+            this.buttonTampil.Text = "   Tampil";
+            this.buttonTampil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTampil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTampil.UseVisualStyleBackColor = false;
+            this.buttonTampil.Click += new System.EventHandler(this.buttonTampil_Click);
+            // 
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
@@ -667,17 +753,6 @@
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(2)))), ((int)(((byte)(63)))));
-            this.panelLogo.Controls.Add(this.pictureBox2);
-            this.panelLogo.Controls.Add(this.labelTitle);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 112);
-            this.panelLogo.TabIndex = 0;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -689,85 +764,28 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // labelTitle
+            // label2
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.labelTitle.Location = new System.Drawing.Point(94, 36);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(124, 38);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Kouvee";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.label2.Location = new System.Drawing.Point(250, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 70);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Manajemen Data";
             // 
-            // panelNotif
+            // pictureBox3
             // 
-            this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.panelNotif.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNotif.Location = new System.Drawing.Point(250, 625);
-            this.panelNotif.Name = "panelNotif";
-            this.panelNotif.Size = new System.Drawing.Size(1014, 56);
-            this.panelNotif.TabIndex = 5;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panelChildForm.Controls.Add(this.btnReport);
-            this.panelChildForm.Controls.Add(this.btnCashier);
-            this.panelChildForm.Controls.Add(this.labelTitle2);
-            this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1014, 625);
-            this.panelChildForm.TabIndex = 6;
-            // 
-            // btnReport
-            // 
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Image = global::Kouvee.Properties.Resources.report__1_;
-            this.btnReport.Location = new System.Drawing.Point(942, 480);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(63, 64);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.UseVisualStyleBackColor = true;
-            // 
-            // btnCashier
-            // 
-            this.btnCashier.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCashier.FlatAppearance.BorderSize = 0;
-            this.btnCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.btnCashier.Image = global::Kouvee.Properties.Resources.cashier__1_;
-            this.btnCashier.Location = new System.Drawing.Point(942, 550);
-            this.btnCashier.Name = "btnCashier";
-            this.btnCashier.Size = new System.Drawing.Size(63, 64);
-            this.btnCashier.TabIndex = 2;
-            this.btnCashier.UseVisualStyleBackColor = true;
-            // 
-            // labelTitle2
-            // 
-            this.labelTitle2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle2.AutoSize = true;
-            this.labelTitle2.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.labelTitle2.Location = new System.Drawing.Point(404, 319);
-            this.labelTitle2.Name = "labelTitle2";
-            this.labelTitle2.Size = new System.Drawing.Size(225, 70);
-            this.labelTitle2.TabIndex = 1;
-            this.labelTitle2.Text = "Kouvee";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(428, 159);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = global::Kouvee.Properties.Resources.database__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(442, 210);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // MainForm
             // 
@@ -780,7 +798,7 @@
             this.Controls.Add(this.panelSidemenu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "Kouvee";
             this.panelSidemenu.ResumeLayout(false);
@@ -789,10 +807,11 @@
             this.panelTambahSubmenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelNotif.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -814,8 +833,6 @@
         private System.Windows.Forms.Panel panelNotif;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelTitle2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Panel panelHapusSubmenu;
@@ -840,6 +857,9 @@
         private System.Windows.Forms.Button buttonUbah;
         private System.Windows.Forms.Button btnCashier;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnData;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

@@ -55,22 +55,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\CustomerControl.cs" />
+    <Compile Include="Control\DetilTransaksiLayananControl.cs" />
+    <Compile Include="Control\DetilTransaksiProdukControl.cs" />
     <Compile Include="Control\HewanControl.cs" />
     <Compile Include="Control\JenisHewanControl.cs" />
     <Compile Include="Control\LayananControl.cs" />
     <Compile Include="Control\PegawaiControl.cs" />
     <Compile Include="Control\ProdukControl.cs" />
     <Compile Include="Control\SupplierControl.cs" />
+    <Compile Include="Control\TransaksiLayananControl.cs" />
+    <Compile Include="Control\TransaksiProdukControl.cs" />
     <Compile Include="Control\UkuranHewanControl.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DetilTransaksiLayananDAO.cs" />
+    <Compile Include="DAO\DetilTransaksiProdukDAO.cs" />
     <Compile Include="DAO\HewanDAO.cs" />
     <Compile Include="DAO\JenisHewanDAO.cs" />
     <Compile Include="DAO\LayananDAO.cs" />
     <Compile Include="DAO\PegawaiDAO.cs" />
     <Compile Include="DAO\ProdukDAO.cs" />
     <Compile Include="DAO\SupplierDAO.cs" />
+    <Compile Include="DAO\TransaksiLayananDAO.cs" />
+    <Compile Include="DAO\TransaksiProdukDAO.cs" />
     <Compile Include="DAO\UkuranHewanDAO.cs" />
     <Compile Include="Exceptions\NumberOnlyException.cs" />
+    <Compile Include="Models\DetilTransaksiLayanan.cs" />
+    <Compile Include="Models\DetilTransaksiProduk.cs" />
+    <Compile Include="Models\TransaksiLayanan.cs" />
+    <Compile Include="Models\TransaksiProduk.cs" />
     <Compile Include="View\Data\FormData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +255,60 @@
     <Compile Include="Models\UkuranHewan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Transaksi\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.Designer.cs">
+      <DependentUpon>FormEditTransaksiLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.Designer.cs">
+      <DependentUpon>FormTambahTransaksiLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormTampilTransaksiLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormTampilTransaksiLayanan.Designer.cs">
+      <DependentUpon>FormTampilTransaksiLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Pembayaran\FormPembayaranLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Pembayaran\FormPembayaranLayanan.Designer.cs">
+      <DependentUpon>FormPembayaranLayanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Pembayaran\FormPembayaranProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Pembayaran\FormPembayaranProduk.Designer.cs">
+      <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormEditTransaksiProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormEditTransaksiProduk.Designer.cs">
+      <DependentUpon>FormEditTransaksiProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormTambahTransaksiProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormTambahTransaksiProduk.Designer.cs">
+      <DependentUpon>FormTambahTransaksiProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormTampilTransaksiProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormTampilTransaksiProduk.Designer.cs">
+      <DependentUpon>FormTampilTransaksiProduk.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Data\FormData.resx">
       <DependentUpon>FormData.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +400,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Transaksi\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.resx">
+      <DependentUpon>FormEditTransaksiLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.resx">
+      <DependentUpon>FormTambahTransaksiLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Layanan\FormTampilTransaksiLayanan.resx">
+      <DependentUpon>FormTampilTransaksiLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Pembayaran\FormPembayaranLayanan.resx">
+      <DependentUpon>FormPembayaranLayanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Pembayaran\FormPembayaranProduk.resx">
+      <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Produk\FormEditTransaksiProduk.resx">
+      <DependentUpon>FormEditTransaksiProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Produk\FormTambahTransaksiProduk.resx">
+      <DependentUpon>FormTambahTransaksiProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Produk\FormTampilTransaksiProduk.resx">
+      <DependentUpon>FormTampilTransaksiProduk.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -353,7 +446,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Laporan\" />
-    <Folder Include="View\Transaksi\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pencil.png" />
@@ -372,6 +464,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cashier %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

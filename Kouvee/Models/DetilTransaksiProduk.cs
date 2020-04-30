@@ -8,6 +8,13 @@ namespace Kouvee.Models
 {
     class DetilTransaksiProduk
     {
+        public DetilTransaksiProduk(string nama_Produk, int sub_Total_Produk, int jumlah_Produk)
+        {
+            Nama_Produk = nama_Produk;
+            Sub_Total_Produk = sub_Total_Produk;
+            Jumlah_Produk = jumlah_Produk;
+        }
+
         public DetilTransaksiProduk(int iD_Detil_Transaksi, string iD_Transaksi_Produk, int iD_Produk, string nama_Produk, int sub_Total_Produk, int jumlah_Produk)
         {
             ID_Detil_Transaksi = iD_Detil_Transaksi;

@@ -88,7 +88,7 @@ namespace Kouvee.View.Transaksi
 
         private void buttonTambahTransaksiProduk_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTambahTransaksiProduk());
+            openChildForm(new FormEditDetailTransaksiProduk());
             hideSubmenu();
         }
 
@@ -119,7 +119,7 @@ namespace Kouvee.View.Transaksi
 
         private void buttonTambahTransaksiLayanan_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTambahTransaksiLayanan());
+            openChildForm(new FormEditDetailTransaksiLayanan());
             hideSubmenu();
         }
 

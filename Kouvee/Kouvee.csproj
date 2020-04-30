@@ -261,17 +261,17 @@
     <Compile Include="View\Transaksi\FormTransaksi.Designer.cs">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.Designer.cs">
+      <DependentUpon>FormEditDetailTransaksiLayanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.Designer.cs">
       <DependentUpon>FormEditTransaksiLayanan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.Designer.cs">
-      <DependentUpon>FormTambahTransaksiLayanan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Transaksi\Layanan\FormTampilTransaksiLayanan.cs">
       <SubType>Form</SubType>
@@ -291,17 +291,17 @@
     <Compile Include="View\Transaksi\Pembayaran\FormPembayaranProduk.Designer.cs">
       <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.Designer.cs">
+      <DependentUpon>FormEditDetailTransaksiProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Transaksi\Produk\FormEditTransaksiProduk.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Transaksi\Produk\FormEditTransaksiProduk.Designer.cs">
       <DependentUpon>FormEditTransaksiProduk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Transaksi\Produk\FormTambahTransaksiProduk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Transaksi\Produk\FormTambahTransaksiProduk.Designer.cs">
-      <DependentUpon>FormTambahTransaksiProduk.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Transaksi\Produk\FormTampilTransaksiProduk.cs">
       <SubType>Form</SubType>
@@ -403,11 +403,11 @@
     <EmbeddedResource Include="View\Transaksi\FormTransaksi.resx">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.resx">
+      <DependentUpon>FormEditDetailTransaksiLayanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.resx">
       <DependentUpon>FormEditTransaksiLayanan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Transaksi\Layanan\FormTambahTransaksiLayanan.resx">
-      <DependentUpon>FormTambahTransaksiLayanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Layanan\FormTampilTransaksiLayanan.resx">
       <DependentUpon>FormTampilTransaksiLayanan.cs</DependentUpon>
@@ -418,11 +418,11 @@
     <EmbeddedResource Include="View\Transaksi\Pembayaran\FormPembayaranProduk.resx">
       <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.resx">
+      <DependentUpon>FormEditDetailTransaksiProduk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Produk\FormEditTransaksiProduk.resx">
       <DependentUpon>FormEditTransaksiProduk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Transaksi\Produk\FormTambahTransaksiProduk.resx">
-      <DependentUpon>FormTambahTransaksiProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Produk\FormTampilTransaksiProduk.resx">
       <DependentUpon>FormTampilTransaksiProduk.cs</DependentUpon>

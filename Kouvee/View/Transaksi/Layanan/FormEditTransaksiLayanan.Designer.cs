@@ -37,24 +37,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTambahInputan = new System.Windows.Forms.Panel();
-            this.panelCariData = new System.Windows.Forms.Panel();
-            this.txtCari = new System.Windows.Forms.TextBox();
-            this.btnCari = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxJumlah = new System.Windows.Forms.TextBox();
-            this.comboBoxLayanan = new System.Windows.Forms.ComboBox();
+            this.comboBoxProgress = new System.Windows.Forms.ComboBox();
+            this.txtDiskon = new System.Windows.Forms.TextBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.comboBoxKasir = new System.Windows.Forms.ComboBox();
+            this.comboBoxCS = new System.Windows.Forms.ComboBox();
             this.comboBoxHewan = new System.Windows.Forms.ComboBox();
+            this.panelCariData = new System.Windows.Forms.Panel();
+            this.txtCari = new System.Windows.Forms.TextBox();
+            this.btnCari = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
             this.panelTambahInputan.SuspendLayout();
-            this.panelCariData.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelCariData.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSide
@@ -95,6 +101,7 @@
             this.buttonUbah.Text = "Ubah";
             this.buttonUbah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUbah.UseVisualStyleBackColor = false;
+            this.buttonUbah.Click += new System.EventHandler(this.buttonUbah_Click);
             // 
             // buttonBatal
             // 
@@ -114,6 +121,7 @@
             this.buttonBatal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonBatal.UseVisualStyleBackColor = false;
+            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
             // 
             // buttonKembali
             // 
@@ -131,6 +139,7 @@
             this.buttonKembali.Text = "Kembali";
             this.buttonKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
             // panelTitleTambah
             // 
@@ -177,7 +186,159 @@
             this.panelTambahInputan.Location = new System.Drawing.Point(0, 0);
             this.panelTambahInputan.Name = "panelTambahInputan";
             this.panelTambahInputan.Size = new System.Drawing.Size(798, 587);
-            this.panelTambahInputan.TabIndex = 3;
+            this.panelTambahInputan.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(35, 169);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(145, 318);
+            this.panel2.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(32, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Progress";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(32, 260);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Diskon";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(32, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 16);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Status Bayar";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(32, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Nama Kasir";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(32, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Nama CS";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(32, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nama Hewan";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.comboBoxProgress);
+            this.panel1.Controls.Add(this.txtDiskon);
+            this.panel1.Controls.Add(this.comboBoxStatus);
+            this.panel1.Controls.Add(this.comboBoxKasir);
+            this.panel1.Controls.Add(this.comboBoxCS);
+            this.panel1.Controls.Add(this.comboBoxHewan);
+            this.panel1.Location = new System.Drawing.Point(206, 169);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 318);
+            this.panel1.TabIndex = 6;
+            // 
+            // comboBoxProgress
+            // 
+            this.comboBoxProgress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProgress.FormattingEnabled = true;
+            this.comboBoxProgress.Location = new System.Drawing.Point(24, 212);
+            this.comboBoxProgress.Name = "comboBoxProgress";
+            this.comboBoxProgress.Size = new System.Drawing.Size(516, 21);
+            this.comboBoxProgress.TabIndex = 6;
+            // 
+            // txtDiskon
+            // 
+            this.txtDiskon.Location = new System.Drawing.Point(24, 259);
+            this.txtDiskon.Name = "txtDiskon";
+            this.txtDiskon.Size = new System.Drawing.Size(516, 20);
+            this.txtDiskon.TabIndex = 5;
+            // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(24, 165);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(516, 21);
+            this.comboBoxStatus.TabIndex = 4;
+            // 
+            // comboBoxKasir
+            // 
+            this.comboBoxKasir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxKasir.FormattingEnabled = true;
+            this.comboBoxKasir.Location = new System.Drawing.Point(24, 120);
+            this.comboBoxKasir.Name = "comboBoxKasir";
+            this.comboBoxKasir.Size = new System.Drawing.Size(516, 21);
+            this.comboBoxKasir.TabIndex = 3;
+            // 
+            // comboBoxCS
+            // 
+            this.comboBoxCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCS.FormattingEnabled = true;
+            this.comboBoxCS.Location = new System.Drawing.Point(24, 75);
+            this.comboBoxCS.Name = "comboBoxCS";
+            this.comboBoxCS.Size = new System.Drawing.Size(516, 21);
+            this.comboBoxCS.TabIndex = 1;
+            // 
+            // comboBoxHewan
+            // 
+            this.comboBoxHewan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxHewan.FormattingEnabled = true;
+            this.comboBoxHewan.Location = new System.Drawing.Point(24, 30);
+            this.comboBoxHewan.Name = "comboBoxHewan";
+            this.comboBoxHewan.Size = new System.Drawing.Size(516, 21);
+            this.comboBoxHewan.TabIndex = 0;
             // 
             // panelCariData
             // 
@@ -213,87 +374,7 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(35, 169);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 248);
-            this.panel2.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(30, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Jumlah";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(30, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Nama Layanan";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(30, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nama Hewan";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.textBoxJumlah);
-            this.panel1.Controls.Add(this.comboBoxLayanan);
-            this.panel1.Controls.Add(this.comboBoxHewan);
-            this.panel1.Location = new System.Drawing.Point(206, 169);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 248);
-            this.panel1.TabIndex = 5;
-            // 
-            // textBoxJumlah
-            // 
-            this.textBoxJumlah.Location = new System.Drawing.Point(24, 167);
-            this.textBoxJumlah.Name = "textBoxJumlah";
-            this.textBoxJumlah.Size = new System.Drawing.Size(516, 20);
-            this.textBoxJumlah.TabIndex = 2;
-            // 
-            // comboBoxLayanan
-            // 
-            this.comboBoxLayanan.FormattingEnabled = true;
-            this.comboBoxLayanan.Location = new System.Drawing.Point(24, 110);
-            this.comboBoxLayanan.Name = "comboBoxLayanan";
-            this.comboBoxLayanan.Size = new System.Drawing.Size(516, 21);
-            this.comboBoxLayanan.TabIndex = 1;
-            // 
-            // comboBoxHewan
-            // 
-            this.comboBoxHewan.FormattingEnabled = true;
-            this.comboBoxHewan.Location = new System.Drawing.Point(24, 54);
-            this.comboBoxHewan.Name = "comboBoxHewan";
-            this.comboBoxHewan.Size = new System.Drawing.Size(516, 21);
-            this.comboBoxHewan.TabIndex = 0;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // FormEditTransaksiLayanan
             // 
@@ -310,12 +391,12 @@
             this.panelTitleTambah.ResumeLayout(false);
             this.panelTitleTambah.PerformLayout();
             this.panelTambahInputan.ResumeLayout(false);
-            this.panelCariData.ResumeLayout(false);
-            this.panelCariData.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelCariData.ResumeLayout(false);
+            this.panelCariData.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -329,18 +410,24 @@
         private System.Windows.Forms.Panel panelTitleTambah;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelTambahInputan;
-        private System.Windows.Forms.Panel panelCariData;
-        private System.Windows.Forms.TextBox txtCari;
-        private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.Button buttonUbah;
+        private System.Windows.Forms.Panel panelTambahInputan;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxJumlah;
-        private System.Windows.Forms.ComboBox comboBoxLayanan;
+        private System.Windows.Forms.TextBox txtDiskon;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.ComboBox comboBoxKasir;
+        private System.Windows.Forms.ComboBox comboBoxCS;
         private System.Windows.Forms.ComboBox comboBoxHewan;
+        private System.Windows.Forms.Panel panelCariData;
+        private System.Windows.Forms.TextBox txtCari;
+        private System.Windows.Forms.Button btnCari;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxProgress;
     }
 }

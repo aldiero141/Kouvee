@@ -43,11 +43,12 @@ namespace Kouvee.DAO
 
         public List<TransaksiProduk> ShowTransaksiProduk()
         {
-            string sql = "SELECT T.ID_TRANSAKSI_PRODUK, T.ID_PEGAWAI, P.NAMA_PEGAWAI, T.ID_HEWAN, H.NAMA_HEWAN, G.NAMA_PELANGGAN, T.PEG_ID_PEGAWAI, " +
+            string sql = "SELECT T.ID_TRANSAKSI_PRODUK, T.ID_PEGAWAI, C.NAMA_PEGAWAI AS NAMA_CS, T.ID_HEWAN, H.NAMA_HEWAN, G.NAMA_PELANGGAN, T.PEG_ID_PEGAWAI, K.NAMA_PEGAWAI AS NAMA_KASIR,  " +
                 "T.STATUS_TRANSAKSI_PRODUK, T.TGL_TRANSAKSI, T.SUBTOTAL_TRANSAKSI_PRODUK, T.TOTAL_TRANSAKSI_PRODUK, T.DISKON_PRODUK " +
                 "FROM transaksi_produk T " +
                 "JOIN hewan H ON (T.ID_HEWAN = H.ID_HEWAN) " +
-                "JOIN pegawai P ON (T.ID_PEGAWAI = P.ID_PEGAWAI) " +
+                "JOIN pegawai C ON (T.ID_PEGAWAI = C.ID_PEGAWAI) " +
+                "JOIN pegawai K ON (T.PEG_ID_PEGAWAI = K.ID_PEGAWAI) " +
                 "JOIN pelanggan G ON (G.ID_PELANGGAN = H.ID_PELANGGAN);";
 
             List<TransaksiProduk> TransaksiProdukList = new List<TransaksiProduk>();
@@ -62,11 +63,12 @@ namespace Kouvee.DAO
                         TransaksiProduk TP = new TransaksiProduk(
                             result.GetString("ID_TRANSAKSI_PRODUK"),
                             result.GetInt32("ID_PEGAWAI"),
-                            result.GetString("NAMA_PEGAWAI"),
+                            result.GetString("NAMA_CS"),
                             result.GetInt32("ID_HEWAN"),
                             result.GetString("NAMA_HEWAN"),
                             result.GetString("NAMA_PELANGGAN"),
                             result.GetInt32("PEG_ID_PEGAWAI"),
+                            result.GetString("NAMA_KASIR"),
                             result.GetInt32("STATUS_TRANSAKSI_PRODUK"),
                             result.GetDateTime("TGL_TRANSAKSI"),
                             result.GetInt32("SUBTOTAL_TRANSAKSI_PRODUK"),
@@ -86,11 +88,12 @@ namespace Kouvee.DAO
 
         public TransaksiProduk SearchTransaksiProduk(String idTransaksi)
         {
-            string sql = "SELECT T.ID_TRANSAKSI_PRODUK, T.ID_PEGAWAI, P.NAMA_PEGAWAI, T.ID_HEWAN, H.NAMA_HEWAN, G.NAMA_PELANGGAN, T.PEG_ID_PEGAWAI, " +
+            string sql = "SELECT T.ID_TRANSAKSI_PRODUK, T.ID_PEGAWAI, C.NAMA_PEGAWAI AS NAMA_CS, T.ID_HEWAN, H.NAMA_HEWAN, G.NAMA_PELANGGAN, T.PEG_ID_PEGAWAI, K.NAMA_PEGAWAI AS NAMA_KASIR, " +
                 "T.STATUS_TRANSAKSI_PRODUK, T.TGL_TRANSAKSI, T.SUBTOTAL_TRANSAKSI_PRODUK, T.TOTAL_TRANSAKSI_PRODUK, T.DISKON_PRODUK " +
                 "FROM transaksi_produk T " +
                 "JOIN hewan H ON (T.ID_HEWAN = H.ID_HEWAN) " +
-                "JOIN pegawai P ON (T.ID_PEGAWAI = P.ID_PEGAWAI) " +
+                "JOIN pegawai C ON (T.ID_PEGAWAI = C.ID_PEGAWAI) " +
+                "JOIN pegawai K ON (T.PEG_ID_PEGAWAI = K.ID_PEGAWAI) " +
                 "JOIN pelanggan G ON (G.ID_PELANGGAN = H.ID_PELANGGAN) " +
                 "WHERE T.ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
 
@@ -106,11 +109,12 @@ namespace Kouvee.DAO
                         transaksiProduk = new TransaksiProduk(
                             result.GetString("ID_TRANSAKSI_PRODUK"),
                             result.GetInt32("ID_PEGAWAI"),
-                            result.GetString("NAMA_PEGAWAI"),
+                            result.GetString("NAMA_CS"),
                             result.GetInt32("ID_HEWAN"),
                             result.GetString("NAMA_HEWAN"),
                             result.GetString("NAMA_PELANGGAN"),
                             result.GetInt32("PEG_ID_PEGAWAI"),
+                            result.GetString("NAMA_KASIR"),
                             result.GetInt32("STATUS_TRANSAKSI_PRODUK"),
                             result.GetDateTime("TGL_TRANSAKSI"),
                             result.GetInt32("SUBTOTAL_TRANSAKSI_PRODUK"),
@@ -125,6 +129,46 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
             return transaksiProduk;
+        }
+
+        public void UpdateTransaksiProduk(TransaksiProduk TP, String idTransaksi)
+        {
+            string sql = "UPDATE transaksi_produk SET ID_HEWAN = (SELECT ID_HEWAN FROM hewan WHERE NAMA_HEWAN = '" + TP.Nama_Hewan + "')"
+                     + " ,ID_PEGAWAI = (SELECT ID_PEGAWAI FROM pegawai WHERE NAMA_PEGAWAI = '" + TP.Nama_CS + "')"
+                     + " ,PEG_ID_PEGAWAI = (SELECT ID_PEGAWAI FROM pegawai WHERE NAMA_PEGAWAI = '" + TP.Nama_Kasir + "')"
+                     + " ,STATUS_TRANSAKSI_PRODUK =" + TP.Status_Transaksi_Produk + ",DISKON_PRODUK ='" + TP.Diskon_Produk + "'"
+                     + " ,TOTAL_TRANSAKSI_PRODUK ='" + TP.Total_Transaksi_Produk + "'"
+                     + " WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public void UpdateSubtotalProduk(TransaksiProduk TP, String idTransaksi)
+        {
+            string sql = "UPDATE transaksi_produk SET SUBTOTAL_TRANSAKSI_PRODUK = '" +  TP.Subtotal_Transaksi_Produk + "'"
+                     + " WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

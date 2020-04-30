@@ -107,5 +107,24 @@ namespace Kouvee.DAO
             }
             return detiltransaksiProduk;
         }
+
+        public void UpdateDetilTransaksiProduk(DetilTransaksiProduk DTP, String idTransaksi)
+        {
+            string sql = "UPDATE detil_transaksi_produk SET ID_PRODUK = (SELECT ID_PRODUK FROM produk WHERE NAMA_PRODUK = '" + DTP.Nama_Produk + "')"
+                     + ", JUMLAH_PRODUK = '" + DTP.Jumlah_Produk + "' ,SUB_TOTAL_PRODUK = '" + DTP.Sub_Total_Produk + "'"
+                     + " WHERE ID_DETIL_TRANSAKSI = '" + idTransaksi + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }

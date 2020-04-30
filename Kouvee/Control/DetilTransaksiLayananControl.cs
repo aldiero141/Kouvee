@@ -28,5 +28,11 @@ namespace Kouvee.Control
             dtpDAO.closeConnection();
             return detiltransaksiProduk;
         }
+        public void UpdateDetilTransaksiLayanan(DetilTransaksiLayanan detailTransaksiProduk, String idTransaksi)
+        {
+            dtpDAO.makeConnection();
+            dtpDAO.UpdateDetilTransaksiLayanan(detailTransaksiProduk, idTransaksi);
+            dtpDAO.closeConnection();
+        }
     }
 }

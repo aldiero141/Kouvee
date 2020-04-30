@@ -28,5 +28,20 @@ namespace Kouvee.Control
             tlDAO.closeConnection();
             return transaksiProduk;
         }
+
+        public void UpdateTransaksiLayanan(TransaksiLayanan transaksiLayanan, String idTransaksi)
+        {
+            tlDAO.makeConnection();
+            tlDAO.UpdateTransaksiLayanan(transaksiLayanan, idTransaksi);
+            tlDAO.closeConnection();
+        }
+
+        public void UpdateSubtotalLayanan(TransaksiLayanan transaksiLayanan, String idTransaksi)
+        {
+            tlDAO.makeConnection();
+            tlDAO.UpdateSubtotalLayanan(transaksiLayanan, idTransaksi);
+            tlDAO.closeConnection();
+        }
+
     }
 }

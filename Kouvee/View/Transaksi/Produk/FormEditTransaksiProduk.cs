@@ -19,6 +19,7 @@ namespace Kouvee.View.Transaksi.Produk
     {
         TransaksiProduk transaksiProduk;
         int subtotal;
+        int statusTransaksi;
 
         public FormEditTransaksiProduk()
         {
@@ -122,10 +123,12 @@ namespace Kouvee.View.Transaksi.Produk
                 {
                     SetTextBoxEnable();
                     buttonUbah.Enabled = true;
+                    buttonBatal.Enabled = true;
 
                     transaksiProduk = list.SearchTransaksiProduk(txtCari.Text);
                     txtDiskon.Text = System.Convert.ToString(transaksiProduk.Diskon_Produk);
                     subtotal = transaksiProduk.Subtotal_Transaksi_Produk;
+                    statusTransaksi = transaksiProduk.Status_Transaksi_Produk;
 
                     if (transaksiProduk.Status_Transaksi_Produk == 1)comboBoxStatus.Text = "Lunas";
                     else comboBoxStatus.Text = "Belum Lunas";
@@ -199,6 +202,7 @@ namespace Kouvee.View.Transaksi.Produk
                 else
                 {
                     MessageBox.Show("Pencarian Tidak Ditemukan");
+                    txtCari.Text = string.Empty;
                     throw null;
                 }
             }
@@ -212,6 +216,7 @@ namespace Kouvee.View.Transaksi.Produk
         {
             SetTextBoxDisable();
             buttonUbah.Enabled = false;
+            buttonBatal.Enabled = false;
             int status;
             int totalHarga;
 
@@ -258,8 +263,13 @@ namespace Kouvee.View.Transaksi.Produk
                 transaksiProduk = new TransaksiProduk(comboBoxCS.Text, comboBoxHewan.Text, comboBoxKasir.Text, status, totalHarga, Int32.Parse(txtDiskon.Text));
                 ctrl.UpdateTransaksiProduk(transaksiProduk, txtCari.Text);
 
-                MessageBox.Show("Data Berhasil Diubah");
-                
+                MessageBox.Show("Transaksi Berhasil Diubah!");
+                txtCari.Text = string.Empty;
+                txtDiskon.Text = string.Empty;
+                comboBoxCS.Text = string.Empty;
+                comboBoxHewan.Text = string.Empty;
+                comboBoxKasir.Text = string.Empty;
+                comboBoxStatus.Text = string.Empty;
             }
             catch (NumberOnlyException ex)
             {
@@ -273,7 +283,39 @@ namespace Kouvee.View.Transaksi.Produk
 
         private void buttonBatal_Click(object sender, EventArgs e)
         {
+            SetTextBoxDisable();
+            buttonUbah.Enabled = false;
+            buttonBatal.Enabled = false;
 
+            try
+            {
+                var ctrlTP = new TransaksiProdukControl();
+                var ctrlDTP = new DetilTransaksiProdukControl();
+
+                if (statusTransaksi == 1)
+                {
+                    MessageBox.Show("Transaksi Sudah Lunas! Transaksi tidak bisa dibatalkan!");
+                    txtCari.Text = string.Empty;
+                    throw null;
+                }
+                else
+                {
+                    ctrlTP.DeleteTransaksiProduk(txtCari.Text);
+                    ctrlDTP.DeleteDetilTransaksiProduk(txtCari.Text);
+                    MessageBox.Show("Transaksi Berhasil Dibatalkan!");
+                    txtCari.Text = string.Empty;
+                    txtDiskon.Text = string.Empty;
+                    comboBoxCS.Text = string.Empty;
+                    comboBoxHewan.Text = string.Empty;
+                    comboBoxKasir.Text = string.Empty;
+                    comboBoxStatus.Text = string.Empty;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void buttonKembali_Click(object sender, EventArgs e)

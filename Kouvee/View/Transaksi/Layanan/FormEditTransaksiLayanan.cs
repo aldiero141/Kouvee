@@ -19,6 +19,8 @@ namespace Kouvee.View.Transaksi.Layanan
     {
         TransaksiLayanan transaksiLayanan;
         int subtotal;
+        int statusTransaksi;
+        int progressLayanan;
 
         public FormEditTransaksiLayanan()
         {
@@ -132,10 +134,13 @@ namespace Kouvee.View.Transaksi.Layanan
                 {
                     SetTextBoxEnable();
                     buttonUbah.Enabled = true;
+                    buttonBatal.Enabled = true;
 
                     transaksiLayanan = list.SearchTransaksiLayanan(txtCari.Text);
                     txtDiskon.Text = System.Convert.ToString(transaksiLayanan.Diskon_Layanan);
                     subtotal = transaksiLayanan.Subtotal_Transaksi_Layanan;
+                    statusTransaksi = transaksiLayanan.Status_Layanan;
+                    progressLayanan = transaksiLayanan.Progres_Layanan;
 
                     if (transaksiLayanan.Status_Layanan == 1) comboBoxStatus.Text = "Lunas";
                     else comboBoxStatus.Text = "Belum Lunas";
@@ -212,6 +217,7 @@ namespace Kouvee.View.Transaksi.Layanan
                 else
                 {
                     MessageBox.Show("Pencarian Tidak Ditemukan");
+                    txtCari.Text = string.Empty;
                     throw null;
                 }
             }
@@ -225,6 +231,7 @@ namespace Kouvee.View.Transaksi.Layanan
         {
             SetTextBoxDisable();
             buttonUbah.Enabled = false;
+            buttonBatal.Enabled = false;
             int status;
             int progress;
             int totalHarga;
@@ -279,8 +286,14 @@ namespace Kouvee.View.Transaksi.Layanan
                 transaksiLayanan = new TransaksiLayanan(comboBoxCS.Text, comboBoxKasir.Text, comboBoxHewan.Text, progress, status, totalHarga, Int32.Parse(txtDiskon.Text));
                 ctrl.UpdateTransaksiLayanan(transaksiLayanan, txtCari.Text);
 
-                MessageBox.Show("Data Berhasil Diubah");
-
+                MessageBox.Show("Transaksi Berhasil Diubah");
+                txtCari.Text = string.Empty;
+                txtDiskon.Text = string.Empty;
+                comboBoxCS.Text = string.Empty;
+                comboBoxHewan.Text = string.Empty;
+                comboBoxKasir.Text = string.Empty;
+                comboBoxStatus.Text = string.Empty;
+                comboBoxProgress.Text = string.Empty;
             }
             catch (NumberOnlyException ex)
             {
@@ -294,7 +307,44 @@ namespace Kouvee.View.Transaksi.Layanan
 
         private void buttonBatal_Click(object sender, EventArgs e)
         {
+            SetTextBoxDisable();
+            buttonUbah.Enabled = false;
+            buttonBatal.Enabled = false;
+            try
+            {
+                var ctrlTL = new TransaksiLayananControl();
+                var ctrlDTL = new DetilTransaksiLayananControl();
 
+                if (statusTransaksi == 1)
+                {
+                    MessageBox.Show("Transaksi Sudah Lunas! Transaksi tidak bisa dibatalkan!");
+                    txtCari.Text = string.Empty;
+                    throw null;
+                }
+                if (progressLayanan == 1)
+                {
+                    MessageBox.Show("Progress Sudah Selesai! Transaksi tidak bisa dibatalkan!");
+                    txtCari.Text = string.Empty;
+                    throw null;
+                }
+
+
+                ctrlTL.DeleteTransaksiLayanan(txtCari.Text);
+                ctrlDTL.DeleteDetilTransaksiLayanan(txtCari.Text);
+                MessageBox.Show("Transaksi Berhasil Dibatalkan");
+                txtCari.Text = string.Empty;
+                txtDiskon.Text = string.Empty;
+                comboBoxCS.Text = string.Empty;
+                comboBoxHewan.Text = string.Empty;
+                comboBoxKasir.Text = string.Empty;
+                comboBoxStatus.Text = string.Empty;
+                comboBoxProgress.Text = string.Empty;
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void buttonKembali_Click(object sender, EventArgs e)

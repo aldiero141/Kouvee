@@ -89,25 +89,24 @@ namespace Kouvee.View.Transaksi
         private void buttonTambahTransaksiProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormEditDetailTransaksiProduk());
-            hideSubmenu();
+            
         }
 
         private void buttonUbahHapusTransaksiProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormEditTransaksiProduk());
-            hideSubmenu();
+            
         }
 
         private void buttonTampilTransaksiProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTampilTransaksiProduk());
-            hideSubmenu();
+            
         }
 
         private void buttonCetakNotaProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTampilTransaksiProduk());
-            hideSubmenu();
         }
         #endregion
 
@@ -120,25 +119,21 @@ namespace Kouvee.View.Transaksi
         private void buttonTambahTransaksiLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormEditDetailTransaksiLayanan());
-            hideSubmenu();
         }
 
         private void buttonEditTransaksiLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormEditTransaksiLayanan());
-            hideSubmenu();
         }
 
         private void buttonUbahJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTampilTransaksiLayanan());
-            hideSubmenu();
         }
 
         private void buttonCetakNotaLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTampilTransaksiProduk());
-            hideSubmenu();
         }
         #endregion
 
@@ -151,24 +146,23 @@ namespace Kouvee.View.Transaksi
         private void buttonPembayaranProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormPembayaranProduk());
-            hideSubmenu();
         }
 
         private void buttonPembayaranLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormPembayaranLayanan());
-            hideSubmenu();
         }
         #endregion
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
-        private void btnData_Click(object sender, EventArgs e)
+        private void btnCashier_Click(object sender, EventArgs e)
         {
-            var form = new MainForm();
+            var form = new FormTransaksi();
             var frm2 = new FormLogin();
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
@@ -180,6 +174,17 @@ namespace Kouvee.View.Transaksi
         private void btnReport_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            var form = new MainForm();
+            var frm2 = new FormLogin();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Close(); };
+            form.Show();
+            this.Hide();
         }
     }
 }

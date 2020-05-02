@@ -91,50 +91,42 @@ namespace Kouvee
         private void buttonTambahCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahCustomer());
-            hideSubmenu();
         }
 
         private void buttonTambahHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahHewan());
-            hideSubmenu();
         }
 
         private void buttonTambahJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahJenisHewan());
-            hideSubmenu();
         }
 
         private void buttonTambahLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahLayanan());
-            hideSubmenu();
         }
 
         private void buttonTambahPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahPegawai());
-            hideSubmenu();
         }
 
         private void buttonTambahProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahProduk());
-            hideSubmenu();
         }
         
 
         private void buttonTambahSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahSupplier());
-            hideSubmenu();
         }
 
         private void buttonTambahUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormTambahUkuranHewan());
-            hideSubmenu();
         }
         #endregion
 
@@ -158,49 +150,41 @@ namespace Kouvee
         private void buttonUbahCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahCustomer());
-            hideSubmenu();
         }
 
         private void buttonUbahHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahHewan());
-            hideSubmenu();
         }
 
         private void buttonUbahJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahJenisHewan());
-            hideSubmenu();
         }
 
         private void buttonUbahLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahLayanan());
-            hideSubmenu();
         }
 
         private void buttonUbahPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahPegawai());
-            hideSubmenu();
         }
 
         private void buttonUbahProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahProduk());
-            hideSubmenu();
         }
 
         private void buttonUbahSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahSupplier());
-            hideSubmenu();
         }
 
         private void buttonUbahUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormUbahUkuranHewan());
-            hideSubmenu();
         }
         #endregion
 
@@ -213,49 +197,41 @@ namespace Kouvee
         private void buttonHapusCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusCustomer());
-            hideSubmenu();
         }
 
         private void buttonHapusHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusHewan());
-            hideSubmenu();
         }
 
         private void buttonHapusJenisHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusJenisHewan());
-            hideSubmenu();
         }
 
         private void buttonHapusLayanan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusLayanan());
-            hideSubmenu();
         }
 
         private void buttonHapusPegawai_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusPegawai());
-            hideSubmenu();
         }
 
         private void buttonHapusProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusProduk());
-            hideSubmenu();
         }
 
         private void buttonHapusSupplier_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusSupplier());
-            hideSubmenu();
         }
 
         private void buttonHapusUkuranHewan_Click(object sender, EventArgs e)
         {
             openChildForm(new FormHapusUkuranHewan());
-            hideSubmenu();
         }
         #endregion
 
@@ -272,6 +248,17 @@ namespace Kouvee
         private void btnCashier_Click(object sender, EventArgs e)
         {
             var form = new FormTransaksi();
+            var frm2 = new FormLogin();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Close(); };
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            var form = new MainForm();
             var frm2 = new FormLogin();
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;

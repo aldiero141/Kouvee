@@ -98,6 +98,7 @@ namespace Kouvee.View.Transaksi.Produk
                 else
                 {
                     MessageBox.Show("Pencarian Tidak Ditemukan");
+                    txtCari.Text = string.Empty;
                     throw null;
                 }
             }
@@ -139,10 +140,12 @@ namespace Kouvee.View.Transaksi.Produk
                 Subtotal = Convert.ToInt32(txtJumlah.Text) * hargaProduk;
                 detilTransaksiProduk = new DetilTransaksiProduk(comboBoxProduk.Text, Subtotal, Convert.ToInt32(txtJumlah.Text));
                 transaksiProduk = new TransaksiProduk(Subtotal);
-                ctrl.UpdateTransaksiProduk(detilTransaksiProduk, txtCari.Text);
+                ctrl.UpdateDetilTransaksiProduk(detilTransaksiProduk, txtCari.Text);
                 ctrlTP.UpdateSubtotalProduk(transaksiProduk,ID_Transaksi);
-                MessageBox.Show("Data Berhasil Diubah");
-
+                MessageBox.Show("Transaksi Berhasil Diubah!");
+                txtCari.Text = string.Empty;
+                txtJumlah.Text = string.Empty;
+                comboBoxProduk.Text = string.Empty;
             }
             catch (NumberOnlyException ex)
             {

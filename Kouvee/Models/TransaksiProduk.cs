@@ -8,9 +8,17 @@ namespace Kouvee.Models
 {
     class TransaksiProduk
     {
+
         public TransaksiProduk(int subtotal_Transaksi_Produk)
         {
             Subtotal_Transaksi_Produk = subtotal_Transaksi_Produk;
+        }
+
+        public TransaksiProduk(int status_Transaksi_Produk, int total_Transaksi_Produk, int diskon_Produk)
+        {
+            Status_Transaksi_Produk = status_Transaksi_Produk;
+            Total_Transaksi_Produk = total_Transaksi_Produk;
+            Diskon_Produk = diskon_Produk;
         }
 
         public TransaksiProduk(string nama_CS, string nama_Hewan, string nama_Kasir, int status_Transaksi_Produk, int total_Transaksi_Produk, int diskon_Produk)

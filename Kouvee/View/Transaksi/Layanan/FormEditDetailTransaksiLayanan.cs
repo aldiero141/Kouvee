@@ -98,6 +98,7 @@ namespace Kouvee.View.Transaksi.Layanan
                 else
                 {
                     MessageBox.Show("Pencarian Tidak Ditemukan");
+                    txtCari.Text = string.Empty;
                     throw null;
                 }
             }
@@ -140,7 +141,10 @@ namespace Kouvee.View.Transaksi.Layanan
                 transaksiLayanan = new TransaksiLayanan(Subtotal);
                 ctrl.UpdateDetilTransaksiLayanan(detilTransaksiLayanan, txtCari.Text);
                 ctrlTL.UpdateSubtotalLayanan(transaksiLayanan, ID_Transaksi);
-                MessageBox.Show("Data Berhasil Diubah");
+                MessageBox.Show("Transaksi Berhasil Diubah!");
+                txtCari.Text = string.Empty;
+                txtJumlah.Text = string.Empty;
+                comboBoxLayanan.Text = string.Empty;
             }
             catch (NumberOnlyException ex)
             {

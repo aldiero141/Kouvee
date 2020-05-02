@@ -170,5 +170,42 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        public void UpdatePembayaranProduk(TransaksiProduk TP, String idTransaksi)
+        {
+            string sql = "UPDATE transaksi_produk SET STATUS_TRANSAKSI_PRODUK ='" + TP.Status_Transaksi_Produk + "'"
+                     + " ,TOTAL_TRANSAKSI_PRODUK ='" + TP.Total_Transaksi_Produk + "'"
+                     + " ,DISKON_PRODUK ='" + TP.Diskon_Produk + "'"
+                     + " WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        public void DeleteTransaksiProduk(String idTransaksi)
+        {
+            string sql = "SET FOREIGN_KEY_CHECKS = 0; DELETE FROM transaksi_produk WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "'; SET FOREIGN_KEY_CHECKS = 1;";
+           
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }

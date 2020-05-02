@@ -30,8 +30,9 @@
         {
             this.panelSide = new System.Windows.Forms.Panel();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buttonHitungTotal = new System.Windows.Forms.Button();
             this.buttonBayar = new System.Windows.Forms.Button();
-            this.buttonBatal = new System.Windows.Forms.Button();
+            this.buttonCetak = new System.Windows.Forms.Button();
             this.buttonKembali = new System.Windows.Forms.Button();
             this.panelTitleTambah = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,12 +42,34 @@
             this.txtCari = new System.Windows.Forms.TextBox();
             this.btnCari = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtKembalian = new System.Windows.Forms.TextBox();
+            this.txtJumlahBayar = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.txtDiskon = new System.Windows.Forms.TextBox();
+            this.txtTotalHarga = new System.Windows.Forms.TextBox();
+            this.txtProgress = new System.Windows.Forms.TextBox();
+            this.txtStatusBayar = new System.Windows.Forms.TextBox();
+            this.txtNamaHewan = new System.Windows.Forms.TextBox();
+            this.txtNamaPelanggan = new System.Windows.Forms.TextBox();
+            this.txtNomorTransaksi = new System.Windows.Forms.TextBox();
             this.panelSide.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panelTitleTambah.SuspendLayout();
             this.panelTambahInputan.SuspendLayout();
             this.panelCariData.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSide
@@ -62,24 +85,43 @@
             // 
             // panelButton
             // 
+            this.panelButton.Controls.Add(this.buttonHitungTotal);
             this.panelButton.Controls.Add(this.buttonBayar);
-            this.panelButton.Controls.Add(this.buttonBatal);
+            this.panelButton.Controls.Add(this.buttonCetak);
             this.panelButton.Controls.Add(this.buttonKembali);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButton.Location = new System.Drawing.Point(0, 428);
+            this.panelButton.Location = new System.Drawing.Point(0, 374);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(200, 159);
+            this.panelButton.Size = new System.Drawing.Size(200, 213);
             this.panelButton.TabIndex = 2;
+            // 
+            // buttonHitungTotal
+            // 
+            this.buttonHitungTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
+            this.buttonHitungTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonHitungTotal.FlatAppearance.BorderSize = 0;
+            this.buttonHitungTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHitungTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHitungTotal.ForeColor = System.Drawing.Color.Silver;
+            this.buttonHitungTotal.Location = new System.Drawing.Point(0, 13);
+            this.buttonHitungTotal.Name = "buttonHitungTotal";
+            this.buttonHitungTotal.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.buttonHitungTotal.Size = new System.Drawing.Size(200, 50);
+            this.buttonHitungTotal.TabIndex = 21;
+            this.buttonHitungTotal.Text = "Hitung Total";
+            this.buttonHitungTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHitungTotal.UseVisualStyleBackColor = false;
+            this.buttonHitungTotal.Click += new System.EventHandler(this.buttonHitungTotal_Click);
             // 
             // buttonBayar
             // 
-            this.buttonBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
+            this.buttonBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
             this.buttonBayar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonBayar.FlatAppearance.BorderSize = 0;
             this.buttonBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBayar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBayar.ForeColor = System.Drawing.Color.Silver;
-            this.buttonBayar.Location = new System.Drawing.Point(0, 9);
+            this.buttonBayar.Location = new System.Drawing.Point(0, 63);
             this.buttonBayar.Name = "buttonBayar";
             this.buttonBayar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.buttonBayar.Size = new System.Drawing.Size(200, 50);
@@ -87,35 +129,37 @@
             this.buttonBayar.Text = "Bayar";
             this.buttonBayar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBayar.UseVisualStyleBackColor = false;
+            this.buttonBayar.Click += new System.EventHandler(this.buttonBayar_Click);
             // 
-            // buttonBatal
+            // buttonCetak
             // 
-            this.buttonBatal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.buttonBatal.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonBatal.FlatAppearance.BorderSize = 0;
-            this.buttonBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBatal.ForeColor = System.Drawing.Color.Silver;
-            this.buttonBatal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBatal.Location = new System.Drawing.Point(0, 59);
-            this.buttonBatal.Name = "buttonBatal";
-            this.buttonBatal.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.buttonBatal.Size = new System.Drawing.Size(200, 50);
-            this.buttonBatal.TabIndex = 19;
-            this.buttonBatal.Text = "Cetak Nota";
-            this.buttonBatal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonBatal.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.buttonBatal.UseVisualStyleBackColor = false;
+            this.buttonCetak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
+            this.buttonCetak.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonCetak.FlatAppearance.BorderSize = 0;
+            this.buttonCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCetak.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCetak.ForeColor = System.Drawing.Color.Silver;
+            this.buttonCetak.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCetak.Location = new System.Drawing.Point(0, 113);
+            this.buttonCetak.Name = "buttonCetak";
+            this.buttonCetak.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.buttonCetak.Size = new System.Drawing.Size(200, 50);
+            this.buttonCetak.TabIndex = 19;
+            this.buttonCetak.Text = "Cetak Nota";
+            this.buttonCetak.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCetak.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonCetak.UseVisualStyleBackColor = false;
+            this.buttonCetak.Click += new System.EventHandler(this.buttonCetak_Click);
             // 
             // buttonKembali
             // 
-            this.buttonKembali.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(4)))), ((int)(((byte)(69)))));
+            this.buttonKembali.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
             this.buttonKembali.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonKembali.FlatAppearance.BorderSize = 0;
             this.buttonKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKembali.ForeColor = System.Drawing.Color.Silver;
-            this.buttonKembali.Location = new System.Drawing.Point(0, 109);
+            this.buttonKembali.Location = new System.Drawing.Point(0, 163);
             this.buttonKembali.Name = "buttonKembali";
             this.buttonKembali.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.buttonKembali.Size = new System.Drawing.Size(200, 50);
@@ -123,6 +167,7 @@
             this.buttonKembali.Text = "Kembali";
             this.buttonKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
             // panelTitleTambah
             // 
@@ -205,22 +250,233 @@
             this.btnCari.TabIndex = 1;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel2.Location = new System.Drawing.Point(41, 69);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(41, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 485);
+            this.panel2.Size = new System.Drawing.Size(145, 472);
             this.panel2.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(16, 427);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 16);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Kembalian";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(16, 250);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Subtotal";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(16, 387);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Jumlah Bayar";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(16, 293);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 16);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Diskon";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(16, 203);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Progress";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(16, 340);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Total Harga";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(16, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Status Bayar";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(16, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 16);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Nama Hewan";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(16, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Nama Pelanggan";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(16, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Nomor Transaksi";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panel1.Location = new System.Drawing.Point(205, 69);
+            this.panel1.Controls.Add(this.txtKembalian);
+            this.panel1.Controls.Add(this.txtJumlahBayar);
+            this.panel1.Controls.Add(this.txtSubtotal);
+            this.panel1.Controls.Add(this.txtDiskon);
+            this.panel1.Controls.Add(this.txtTotalHarga);
+            this.panel1.Controls.Add(this.txtProgress);
+            this.panel1.Controls.Add(this.txtStatusBayar);
+            this.panel1.Controls.Add(this.txtNamaHewan);
+            this.panel1.Controls.Add(this.txtNamaPelanggan);
+            this.panel1.Controls.Add(this.txtNomorTransaksi);
+            this.panel1.Location = new System.Drawing.Point(205, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 485);
+            this.panel1.Size = new System.Drawing.Size(558, 472);
             this.panel1.TabIndex = 2;
+            // 
+            // txtKembalian
+            // 
+            this.txtKembalian.Location = new System.Drawing.Point(20, 426);
+            this.txtKembalian.Name = "txtKembalian";
+            this.txtKembalian.Size = new System.Drawing.Size(516, 20);
+            this.txtKembalian.TabIndex = 21;
+            // 
+            // txtJumlahBayar
+            // 
+            this.txtJumlahBayar.Location = new System.Drawing.Point(20, 384);
+            this.txtJumlahBayar.Name = "txtJumlahBayar";
+            this.txtJumlahBayar.Size = new System.Drawing.Size(516, 20);
+            this.txtJumlahBayar.TabIndex = 19;
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Location = new System.Drawing.Point(20, 249);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(516, 20);
+            this.txtSubtotal.TabIndex = 18;
+            // 
+            // txtDiskon
+            // 
+            this.txtDiskon.Location = new System.Drawing.Point(20, 292);
+            this.txtDiskon.Name = "txtDiskon";
+            this.txtDiskon.Size = new System.Drawing.Size(516, 20);
+            this.txtDiskon.TabIndex = 17;
+            // 
+            // txtTotalHarga
+            // 
+            this.txtTotalHarga.Location = new System.Drawing.Point(20, 339);
+            this.txtTotalHarga.Name = "txtTotalHarga";
+            this.txtTotalHarga.Size = new System.Drawing.Size(516, 20);
+            this.txtTotalHarga.TabIndex = 16;
+            // 
+            // txtProgress
+            // 
+            this.txtProgress.Location = new System.Drawing.Point(20, 200);
+            this.txtProgress.Name = "txtProgress";
+            this.txtProgress.Size = new System.Drawing.Size(516, 20);
+            this.txtProgress.TabIndex = 15;
+            // 
+            // txtStatusBayar
+            // 
+            this.txtStatusBayar.Location = new System.Drawing.Point(20, 155);
+            this.txtStatusBayar.Name = "txtStatusBayar";
+            this.txtStatusBayar.Size = new System.Drawing.Size(516, 20);
+            this.txtStatusBayar.TabIndex = 14;
+            // 
+            // txtNamaHewan
+            // 
+            this.txtNamaHewan.Location = new System.Drawing.Point(20, 110);
+            this.txtNamaHewan.Name = "txtNamaHewan";
+            this.txtNamaHewan.Size = new System.Drawing.Size(516, 20);
+            this.txtNamaHewan.TabIndex = 13;
+            // 
+            // txtNamaPelanggan
+            // 
+            this.txtNamaPelanggan.Location = new System.Drawing.Point(20, 65);
+            this.txtNamaPelanggan.Name = "txtNamaPelanggan";
+            this.txtNamaPelanggan.Size = new System.Drawing.Size(516, 20);
+            this.txtNamaPelanggan.TabIndex = 12;
+            // 
+            // txtNomorTransaksi
+            // 
+            this.txtNomorTransaksi.Location = new System.Drawing.Point(20, 20);
+            this.txtNomorTransaksi.Name = "txtNomorTransaksi";
+            this.txtNomorTransaksi.Size = new System.Drawing.Size(516, 20);
+            this.txtNomorTransaksi.TabIndex = 11;
             // 
             // FormPembayaranLayanan
             // 
@@ -238,6 +494,10 @@
             this.panelTambahInputan.ResumeLayout(false);
             this.panelCariData.ResumeLayout(false);
             this.panelCariData.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,7 +516,28 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelButton;
         private System.Windows.Forms.Button buttonBayar;
-        private System.Windows.Forms.Button buttonBatal;
+        private System.Windows.Forms.Button buttonCetak;
         private System.Windows.Forms.Button buttonKembali;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtJumlahBayar;
+        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.TextBox txtDiskon;
+        private System.Windows.Forms.TextBox txtTotalHarga;
+        private System.Windows.Forms.TextBox txtProgress;
+        private System.Windows.Forms.TextBox txtStatusBayar;
+        private System.Windows.Forms.TextBox txtNamaHewan;
+        private System.Windows.Forms.TextBox txtNamaPelanggan;
+        private System.Windows.Forms.TextBox txtNomorTransaksi;
+        private System.Windows.Forms.Button buttonHitungTotal;
+        private System.Windows.Forms.TextBox txtKembalian;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -53,6 +53,7 @@ namespace Kouvee.View.Transaksi.Layanan
                 }
                 else
                 {
+                    
                     if(stat == "transaksi")
                     {
                         var ctrl = new TransaksiLayananControl();
@@ -103,6 +104,18 @@ namespace Kouvee.View.Transaksi.Layanan
         private void buttonTampilKembali_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void SetSideButtonDisabled()
+        {
+            buttonTransaksi.Enabled = false;
+            buttonDetilTransaksi.Enabled = false;
+        }
+
+        public void SetSideButtonEnabled()
+        {
+            buttonTransaksi.Enabled = false;
+            buttonDetilTransaksi.Enabled = false;
         }
     }
 }

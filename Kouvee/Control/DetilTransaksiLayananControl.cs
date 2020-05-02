@@ -10,29 +10,36 @@ namespace Kouvee.Control
 {
     class DetilTransaksiLayananControl
     {
-        private DetilTransaksiLayananDAO dtpDAO = new DetilTransaksiLayananDAO();
+        private DetilTransaksiLayananDAO dtlDAO = new DetilTransaksiLayananDAO();
 
         public List<DetilTransaksiLayanan> ShowDetilTransaksiLayanan()
         {
-            dtpDAO.makeConnection();
-            List<DetilTransaksiLayanan> DetilTransaksiLayananData = dtpDAO.ShowDetilTransaksiLayanan();
-            dtpDAO.closeConnection();
+            dtlDAO.makeConnection();
+            List<DetilTransaksiLayanan> DetilTransaksiLayananData = dtlDAO.ShowDetilTransaksiLayanan();
+            dtlDAO.closeConnection();
             return DetilTransaksiLayananData;
         }
 
         public DetilTransaksiLayanan SearchDetilTransaksiLayanan(String idTransaksi)
         {
             DetilTransaksiLayanan detiltransaksiProduk = null;
-            dtpDAO.makeConnection();
-            detiltransaksiProduk = dtpDAO.SearchDetilTransaksiLayanan(idTransaksi);
-            dtpDAO.closeConnection();
+            dtlDAO.makeConnection();
+            detiltransaksiProduk = dtlDAO.SearchDetilTransaksiLayanan(idTransaksi);
+            dtlDAO.closeConnection();
             return detiltransaksiProduk;
         }
         public void UpdateDetilTransaksiLayanan(DetilTransaksiLayanan detailTransaksiProduk, String idTransaksi)
         {
-            dtpDAO.makeConnection();
-            dtpDAO.UpdateDetilTransaksiLayanan(detailTransaksiProduk, idTransaksi);
-            dtpDAO.closeConnection();
+            dtlDAO.makeConnection();
+            dtlDAO.UpdateDetilTransaksiLayanan(detailTransaksiProduk, idTransaksi);
+            dtlDAO.closeConnection();
+        }
+
+        public void DeleteDetilTransaksiLayanan(String idTransaksi)
+        {
+            dtlDAO.makeConnection();
+            dtlDAO.DeleteDetilTransaksiLayanan(idTransaksi);
+            dtlDAO.closeConnection();
         }
     }
 }

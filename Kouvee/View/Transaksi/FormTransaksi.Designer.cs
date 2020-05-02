@@ -49,12 +49,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNotif = new System.Windows.Forms.Panel();
-            this.btnCashier = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnData = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnData = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnCashier = new System.Windows.Forms.Button();
             this.panelSidemenu.SuspendLayout();
             this.panelPembayaran.SuspendLayout();
             this.panelTransaksiLayanan.SuspendLayout();
@@ -373,53 +373,14 @@
             // panelNotif
             // 
             this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.panelNotif.Controls.Add(this.btnCashier);
-            this.panelNotif.Controls.Add(this.btnReport);
             this.panelNotif.Controls.Add(this.btnData);
+            this.panelNotif.Controls.Add(this.btnReport);
+            this.panelNotif.Controls.Add(this.btnCashier);
             this.panelNotif.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelNotif.Location = new System.Drawing.Point(250, 626);
             this.panelNotif.Name = "panelNotif";
             this.panelNotif.Size = new System.Drawing.Size(1014, 56);
             this.panelNotif.TabIndex = 7;
-            // 
-            // btnCashier
-            // 
-            this.btnCashier.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCashier.FlatAppearance.BorderSize = 0;
-            this.btnCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.btnCashier.Image = global::Kouvee.Properties.Resources.cashier__1_1;
-            this.btnCashier.Location = new System.Drawing.Point(957, 2);
-            this.btnCashier.Name = "btnCashier";
-            this.btnCashier.Size = new System.Drawing.Size(54, 52);
-            this.btnCashier.TabIndex = 6;
-            this.btnCashier.UseVisualStyleBackColor = true;
-            // 
-            // btnReport
-            // 
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Image = global::Kouvee.Properties.Resources.report;
-            this.btnReport.Location = new System.Drawing.Point(913, 4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(50, 50);
-            this.btnReport.TabIndex = 5;
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnData
-            // 
-            this.btnData.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnData.FlatAppearance.BorderSize = 0;
-            this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.btnData.Image = global::Kouvee.Properties.Resources.database;
-            this.btnData.Location = new System.Drawing.Point(864, 3);
-            this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(54, 52);
-            this.btnData.TabIndex = 4;
-            this.btnData.UseVisualStyleBackColor = true;
-            this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
             // panelChildForm
             // 
@@ -454,6 +415,49 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnData
+            // 
+            this.btnData.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnData.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnData.FlatAppearance.BorderSize = 0;
+            this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnData.Image = global::Kouvee.Properties.Resources.database;
+            this.btnData.Location = new System.Drawing.Point(856, 0);
+            this.btnData.Name = "btnData";
+            this.btnData.Size = new System.Drawing.Size(54, 56);
+            this.btnData.TabIndex = 8;
+            this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Image = global::Kouvee.Properties.Resources.report;
+            this.btnReport.Location = new System.Drawing.Point(910, 0);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(50, 56);
+            this.btnReport.TabIndex = 7;
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnCashier
+            // 
+            this.btnCashier.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCashier.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCashier.FlatAppearance.BorderSize = 0;
+            this.btnCashier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.btnCashier.Image = global::Kouvee.Properties.Resources.cashier__1_1;
+            this.btnCashier.Location = new System.Drawing.Point(960, 0);
+            this.btnCashier.Name = "btnCashier";
+            this.btnCashier.Size = new System.Drawing.Size(54, 56);
+            this.btnCashier.TabIndex = 6;
+            this.btnCashier.UseVisualStyleBackColor = true;
+            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
             // FormTransaksi
             // 
@@ -501,12 +505,12 @@
         private System.Windows.Forms.Panel panelPembayaran;
         private System.Windows.Forms.Button buttonPembayaranLayanan;
         private System.Windows.Forms.Button buttonPembayaranProduk;
-        private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnData;
-        private System.Windows.Forms.Button btnCashier;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnData;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnCashier;
     }
 }

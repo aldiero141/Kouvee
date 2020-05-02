@@ -42,5 +42,19 @@ namespace Kouvee.Control
             tpDAO.UpdateSubtotalProduk(transaksiProduk, idTransaksi);
             tpDAO.closeConnection();
         }
+
+        public void UpdatePembayaranProduk(TransaksiProduk transaksiProduk, String idTransaksi)
+        {
+            tpDAO.makeConnection();
+            tpDAO.UpdatePembayaranProduk(transaksiProduk, idTransaksi);
+            tpDAO.closeConnection();
+        }
+
+        public void DeleteTransaksiProduk(String idTransaksi)
+        {
+            tpDAO.makeConnection();
+            tpDAO.DeleteTransaksiProduk(idTransaksi);
+            tpDAO.closeConnection();
+        }
     }
 }

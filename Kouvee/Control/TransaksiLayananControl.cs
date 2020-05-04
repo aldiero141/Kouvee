@@ -56,5 +56,14 @@ namespace Kouvee.Control
             tlDAO.DeleteTransaksiLayanan(idTransaksi);
             tlDAO.closeConnection();
         }
+
+        public TransaksiLayanan ShowNotaLayanan(String idTransaksi)
+        {
+            TransaksiLayanan transaksiProduk = null;
+            tlDAO.makeConnection();
+            transaksiProduk = tlDAO.ShowNotaLayanan(idTransaksi);
+            tlDAO.closeConnection();
+            return transaksiProduk;
+        }
     }
 }

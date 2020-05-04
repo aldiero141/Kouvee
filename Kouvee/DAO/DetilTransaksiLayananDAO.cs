@@ -143,5 +143,37 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        public List<DetilTransaksiLayanan> ShowDetilNotaLayanan()
+        {
+            string sql = "SELECT L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN, L.HARGA_LAYANAN " +
+                "FROM detil_transaksi_layanan P " +
+                "JOIN layanan L ON (P.ID_LAYANAN = L.ID_LAYANAN);";
+
+            List<DetilTransaksiLayanan> DetilTransaksiLayananList = new List<DetilTransaksiLayanan>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        DetilTransaksiLayanan DTP = new DetilTransaksiLayanan(
+                            result.GetString("NAMA_LAYANAN"),
+                            result.GetInt32("SUB_TOTAL_LAYANAN"),
+                            result.GetInt32("JUMLAH_DETIL_LAYANAN"),
+                            result.GetInt32("HARGA_LAYANAN"));
+                        DetilTransaksiLayananList.Add(DTP);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return DetilTransaksiLayananList;
+        }
     }
 }

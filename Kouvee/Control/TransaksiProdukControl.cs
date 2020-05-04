@@ -56,5 +56,14 @@ namespace Kouvee.Control
             tpDAO.DeleteTransaksiProduk(idTransaksi);
             tpDAO.closeConnection();
         }
+
+        public TransaksiProduk ShowNotaProduk(String idTransaksi)
+        {
+            TransaksiProduk transaksiProduk = null;
+            tpDAO.makeConnection();
+            transaksiProduk = tpDAO.ShowNotaProduk(idTransaksi);
+            tpDAO.closeConnection();
+            return transaksiProduk;
+        }
     }
 }

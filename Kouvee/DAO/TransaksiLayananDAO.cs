@@ -180,6 +180,7 @@ namespace Kouvee.DAO
             string sql = "UPDATE transaksi_layanan SET STATUS_LAYANAN = '" + TL.Status_Layanan + "'"
                      + ", TOTAL_TRANSAKSI_LAYANAN = '" + TL.Total_Transaksi_Layanan + "'"
                      + ", DISKON_LAYANAN = '" + TL.Diskon_Layanan + "'"
+                     + " ,PEG_ID_PEGAWAI ='" + TL.Peg_ID_Pegawai + "'"
                      + " WHERE ID_TRANSAKSI_LAYANAN = '" + idTransaksi + "';";
 
             try
@@ -211,5 +212,52 @@ namespace Kouvee.DAO
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        public TransaksiLayanan ShowNotaLayanan(String idTransaksi)
+        {
+            string sql = "SELECT T.ID_TRANSAKSI_LAYANAN, C.NAMA_PEGAWAI AS NAMA_CS, K.NAMA_PEGAWAI AS NAMA_KASIR, " +
+                "H.NAMA_HEWAN, G.NAMA_PELANGGAN ,T.TGL_TRANSAKSI_LAYANAN ,T.TOTAL_TRANSAKSI_LAYANAN, " +
+                "T.SUBTOTAL_TRANSAKSI_LAYANAN, T.DISKON_LAYANAN, G.PHONE_PELANGGAN, J.JENISHEWAN " +
+                "FROM transaksi_layanan T " +
+                "JOIN hewan H ON (H.ID_HEWAN = T.ID_HEWAN) " +
+                "JOIN jenis_hewan J ON (H.ID_JENISHEWAN = J.ID_JENISHEWAN) " +
+                "JOIN pegawai C ON (T.ID_PEGAWAI = C.ID_PEGAWAI) " +
+                "JOIN pegawai K ON (T.PEG_ID_PEGAWAI = K.ID_PEGAWAI) " +
+                "JOIN pelanggan G ON (H.ID_HEWAN = G.ID_PELANGGAN) " + 
+                "WHERE ID_TRANSAKSI_LAYANAN = '" + idTransaksi + "';";
+
+            TransaksiLayanan transaksiLayanan = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        transaksiLayanan = new TransaksiLayanan(
+                            result.GetString("ID_TRANSAKSI_LAYANAN"),
+                            result.GetString("NAMA_CS"),
+                            result.GetString("NAMA_KASIR"),
+                            result.GetString("NAMA_HEWAN"),
+                            result.GetString("NAMA_PELANGGAN"),
+                            result.GetDateTime("TGL_TRANSAKSI_LAYANAN"),
+                            result.GetInt32("TOTAL_TRANSAKSI_LAYANAN"),
+                            result.GetInt32("SUBTOTAL_TRANSAKSI_LAYANAN"),
+                            result.GetInt32("DISKON_LAYANAN"),
+                            result.GetString("PHONE_PELANGGAN"),
+                            result.GetString("JENISHEWAN"));
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return transaksiLayanan;
+        }
+
     }
 }

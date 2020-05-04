@@ -176,6 +176,7 @@ namespace Kouvee.DAO
             string sql = "UPDATE transaksi_produk SET STATUS_TRANSAKSI_PRODUK ='" + TP.Status_Transaksi_Produk + "'"
                      + " ,TOTAL_TRANSAKSI_PRODUK ='" + TP.Total_Transaksi_Produk + "'"
                      + " ,DISKON_PRODUK ='" + TP.Diskon_Produk + "'"
+                     + " ,PEG_ID_PEGAWAI ='" + TP.Peg_ID_Pegawai + "'"
                      + " WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
 
             try
@@ -206,6 +207,51 @@ namespace Kouvee.DAO
                 Console.WriteLine("Failed to delete...");
                 Console.WriteLine(ex.ToString());
             }
+        }
+
+        public TransaksiProduk ShowNotaProduk(String idTransaksi)
+        {
+            string sql = "SELECT T.ID_TRANSAKSI_PRODUK, C.NAMA_PEGAWAI AS NAMA_CS, H.NAMA_HEWAN, G.NAMA_PELANGGAN, K.NAMA_PEGAWAI AS NAMA_KASIR, " +
+                "T.TGL_TRANSAKSI, T.SUBTOTAL_TRANSAKSI_PRODUK, T.TOTAL_TRANSAKSI_PRODUK, T.DISKON_PRODUK, G.PHONE_PELANGGAN, J.JENISHEWAN " +
+                "FROM transaksi_produk T " +
+                "JOIN hewan H ON (T.ID_HEWAN = H.ID_HEWAN) " +
+                "JOIN jenis_hewan J ON (H.ID_JENISHEWAN = J.ID_JENISHEWAN) " +
+                "JOIN pegawai C ON (T.ID_PEGAWAI = C.ID_PEGAWAI) " +
+                "JOIN pegawai K ON (T.PEG_ID_PEGAWAI = K.ID_PEGAWAI) " +
+                "JOIN pelanggan G ON (G.ID_PELANGGAN = H.ID_PELANGGAN) " + 
+                "WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            TransaksiProduk transaksiProduk = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        transaksiProduk = new TransaksiProduk(
+                            result.GetString("ID_TRANSAKSI_PRODUK"),
+                            result.GetString("NAMA_CS"),
+                            result.GetString("NAMA_KASIR"),
+                            result.GetString("NAMA_HEWAN"),
+                            result.GetString("NAMA_PELANGGAN"),
+                            result.GetDateTime("TGL_TRANSAKSI"),
+                            result.GetInt32("SUBTOTAL_TRANSAKSI_PRODUK"),
+                            result.GetInt32("TOTAL_TRANSAKSI_PRODUK"),
+                            result.GetInt32("DISKON_PRODUK"),
+                            result.GetString("PHONE_PELANGGAN"),
+                            result.GetString("JENISHEWAN"));
+                        
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return transaksiProduk;
         }
     }
 }

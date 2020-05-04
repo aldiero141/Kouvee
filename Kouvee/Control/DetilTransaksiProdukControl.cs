@@ -42,5 +42,13 @@ namespace Kouvee.Control
             dtpDAO.DeleteDetilTransaksiProduk(idTransaksi);
             dtpDAO.closeConnection();
         }
+
+        public List<DetilTransaksiProduk> ShowDetilNotaProduk()
+        {
+            dtpDAO.makeConnection();
+            List<DetilTransaksiProduk> NotaDetilTransaksiProdukData = dtpDAO.ShowDetilNotaProduk();
+            dtpDAO.closeConnection();
+            return NotaDetilTransaksiProdukData;
+        }
     }
 }

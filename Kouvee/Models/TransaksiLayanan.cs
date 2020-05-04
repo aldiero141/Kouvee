@@ -14,11 +14,12 @@ namespace Kouvee.Models
             Subtotal_Transaksi_Layanan = subtotal_Transaksi_Layanan;
         }
 
-        public TransaksiLayanan(int status_Layanan, int total_Transaksi_Layanan, int diskon_Layanan)
+        public TransaksiLayanan(int status_Layanan, int total_Transaksi_Layanan, int diskon_Layanan, int peg_ID_Pegawai)
         {
             Status_Layanan = status_Layanan;
             Total_Transaksi_Layanan = total_Transaksi_Layanan;
             Diskon_Layanan = diskon_Layanan;
+            Peg_ID_Pegawai = peg_ID_Pegawai;
         }
 
         public TransaksiLayanan(string nama_CS, string nama_Kasir, string nama_Hewan, int progres_Layanan, int status_Layanan, int total_Transaksi_Layanan, int diskon_Layanan)
@@ -30,6 +31,21 @@ namespace Kouvee.Models
             Status_Layanan = status_Layanan;
             Total_Transaksi_Layanan = total_Transaksi_Layanan;
             Diskon_Layanan = diskon_Layanan;
+        }
+
+        public TransaksiLayanan(string iD_Transaksi_Layanan, string nama_CS, string nama_Kasir, string nama_Hewan, string nama_Pelanggan, DateTime tgl_Transaksi_Layanan, int total_Transaksi_Layanan, int subtotal_Transaksi_Layanan, int diskon_Layanan, string nomor_Telpon, string jenis_Hewan)
+        {
+            ID_Transaksi_Layanan = iD_Transaksi_Layanan;
+            Nama_CS = nama_CS;
+            Nama_Kasir = nama_Kasir;
+            Nama_Hewan = nama_Hewan;
+            Nama_Pelanggan = nama_Pelanggan;
+            Tgl_Transaksi_Layanan = tgl_Transaksi_Layanan;
+            Total_Transaksi_Layanan = total_Transaksi_Layanan;
+            Subtotal_Transaksi_Layanan = subtotal_Transaksi_Layanan;
+            Diskon_Layanan = diskon_Layanan;
+            Nomor_Telpon = nomor_Telpon;
+            Jenis_Hewan = jenis_Hewan;
         }
 
         public TransaksiLayanan(string iD_Transaksi_Layanan, int iD_Pegawai, string nama_CS, int peg_ID_Pegawai, string nama_Kasir, int iD_Hewan, string nama_Hewan, string nama_Pelanggan, DateTime tgl_Transaksi_Layanan, int progres_Layanan, int status_Layanan, int total_Transaksi_Layanan, int subtotal_Transaksi_Layanan, int diskon_Layanan)
@@ -64,6 +80,7 @@ namespace Kouvee.Models
         public int Total_Transaksi_Layanan { get; set; }
         public int Subtotal_Transaksi_Layanan { get; set; }
         public int Diskon_Layanan { get; set; }
-
+        public string Nomor_Telpon { get; set; }
+        public string Jenis_Hewan { get; set; }
     }
 }

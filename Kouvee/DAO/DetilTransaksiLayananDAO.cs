@@ -42,7 +42,7 @@ namespace Kouvee.DAO
         }
         public List<DetilTransaksiLayanan> ShowDetilTransaksiLayanan()
         {
-            string sql = "SELECT P.ID_DETILTRANSAKSI_LAYANAN, P.ID_TRANSAKSI_LAYANAN, P.ID_LAYANAN, L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN " +
+            string sql = "SELECT P.ID_DETILTRANSAKSI_LAYANAN, P.ID_TRANSAKSI_LAYANAN, P.ID_LAYANAN, L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN, L.HARGA_LAYANAN " +
                 "FROM detil_transaksi_layanan P " +
                 "JOIN layanan L ON (P.ID_LAYANAN = L.ID_LAYANAN);";
 
@@ -61,7 +61,8 @@ namespace Kouvee.DAO
                             result.GetInt32("ID_LAYANAN"),
                             result.GetString("NAMA_LAYANAN"),
                             result.GetInt32("SUB_TOTAL_LAYANAN"),
-                            result.GetInt32("JUMLAH_DETIL_LAYANAN"));
+                            result.GetInt32("JUMLAH_DETIL_LAYANAN"),
+                            result.GetInt32("HARGA_LAYANAN"));
                         DetilTransaksiLayananList.Add(DTP);
                     }
                 }
@@ -76,7 +77,7 @@ namespace Kouvee.DAO
 
         public DetilTransaksiLayanan SearchDetilTransaksiLayanan(String idDetilTransaksi)
         {
-            string sql = "SELECT P.ID_DETILTRANSAKSI_LAYANAN, P.ID_TRANSAKSI_LAYANAN, P.ID_LAYANAN, L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN " +
+            string sql = "SELECT P.ID_DETILTRANSAKSI_LAYANAN , P.ID_TRANSAKSI_LAYANAN, P.ID_LAYANAN, L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN, L.HARGA_LAYANAN " +
                 "FROM detil_transaksi_layanan P " +
                 "JOIN layanan L ON (P.ID_LAYANAN = L.ID_LAYANAN) " +
                 "WHERE P.ID_DETILTRANSAKSI_LAYANAN = '" + idDetilTransaksi + "';";
@@ -96,7 +97,8 @@ namespace Kouvee.DAO
                             result.GetInt32("ID_LAYANAN"),
                             result.GetString("NAMA_LAYANAN"),
                             result.GetInt32("SUB_TOTAL_LAYANAN"),
-                            result.GetInt32("JUMLAH_DETIL_LAYANAN"));
+                            result.GetInt32("JUMLAH_DETIL_LAYANAN"),
+                            result.GetInt32("HARGA_LAYANAN"));
                     }
                 }
             }

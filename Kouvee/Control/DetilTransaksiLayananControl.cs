@@ -22,11 +22,11 @@ namespace Kouvee.Control
 
         public DetilTransaksiLayanan SearchDetilTransaksiLayanan(String idTransaksi)
         {
-            DetilTransaksiLayanan detiltransaksiProduk = null;
+            DetilTransaksiLayanan detilTransaksiLayanan = null;
             dtlDAO.makeConnection();
-            detiltransaksiProduk = dtlDAO.SearchDetilTransaksiLayanan(idTransaksi);
+            detilTransaksiLayanan = dtlDAO.SearchDetilTransaksiLayanan(idTransaksi);
             dtlDAO.closeConnection();
-            return detiltransaksiProduk;
+            return detilTransaksiLayanan;
         }
         public void UpdateDetilTransaksiLayanan(DetilTransaksiLayanan detailTransaksiProduk, String idTransaksi)
         {

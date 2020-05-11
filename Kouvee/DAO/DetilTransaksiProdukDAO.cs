@@ -43,7 +43,7 @@ namespace Kouvee.DAO
 
         public List<DetilTransaksiProduk> ShowDetilTransaksiProduk()
         {
-            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK " +
+            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
                 "FROM detil_transaksi_produk D " +
                 "JOIN produk P ON (D.ID_PRODUK = P.ID_PRODUK)";
 
@@ -62,7 +62,8 @@ namespace Kouvee.DAO
                             result.GetInt32("ID_PRODUK"),
                             result.GetString("NAMA_PRODUK"),
                             result.GetInt32("SUB_TOTAL_PRODUK"),
-                            result.GetInt32("JUMLAH_PRODUK"));
+                            result.GetInt32("JUMLAH_PRODUK"),
+                            result.GetInt32("HARGA_JUAL"));
                         DetilTransaksiProdukList.Add(DTP);
                     }
                 }
@@ -76,7 +77,7 @@ namespace Kouvee.DAO
         }
         public DetilTransaksiProduk SearchDetilTransaksiProduk(String idDetilTransaksi)
         {
-            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK " +
+            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
                 "FROM detil_transaksi_produk D " +
                 "JOIN produk P ON (D.ID_PRODUK = P.ID_PRODUK)" +
                 "WHERE D.ID_DETIL_TRANSAKSI = '" + idDetilTransaksi + "';";
@@ -96,7 +97,8 @@ namespace Kouvee.DAO
                             result.GetInt32("ID_PRODUK"),
                             result.GetString("NAMA_PRODUK"),
                             result.GetInt32("SUB_TOTAL_PRODUK"),
-                            result.GetInt32("JUMLAH_PRODUK"));
+                            result.GetInt32("JUMLAH_PRODUK"),
+                            result.GetInt32("HARGA_JUAL"));
                     }
                 }
             }

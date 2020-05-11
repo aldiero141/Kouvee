@@ -58,6 +58,7 @@ namespace Kouvee.View.Transaksi.Layanan
         private void btnCari_Click(object sender, EventArgs e)
         {
             var list = new DetilTransaksiLayananControl();
+            int id_layanan;
             try
             {
                 if (txtCari.Text != null && list.SearchDetilTransaksiLayanan(txtCari.Text) != null)
@@ -67,11 +68,12 @@ namespace Kouvee.View.Transaksi.Layanan
 
                     detilTransaksiLayanan = list.SearchDetilTransaksiLayanan(txtCari.Text);
                     txtJumlah.Text = System.Convert.ToString(detilTransaksiLayanan.Jumlah_Detil_Layanan);
+                    id_layanan = detilTransaksiLayanan.ID_Layanan;
                     ID_Transaksi = detilTransaksiLayanan.ID_Transaksi_Layanan;
 
                     string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
                     MySqlConnection conn = new MySqlConnection(connStr);
-                    string sqlproduk = "SELECT * FROM layanan WHERE ID_LAYANAN = '" + detilTransaksiLayanan.ID_Layanan + "';";
+                    string sqlproduk = "SELECT Nama_Layanan, Harga_Layanan FROM layanan WHERE ID_LAYANAN = '" + id_layanan + "';";
 
                     conn.Open();
                     try

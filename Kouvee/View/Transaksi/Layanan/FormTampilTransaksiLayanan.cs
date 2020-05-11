@@ -27,6 +27,15 @@ namespace Kouvee.View.Transaksi.Layanan
             stat = "transaksi";
             var ctrl = new TransaksiLayananControl();
             dataGridViewTampil.DataSource = ctrl.ShowTransaksiLayanan();
+            for (int i = 0; i < dataGridViewTampil.Columns.Count; i++)
+            {
+                string str = dataGridViewTampil.Columns[i].HeaderText;
+                if (str == "Nomor_Telpon" || str == "Jenis_Hewan")
+                {
+                    dataGridViewTampil.Columns[i].Visible = false;
+                }
+            }
+
             txtCari.Text = string.Empty;
             txtCari.Enabled = true;
             btnCari.Enabled = true;

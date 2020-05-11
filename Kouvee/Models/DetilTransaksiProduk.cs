@@ -23,7 +23,7 @@ namespace Kouvee.Models
             Harga_Produk = harga_Produk;
         }
 
-        public DetilTransaksiProduk(int iD_Detil_Transaksi, string iD_Transaksi_Produk, int iD_Produk, string nama_Produk, int sub_Total_Produk, int jumlah_Produk)
+        public DetilTransaksiProduk(int iD_Detil_Transaksi, string iD_Transaksi_Produk, int iD_Produk, string nama_Produk, int sub_Total_Produk, int jumlah_Produk, int harga_Produk)
         {
             ID_Detil_Transaksi = iD_Detil_Transaksi;
             ID_Transaksi_Produk = iD_Transaksi_Produk;
@@ -31,6 +31,7 @@ namespace Kouvee.Models
             Nama_Produk = nama_Produk;
             Sub_Total_Produk = sub_Total_Produk;
             Jumlah_Produk = jumlah_Produk;
+            Harga_Produk = harga_Produk;
         }
 
         public int ID_Detil_Transaksi { get; set; }

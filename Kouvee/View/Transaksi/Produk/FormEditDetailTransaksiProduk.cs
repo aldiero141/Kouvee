@@ -58,6 +58,7 @@ namespace Kouvee.View.Transaksi.Produk
         private void btnCari_Click(object sender, EventArgs e)
         {
             var list = new DetilTransaksiProdukControl();
+            int id_produk;
             try
             {
                 if (txtCari.Text != null && list.SearchDetilTransaksiProduk(txtCari.Text) != null)
@@ -67,11 +68,13 @@ namespace Kouvee.View.Transaksi.Produk
 
                     detilTransaksiProduk = list.SearchDetilTransaksiProduk(txtCari.Text);
                     txtJumlah.Text = System.Convert.ToString(detilTransaksiProduk.Jumlah_Produk);
+                    id_produk = detilTransaksiProduk.ID_Produk;
+                    
                     ID_Transaksi = detilTransaksiProduk.ID_Transaksi_Produk;
 
                     string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
                     MySqlConnection conn = new MySqlConnection(connStr);
-                    string sqlproduk = "SELECT * FROM produk WHERE ID_PRODUK = '" + detilTransaksiProduk.ID_Produk + "';";
+                    string sqlproduk = "SELECT Harga_Jual, Nama_Produk FROM produk WHERE ID_PRODUK = '" + id_produk + "';";
                     
                     conn.Open();
                     try
@@ -84,6 +87,8 @@ namespace Kouvee.View.Transaksi.Produk
                             {
                                 comboBoxProduk.Text = result1.GetString("Nama_Produk");
                                 hargaProduk = result1.GetInt32("Harga_Jual");
+                                Console.WriteLine(hargaProduk);
+                                Console.WriteLine(comboBoxProduk.Text);
                             }
                         }
                     }

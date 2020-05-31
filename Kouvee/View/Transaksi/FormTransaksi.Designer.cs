@@ -38,23 +38,21 @@
             this.panelTransaksiLayanan = new System.Windows.Forms.Panel();
             this.buttonUbahJenisHewan = new System.Windows.Forms.Button();
             this.buttonEditTransaksiLayanan = new System.Windows.Forms.Button();
-            this.buttonEditDetilTransaksiLayanan = new System.Windows.Forms.Button();
             this.buttonTransaksiLayanan = new System.Windows.Forms.Button();
             this.panelTransaksiProduk = new System.Windows.Forms.Panel();
             this.buttonTampilTransaksiProduk = new System.Windows.Forms.Button();
             this.buttonUbahHapusTransaksiProduk = new System.Windows.Forms.Button();
-            this.buttonEditDetilTransaksiProduk = new System.Windows.Forms.Button();
             this.buttonTransaksiProduk = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNotif = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnData = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSidemenu.SuspendLayout();
             this.panelPembayaran.SuspendLayout();
             this.panelTransaksiLayanan.SuspendLayout();
@@ -92,7 +90,7 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.Silver;
-            this.buttonKeluar.Location = new System.Drawing.Point(0, 499);
+            this.buttonKeluar.Location = new System.Drawing.Point(0, 436);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(250, 40);
             this.buttonKeluar.TabIndex = 25;
@@ -106,9 +104,9 @@
             this.panelPembayaran.Controls.Add(this.buttonPembayaranLayanan);
             this.panelPembayaran.Controls.Add(this.buttonPembayaranProduk);
             this.panelPembayaran.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPembayaran.Location = new System.Drawing.Point(0, 430);
+            this.panelPembayaran.Location = new System.Drawing.Point(0, 365);
             this.panelPembayaran.Name = "panelPembayaran";
-            this.panelPembayaran.Size = new System.Drawing.Size(250, 69);
+            this.panelPembayaran.Size = new System.Drawing.Size(250, 71);
             this.panelPembayaran.TabIndex = 24;
             // 
             // buttonPembayaranLayanan
@@ -155,7 +153,7 @@
             this.buttonPembayaran.ForeColor = System.Drawing.Color.Silver;
             this.buttonPembayaran.Image = ((System.Drawing.Image)(resources.GetObject("buttonPembayaran.Image")));
             this.buttonPembayaran.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPembayaran.Location = new System.Drawing.Point(0, 390);
+            this.buttonPembayaran.Location = new System.Drawing.Point(0, 325);
             this.buttonPembayaran.Name = "buttonPembayaran";
             this.buttonPembayaran.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonPembayaran.Size = new System.Drawing.Size(250, 40);
@@ -171,11 +169,10 @@
             this.panelTransaksiLayanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelTransaksiLayanan.Controls.Add(this.buttonUbahJenisHewan);
             this.panelTransaksiLayanan.Controls.Add(this.buttonEditTransaksiLayanan);
-            this.panelTransaksiLayanan.Controls.Add(this.buttonEditDetilTransaksiLayanan);
             this.panelTransaksiLayanan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTransaksiLayanan.Location = new System.Drawing.Point(0, 291);
+            this.panelTransaksiLayanan.Location = new System.Drawing.Point(0, 258);
             this.panelTransaksiLayanan.Name = "panelTransaksiLayanan";
-            this.panelTransaksiLayanan.Size = new System.Drawing.Size(250, 99);
+            this.panelTransaksiLayanan.Size = new System.Drawing.Size(250, 67);
             this.panelTransaksiLayanan.TabIndex = 16;
             // 
             // buttonUbahJenisHewan
@@ -185,7 +182,7 @@
             this.buttonUbahJenisHewan.FlatAppearance.BorderSize = 0;
             this.buttonUbahJenisHewan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUbahJenisHewan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonUbahJenisHewan.Location = new System.Drawing.Point(0, 60);
+            this.buttonUbahJenisHewan.Location = new System.Drawing.Point(0, 30);
             this.buttonUbahJenisHewan.Name = "buttonUbahJenisHewan";
             this.buttonUbahJenisHewan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahJenisHewan.Size = new System.Drawing.Size(250, 30);
@@ -202,7 +199,7 @@
             this.buttonEditTransaksiLayanan.FlatAppearance.BorderSize = 0;
             this.buttonEditTransaksiLayanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditTransaksiLayanan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonEditTransaksiLayanan.Location = new System.Drawing.Point(0, 30);
+            this.buttonEditTransaksiLayanan.Location = new System.Drawing.Point(0, 0);
             this.buttonEditTransaksiLayanan.Name = "buttonEditTransaksiLayanan";
             this.buttonEditTransaksiLayanan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonEditTransaksiLayanan.Size = new System.Drawing.Size(250, 30);
@@ -211,23 +208,6 @@
             this.buttonEditTransaksiLayanan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEditTransaksiLayanan.UseVisualStyleBackColor = false;
             this.buttonEditTransaksiLayanan.Click += new System.EventHandler(this.buttonEditTransaksiLayanan_Click);
-            // 
-            // buttonEditDetilTransaksiLayanan
-            // 
-            this.buttonEditDetilTransaksiLayanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
-            this.buttonEditDetilTransaksiLayanan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEditDetilTransaksiLayanan.FlatAppearance.BorderSize = 0;
-            this.buttonEditDetilTransaksiLayanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditDetilTransaksiLayanan.ForeColor = System.Drawing.Color.Silver;
-            this.buttonEditDetilTransaksiLayanan.Location = new System.Drawing.Point(0, 0);
-            this.buttonEditDetilTransaksiLayanan.Name = "buttonEditDetilTransaksiLayanan";
-            this.buttonEditDetilTransaksiLayanan.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.buttonEditDetilTransaksiLayanan.Size = new System.Drawing.Size(250, 30);
-            this.buttonEditDetilTransaksiLayanan.TabIndex = 0;
-            this.buttonEditDetilTransaksiLayanan.Text = "Edit Detil Transaksi";
-            this.buttonEditDetilTransaksiLayanan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditDetilTransaksiLayanan.UseVisualStyleBackColor = false;
-            this.buttonEditDetilTransaksiLayanan.Click += new System.EventHandler(this.buttonTambahTransaksiLayanan_Click);
             // 
             // buttonTransaksiLayanan
             // 
@@ -239,7 +219,7 @@
             this.buttonTransaksiLayanan.ForeColor = System.Drawing.Color.Silver;
             this.buttonTransaksiLayanan.Image = ((System.Drawing.Image)(resources.GetObject("buttonTransaksiLayanan.Image")));
             this.buttonTransaksiLayanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTransaksiLayanan.Location = new System.Drawing.Point(0, 251);
+            this.buttonTransaksiLayanan.Location = new System.Drawing.Point(0, 218);
             this.buttonTransaksiLayanan.Name = "buttonTransaksiLayanan";
             this.buttonTransaksiLayanan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonTransaksiLayanan.Size = new System.Drawing.Size(250, 40);
@@ -255,11 +235,10 @@
             this.panelTransaksiProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
             this.panelTransaksiProduk.Controls.Add(this.buttonTampilTransaksiProduk);
             this.panelTransaksiProduk.Controls.Add(this.buttonUbahHapusTransaksiProduk);
-            this.panelTransaksiProduk.Controls.Add(this.buttonEditDetilTransaksiProduk);
             this.panelTransaksiProduk.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTransaksiProduk.Location = new System.Drawing.Point(0, 152);
             this.panelTransaksiProduk.Name = "panelTransaksiProduk";
-            this.panelTransaksiProduk.Size = new System.Drawing.Size(250, 99);
+            this.panelTransaksiProduk.Size = new System.Drawing.Size(250, 66);
             this.panelTransaksiProduk.TabIndex = 2;
             // 
             // buttonTampilTransaksiProduk
@@ -270,7 +249,7 @@
             this.buttonTampilTransaksiProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTampilTransaksiProduk.ForeColor = System.Drawing.Color.Silver;
             this.buttonTampilTransaksiProduk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTampilTransaksiProduk.Location = new System.Drawing.Point(0, 60);
+            this.buttonTampilTransaksiProduk.Location = new System.Drawing.Point(0, 30);
             this.buttonTampilTransaksiProduk.Name = "buttonTampilTransaksiProduk";
             this.buttonTampilTransaksiProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonTampilTransaksiProduk.Size = new System.Drawing.Size(250, 30);
@@ -288,7 +267,7 @@
             this.buttonUbahHapusTransaksiProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUbahHapusTransaksiProduk.ForeColor = System.Drawing.Color.Silver;
             this.buttonUbahHapusTransaksiProduk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUbahHapusTransaksiProduk.Location = new System.Drawing.Point(0, 30);
+            this.buttonUbahHapusTransaksiProduk.Location = new System.Drawing.Point(0, 0);
             this.buttonUbahHapusTransaksiProduk.Name = "buttonUbahHapusTransaksiProduk";
             this.buttonUbahHapusTransaksiProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.buttonUbahHapusTransaksiProduk.Size = new System.Drawing.Size(250, 30);
@@ -297,24 +276,6 @@
             this.buttonUbahHapusTransaksiProduk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUbahHapusTransaksiProduk.UseVisualStyleBackColor = false;
             this.buttonUbahHapusTransaksiProduk.Click += new System.EventHandler(this.buttonUbahHapusTransaksiProduk_Click);
-            // 
-            // buttonEditDetilTransaksiProduk
-            // 
-            this.buttonEditDetilTransaksiProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(16)))), ((int)(((byte)(144)))));
-            this.buttonEditDetilTransaksiProduk.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEditDetilTransaksiProduk.FlatAppearance.BorderSize = 0;
-            this.buttonEditDetilTransaksiProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditDetilTransaksiProduk.ForeColor = System.Drawing.Color.Silver;
-            this.buttonEditDetilTransaksiProduk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditDetilTransaksiProduk.Location = new System.Drawing.Point(0, 0);
-            this.buttonEditDetilTransaksiProduk.Name = "buttonEditDetilTransaksiProduk";
-            this.buttonEditDetilTransaksiProduk.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.buttonEditDetilTransaksiProduk.Size = new System.Drawing.Size(250, 30);
-            this.buttonEditDetilTransaksiProduk.TabIndex = 0;
-            this.buttonEditDetilTransaksiProduk.Text = "Edit Detil Transaksi";
-            this.buttonEditDetilTransaksiProduk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEditDetilTransaksiProduk.UseVisualStyleBackColor = false;
-            this.buttonEditDetilTransaksiProduk.Click += new System.EventHandler(this.buttonTambahTransaksiProduk_Click);
             // 
             // buttonTransaksiProduk
             // 
@@ -382,40 +343,6 @@
             this.panelNotif.Size = new System.Drawing.Size(1014, 56);
             this.panelNotif.TabIndex = 7;
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
-            this.panelChildForm.Controls.Add(this.label2);
-            this.panelChildForm.Controls.Add(this.pictureBox3);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1014, 626);
-            this.panelChildForm.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
-            this.label2.Location = new System.Drawing.Point(362, 344);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 70);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Transaksi";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::Kouvee.Properties.Resources.cashier1;
-            this.pictureBox3.Location = new System.Drawing.Point(442, 209);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
             // btnData
             // 
             this.btnData.Cursor = System.Windows.Forms.Cursors.Default;
@@ -459,6 +386,40 @@
             this.btnCashier.UseVisualStyleBackColor = true;
             this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(5)))), ((int)(((byte)(94)))));
+            this.panelChildForm.Controls.Add(this.label2);
+            this.panelChildForm.Controls.Add(this.pictureBox3);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1014, 626);
+            this.panelChildForm.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Forte", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.label2.Location = new System.Drawing.Point(362, 344);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 70);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Transaksi";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = global::Kouvee.Properties.Resources.cashier1;
+            this.pictureBox3.Location = new System.Drawing.Point(442, 209);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
             // FormTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,12 +451,10 @@
         private System.Windows.Forms.Panel panelTransaksiLayanan;
         private System.Windows.Forms.Button buttonUbahJenisHewan;
         private System.Windows.Forms.Button buttonEditTransaksiLayanan;
-        private System.Windows.Forms.Button buttonEditDetilTransaksiLayanan;
         private System.Windows.Forms.Button buttonTransaksiLayanan;
         private System.Windows.Forms.Panel panelTransaksiProduk;
         private System.Windows.Forms.Button buttonTampilTransaksiProduk;
         private System.Windows.Forms.Button buttonUbahHapusTransaksiProduk;
-        private System.Windows.Forms.Button buttonEditDetilTransaksiProduk;
         private System.Windows.Forms.Button buttonTransaksiProduk;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelNotif;

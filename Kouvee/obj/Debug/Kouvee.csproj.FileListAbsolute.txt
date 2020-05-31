@@ -49,8 +49,6 @@ E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormEditTransaksiPro
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormTampilTransaksiProduk.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Pembayaran.FormPembayaranLayanan.resources
 E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Pembayaran.FormPembayaranProduk.resources
-E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Layanan.FormEditDetailTransaksiLayanan.resources
-E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Transaksi.Produk.FormEditDetailTransaksiProduk.resources
 E:\Git\Kouvee\Kouvee\bin\Debug\IKVM.AWT.WinForms.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\IKVM.OpenJDK.Beans.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\IKVM.OpenJDK.Charsets.dll
@@ -81,3 +79,15 @@ E:\Git\Kouvee\Kouvee\bin\Debug\IKVM.Runtime.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\IKVM.Runtime.JNI.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\itextsharp.dll
 E:\Git\Kouvee\Kouvee\bin\Debug\itextsharp.xml
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormLaporan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormLayananTerlaris.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormPendapatanBulanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormPendapatanTahunan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormPengadaanBulanan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormPengadaanTahunan.resources
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.View.Laporan.FormProdukTerlaris.resources
+E:\Git\Kouvee\Kouvee\bin\Debug\Interop.AcroPDFLib.dll
+E:\Git\Kouvee\Kouvee\bin\Debug\AxInterop.AcroPDFLib.dll
+E:\Git\Kouvee\Kouvee\obj\Debug\Interop.AcroPDFLib.dll
+E:\Git\Kouvee\Kouvee\obj\Debug\AxInterop.AcroPDFLib.dll
+E:\Git\Kouvee\Kouvee\obj\Debug\Kouvee.csproj.ResolveComReference.cache

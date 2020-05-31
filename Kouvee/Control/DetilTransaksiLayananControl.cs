@@ -11,6 +11,12 @@ namespace Kouvee.Control
     class DetilTransaksiLayananControl
     {
         private DetilTransaksiLayananDAO dtlDAO = new DetilTransaksiLayananDAO();
+        public void CreateDetilTransaksiLayanan(DetilTransaksiLayanan DTL)
+        {
+            dtlDAO.makeConnection();
+            dtlDAO.CreateDetilTransaksiLayanan(DTL);
+            dtlDAO.closeConnection();
+        }
 
         public List<DetilTransaksiLayanan> ShowDetilTransaksiLayanan()
         {
@@ -28,6 +34,16 @@ namespace Kouvee.Control
             dtlDAO.closeConnection();
             return detilTransaksiLayanan;
         }
+
+        public DetilTransaksiLayanan SearchDetilTransaksiLayananUsingID(String idDetilTransaksi, String idTransaksi)
+        {
+            DetilTransaksiLayanan detilTransaksiLayanan = null;
+            dtlDAO.makeConnection();
+            detilTransaksiLayanan = dtlDAO.SearchDetilTransaksiLayananUsingID(idDetilTransaksi,idTransaksi);
+            dtlDAO.closeConnection();
+            return detilTransaksiLayanan;
+        }
+
         public void UpdateDetilTransaksiLayanan(DetilTransaksiLayanan detailTransaksiProduk, String idTransaksi)
         {
             dtlDAO.makeConnection();
@@ -35,10 +51,10 @@ namespace Kouvee.Control
             dtlDAO.closeConnection();
         }
 
-        public void DeleteDetilTransaksiLayanan(String idTransaksi)
+        public void DeleteDetilTransaksiLayanan(String idDetil, String idTransaksi)
         {
             dtlDAO.makeConnection();
-            dtlDAO.DeleteDetilTransaksiLayanan(idTransaksi);
+            dtlDAO.DeleteDetilTransaksiLayanan(idTransaksi, idDetil);
             dtlDAO.closeConnection();
         }
         public List<DetilTransaksiLayanan> ShowDetilNotaLayanan()
@@ -48,5 +64,14 @@ namespace Kouvee.Control
             dtlDAO.closeConnection();
             return NotaDetilTransaksiLayananData;
         }
+
+        public List<DetilTransaksiLayanan> SearchDetilTransaksiLayananUsingIDLayanan(String idTransaksi)
+        {
+            dtlDAO.makeConnection();
+            List<DetilTransaksiLayanan> DetilTransaksiLayananData = dtlDAO.SearchDetilTransaksiLayananUsingIDLayanan(idTransaksi);
+            dtlDAO.closeConnection();
+            return DetilTransaksiLayananData;
+        }
+
     }
 }

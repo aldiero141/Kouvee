@@ -11,7 +11,7 @@ using Kouvee.View.Transaksi;
 using Kouvee.View.Transaksi.Produk;
 using Kouvee.View.Transaksi.Layanan;
 using Kouvee.View.Transaksi.Pembayaran;
-
+using Kouvee.View.Laporan;
 
 namespace Kouvee.View.Transaksi
 {
@@ -86,12 +86,6 @@ namespace Kouvee.View.Transaksi
             showSubmenu(panelTransaksiProduk);
         }
 
-        private void buttonTambahTransaksiProduk_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormEditDetailTransaksiProduk());
-            
-        }
-
         private void buttonUbahHapusTransaksiProduk_Click(object sender, EventArgs e)
         {
             openChildForm(new FormEditTransaksiProduk());
@@ -114,11 +108,6 @@ namespace Kouvee.View.Transaksi
         private void buttonTransaksiLayanan_Click(object sender, EventArgs e)
         {
             showSubmenu(panelTransaksiLayanan);
-        }
-
-        private void buttonTambahTransaksiLayanan_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormEditDetailTransaksiLayanan());
         }
 
         private void buttonEditTransaksiLayanan_Click(object sender, EventArgs e)
@@ -173,7 +162,12 @@ namespace Kouvee.View.Transaksi
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            var form = new FormLaporan();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Close(); };
+            form.Show();
+            this.Hide();
         }
 
         private void btnData_Click(object sender, EventArgs e)

@@ -65,5 +65,12 @@ namespace Kouvee.Control
             tpDAO.closeConnection();
             return transaksiProduk;
         }
+
+        public void UpdateTotalHargaProduk(int harga, String idTransaksi)
+        {
+            tpDAO.makeConnection();
+            tpDAO.UpdateTotalHargaProduk(harga, idTransaksi);
+            tpDAO.closeConnection();
+        }
     }
 }

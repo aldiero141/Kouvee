@@ -15,6 +15,7 @@ using MySql.Data.MySqlClient;
 using Kouvee.View.Data.Ubah;
 using Kouvee.View.Data.Hapus;
 using Kouvee.View.Transaksi;
+using Kouvee.View.Laporan;
 
 namespace Kouvee
 {
@@ -242,13 +243,17 @@ namespace Kouvee
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            
+            var form = new FormLaporan();
+            form.Location = this.Location;
+            form.StartPosition = FormStartPosition.Manual;
+            form.FormClosing += delegate { this.Close(); };
+            form.Show();
+            this.Hide();
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
         {
             var form = new FormTransaksi();
-            var frm2 = new FormLogin();
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
             form.FormClosing += delegate { this.Close(); };

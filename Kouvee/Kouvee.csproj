@@ -342,17 +342,53 @@
     <Compile Include="Models\UkuranHewan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Laporan\FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormLaporan.Designer.cs">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormLayananTerlaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormLayananTerlaris.Designer.cs">
+      <DependentUpon>FormLayananTerlaris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormPendapatanBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormPendapatanBulanan.Designer.cs">
+      <DependentUpon>FormPendapatanBulanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormPendapatanTahunan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormPendapatanTahunan.Designer.cs">
+      <DependentUpon>FormPendapatanTahunan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormPengadaanBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormPengadaanBulanan.Designer.cs">
+      <DependentUpon>FormPengadaanBulanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormPengadaanTahunan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormPengadaanTahunan.Designer.cs">
+      <DependentUpon>FormPengadaanTahunan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Laporan\FormProdukTerlaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Laporan\FormProdukTerlaris.Designer.cs">
+      <DependentUpon>FormProdukTerlaris.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Transaksi\FormTransaksi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Transaksi\FormTransaksi.Designer.cs">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.Designer.cs">
-      <DependentUpon>FormEditDetailTransaksiLayanan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.cs">
       <SubType>Form</SubType>
@@ -377,12 +413,6 @@
     </Compile>
     <Compile Include="View\Transaksi\Pembayaran\FormPembayaranProduk.Designer.cs">
       <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.Designer.cs">
-      <DependentUpon>FormEditDetailTransaksiProduk.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Transaksi\Produk\FormEditTransaksiProduk.cs">
       <SubType>Form</SubType>
@@ -487,11 +517,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Laporan\FormLaporan.resx">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormLayananTerlaris.resx">
+      <DependentUpon>FormLayananTerlaris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormPendapatanBulanan.resx">
+      <DependentUpon>FormPendapatanBulanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormPendapatanTahunan.resx">
+      <DependentUpon>FormPendapatanTahunan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormPengadaanBulanan.resx">
+      <DependentUpon>FormPengadaanBulanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormPengadaanTahunan.resx">
+      <DependentUpon>FormPengadaanTahunan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Laporan\FormProdukTerlaris.resx">
+      <DependentUpon>FormProdukTerlaris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\FormTransaksi.resx">
       <DependentUpon>FormTransaksi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Transaksi\Layanan\FormEditDetailTransaksiLayanan.resx">
-      <DependentUpon>FormEditDetailTransaksiLayanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Layanan\FormEditTransaksiLayanan.resx">
       <DependentUpon>FormEditTransaksiLayanan.cs</DependentUpon>
@@ -504,9 +552,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Pembayaran\FormPembayaranProduk.resx">
       <DependentUpon>FormPembayaranProduk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Transaksi\Produk\FormEditDetailTransaksiProduk.resx">
-      <DependentUpon>FormEditDetailTransaksiProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Transaksi\Produk\FormEditTransaksiProduk.resx">
       <DependentUpon>FormEditTransaksiProduk.cs</DependentUpon>
@@ -532,7 +577,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\Laporan\" />
+    <None Include="Resources\report1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pencil.png" />
@@ -572,6 +617,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\database %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

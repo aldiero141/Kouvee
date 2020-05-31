@@ -258,6 +258,22 @@ namespace Kouvee.DAO
             }
             return transaksiLayanan;
         }
+        public void UpdateTotalHargaLayanan(int harga, String idTransaksi)
+        {
+            string sql = "UPDATE transaksi_layanan SET TOTAL_TRANSAKSI_LAYANAN = '" + harga + "'"
+                     + " WHERE ID_TRANSAKSI_LAYANAN = '" + idTransaksi + "';";
 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }

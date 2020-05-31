@@ -41,6 +41,28 @@ namespace Kouvee.DAO
             }
         }
 
+        public void CreateDetilTransaksiProduk(DetilTransaksiProduk DTP)
+        {
+            string sql = "SET FOREIGN_KEY_CHECKS = 0; " +
+                "INSERT INTO detil_transaksi_produk(ID_TRANSAKSI_PRODUK, ID_PRODUK, SUB_TOTAL_PRODUK, JUMLAH_PRODUK) " +
+                "VALUES ('" + DTP.ID_Transaksi_Produk + "','" + DTP.ID_Produk + "','"
+                + DTP.Sub_Total_Produk + "','" + DTP.Jumlah_Produk + "'); " +
+                "SET FOREIGN_KEY_CHECKS = 1;";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Created...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to create...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+
+
         public List<DetilTransaksiProduk> ShowDetilTransaksiProduk()
         {
             string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
@@ -75,6 +97,7 @@ namespace Kouvee.DAO
             }
             return DetilTransaksiProdukList;
         }
+
         public DetilTransaksiProduk SearchDetilTransaksiProduk(String idDetilTransaksi)
         {
             string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
@@ -110,6 +133,112 @@ namespace Kouvee.DAO
             return detiltransaksiProduk;
         }
 
+        public DetilTransaksiProduk SearchDetilTransaksiProdukUsingID(String idDetilTransaksi, String idTransaksi)
+        {
+            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
+                "FROM detil_transaksi_produk D " +
+                "JOIN produk P ON (D.ID_PRODUK = P.ID_PRODUK)" +
+                "WHERE D.ID_DETIL_TRANSAKSI = '" + idDetilTransaksi + "' AND D.ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            DetilTransaksiProduk detiltransaksiProduk = null;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        detiltransaksiProduk = new DetilTransaksiProduk(
+                            result.GetInt32("ID_DETIL_TRANSAKSI"),
+                            result.GetString("ID_TRANSAKSI_PRODUK"),
+                            result.GetInt32("ID_PRODUK"),
+                            result.GetString("NAMA_PRODUK"),
+                            result.GetInt32("SUB_TOTAL_PRODUK"),
+                            result.GetInt32("JUMLAH_PRODUK"),
+                            result.GetInt32("HARGA_JUAL"));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to search...");
+                Console.WriteLine(ex.ToString());
+            }
+            return detiltransaksiProduk;
+        }
+
+        public List<DetilTransaksiProduk> SearchDetilTransaksiProdukUsingIDTransaksi(String idTransaksi)
+        {
+            string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
+                "FROM detil_transaksi_produk D " +
+                "JOIN produk P ON (D.ID_PRODUK = P.ID_PRODUK)" +
+                "WHERE D.ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+            List<DetilTransaksiProduk> DetilTransaksiProdukList = new List<DetilTransaksiProduk>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader result = cmd.ExecuteReader();
+                if (result != null)
+                {
+                    while (result.Read())
+                    {
+                        DetilTransaksiProduk DTP = new DetilTransaksiProduk(
+                            result.GetInt32("ID_DETIL_TRANSAKSI"),
+                            result.GetString("ID_TRANSAKSI_PRODUK"),
+                            result.GetInt32("ID_PRODUK"),
+                            result.GetString("NAMA_PRODUK"),
+                            result.GetInt32("SUB_TOTAL_PRODUK"),
+                            result.GetInt32("JUMLAH_PRODUK"),
+                            result.GetInt32("HARGA_JUAL"));
+                        DetilTransaksiProdukList.Add(DTP);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to read...");
+                Console.WriteLine(ex.ToString());
+            }
+            return DetilTransaksiProdukList;
+        }
+
+        //public DetilTransaksiProduk SearchDetilTransaksiProdukUsingIDTransaksi(String idTransaksi)
+        //{
+        //    string sql = "SELECT D.ID_DETIL_TRANSAKSI, D.ID_TRANSAKSI_PRODUK, D.ID_PRODUK, P.NAMA_PRODUK , D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +
+        //        "FROM detil_transaksi_produk D " +
+        //        "JOIN produk P ON (D.ID_PRODUK = P.ID_PRODUK)" +
+        //        "WHERE D.ID_TRANSAKSI_PRODUK = '" + idTransaksi + "';";
+
+        //    DetilTransaksiProduk detiltransaksiProduk = null;
+        //    try
+        //    {
+        //        MySqlCommand cmd = new MySqlCommand(sql, conn);
+        //        MySqlDataReader result = cmd.ExecuteReader();
+        //        if (result != null)
+        //        {
+        //            while (result.Read())
+        //            {
+        //                detiltransaksiProduk = new DetilTransaksiProduk(
+        //                    result.GetInt32("ID_DETIL_TRANSAKSI"),
+        //                    result.GetString("ID_TRANSAKSI_PRODUK"),
+        //                    result.GetInt32("ID_PRODUK"),
+        //                    result.GetString("NAMA_PRODUK"),
+        //                    result.GetInt32("SUB_TOTAL_PRODUK"),
+        //                    result.GetInt32("JUMLAH_PRODUK"),
+        //                    result.GetInt32("HARGA_JUAL"));
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("Failed to search...");
+        //        Console.WriteLine(ex.ToString());
+        //    }
+        //    return detiltransaksiProduk;
+        //}
+
         public void UpdateDetilTransaksiProduk(DetilTransaksiProduk DTP, String idTransaksi)
         {
             string sql = "UPDATE detil_transaksi_produk SET ID_PRODUK = (SELECT ID_PRODUK FROM produk WHERE NAMA_PRODUK = '" + DTP.Nama_Produk + "')"
@@ -129,9 +258,11 @@ namespace Kouvee.DAO
             }
         }
 
-        public void DeleteDetilTransaksiProduk(String idTransaksi)
+        public void DeleteDetilTransaksiProduk(String idDetilTransaksi, String idTransaksi)
         {
-            string sql = "SET FOREIGN_KEY_CHECKS = 0; DELETE FROM detil_transaksi_produk WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "'; SET FOREIGN_KEY_CHECKS = 1;";
+            string sql = "SET FOREIGN_KEY_CHECKS = 0; " +
+                "DELETE FROM detil_transaksi_produk WHERE ID_DETIL_TRANSAKSI = '" + idDetilTransaksi + "' AND ID_TRANSAKSI_PRODUK = '" + idTransaksi + "'; " +
+                "SET FOREIGN_KEY_CHECKS = 1;";
 
             try
             {

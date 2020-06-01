@@ -21,8 +21,37 @@ namespace Kouvee.View.Data.Tampil
         public FormTampil()
         {
             InitializeComponent();
+            setAuthority();
         }
 
+        public void setAuthority()
+        {
+            if (FormLogin.jabatan == "Admin")
+            {
+                buttonTampilCustomer.Enabled = false;
+                buttonTampilHewan.Enabled = false;
+            }
+            else if (FormLogin.jabatan == "CS")
+            {
+                buttonTampilPegawai.Enabled = false;
+                buttonTampilSupplier.Enabled = false;
+                buttonTampilJenisHewan.Enabled = false;
+                buttonTampilLayanan.Enabled = false;
+                buttonTampilProduk.Enabled = false;
+                buttonTampilUkuranHewan.Enabled = false;
+            }
+            else if (FormLogin.jabatan == "Kasir")
+            {
+                buttonTampilCustomer.Enabled = false;
+                buttonTampilHewan.Enabled = false;
+                buttonTampilPegawai.Enabled = false;
+                buttonTampilSupplier.Enabled = false;
+                buttonTampilJenisHewan.Enabled = false;
+                buttonTampilLayanan.Enabled = false;
+                buttonTampilProduk.Enabled = false;
+                buttonTampilUkuranHewan.Enabled = false;
+            }
+        }
         private void buttonTampilCustomer_Click(object sender, EventArgs e)
         {
             txtCari.Enabled = true;

@@ -240,6 +240,25 @@ namespace Kouvee.DAO
             }
         }
 
+        public void DeleteDetilTransaksiLayananUsingIDTransaksi(String idTransaksi)
+        {
+            string sql = "SET FOREIGN_KEY_CHECKS = 0; " +
+                "DELETE FROM detil_transaksi_layanan WHERE ID_TRANSAKSI_LAYANAN = '" + idTransaksi + "'; " +
+                "SET FOREIGN_KEY_CHECKS = 1;";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
         public List<DetilTransaksiLayanan> ShowDetilNotaLayanan()
         {
             string sql = "SELECT L.NAMA_LAYANAN, P.SUB_TOTAL_LAYANAN, P.JUMLAH_DETIL_LAYANAN, L.HARGA_LAYANAN " +

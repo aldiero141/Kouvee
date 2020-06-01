@@ -68,6 +68,13 @@ namespace Kouvee.Control
             dtpDAO.closeConnection();
         }
 
+        public void DeleteDetilTransaksiProdukUsingIDTransaksi(String idTransaksi)
+        {
+            dtpDAO.makeConnection();
+            dtpDAO.DeleteDetilTransaksiProdukUsingIDTransaksi(idTransaksi);
+            dtpDAO.closeConnection();
+        }
+
         public List<DetilTransaksiProduk> ShowDetilNotaProduk()
         {
             dtpDAO.makeConnection();

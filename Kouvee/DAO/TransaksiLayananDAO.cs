@@ -157,6 +157,24 @@ namespace Kouvee.DAO
             }
         }
 
+        public void UpdateSubtotalLayanan(int subtotal, String idTransaksi)
+        {
+            string sql = "UPDATE transaksi_layanan SET SUBTOTAL_TRANSAKSI_LAYANAN = '" + subtotal + "'"
+                     + " WHERE ID_TRANSAKSI_LAYANAN = '" + idTransaksi + "';";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Updated...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to update...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
         public void UpdateSubtotalLayanan(TransaksiLayanan TL, String idTransaksi)
         {
             string sql = "UPDATE transaksi_layanan SET SUBTOTAL_TRANSAKSI_LAYANAN = '" + TL.Subtotal_Transaksi_Layanan + "'"

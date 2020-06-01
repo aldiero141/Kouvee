@@ -43,6 +43,13 @@ namespace Kouvee.Control
             tlDAO.closeConnection();
         }
 
+        public void UpdateSubtotalLayanan(int subtotal, String idTransaksi)
+        {
+            tlDAO.makeConnection();
+            tlDAO.UpdateSubtotalLayanan(subtotal, idTransaksi);
+            tlDAO.closeConnection();
+        }
+
         public void UpdatePembayaranLayanan(TransaksiLayanan transaksiLayanan, String idTransaksi)
         {
             tlDAO.makeConnection();

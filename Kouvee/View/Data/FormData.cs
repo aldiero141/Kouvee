@@ -26,6 +26,55 @@ namespace Kouvee
         {
             InitializeComponent();
             CustomizeDesign();
+            setText();
+            setAuthority();
+        }
+
+        public void setAuthority()
+        {
+            if(FormLogin.jabatan == "Admin")
+            {
+                btnCashier.Visible = false;
+                buttonTambahHewan.Enabled = false;
+                buttonTambahCustomer.Enabled = false;
+                buttonUbahHewan.Enabled = false;
+                buttonUbahCustomer.Enabled = false;
+                buttonHapusHewan.Enabled = false;
+                buttonHapusCustomer.Enabled = false;
+            }
+            else if (FormLogin.jabatan == "CS")
+            {
+                btnReport.Visible = false;
+                buttonTambahProduk.Enabled = false;
+                buttonTambahLayanan.Enabled = false;
+                buttonTambahPegawai.Enabled = false;
+                buttonTambahSupplier.Enabled = false;
+                buttonTambahJenisHewan.Enabled = false;
+                buttonTambahUkuranHewan.Enabled = false;
+                buttonUbahProduk.Enabled = false;
+                buttonUbahLayanan.Enabled = false;
+                buttonUbahPegawai.Enabled = false;
+                buttonUbahSupplier.Enabled = false;
+                buttonUbahJenisHewan.Enabled = false;
+                buttonUbahUkuranHewan.Enabled = false;
+                buttonHapusProduk.Enabled = false;
+                buttonHapusLayanan.Enabled = false;
+                buttonHapusPegawai.Enabled = false;
+                buttonHapusSupplier.Enabled = false;
+                buttonHapusJenisHewan.Enabled = false;
+                buttonHapusUkuranHewan.Enabled = false;
+            }
+            else if (FormLogin.jabatan == "Kasir")
+            {
+                btnReport.Visible = false;
+                btnData.Visible = false;
+            }
+        }
+
+        public void setText()
+        {
+            lblNama.Text = FormLogin.nama;
+            lblJabatan.Text = FormLogin.jabatan;
         }
 
         #region Submenu Customizer

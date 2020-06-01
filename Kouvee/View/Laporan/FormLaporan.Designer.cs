@@ -47,6 +47,10 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblJabatan = new System.Windows.Forms.Label();
+            this.lblNama = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelSidemenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -251,6 +255,10 @@
             // panelNotif
             // 
             this.panelNotif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(25)))));
+            this.panelNotif.Controls.Add(this.lblJabatan);
+            this.panelNotif.Controls.Add(this.lblNama);
+            this.panelNotif.Controls.Add(this.label3);
+            this.panelNotif.Controls.Add(this.label4);
             this.panelNotif.Controls.Add(this.btnData);
             this.panelNotif.Controls.Add(this.btnReport);
             this.panelNotif.Controls.Add(this.btnCashier);
@@ -337,6 +345,46 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
+            // lblJabatan
+            // 
+            this.lblJabatan.AutoSize = true;
+            this.lblJabatan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJabatan.Location = new System.Drawing.Point(73, 32);
+            this.lblJabatan.Name = "lblJabatan";
+            this.lblJabatan.Size = new System.Drawing.Size(51, 15);
+            this.lblJabatan.TabIndex = 13;
+            this.lblJabatan.Text = "Jabatan";
+            // 
+            // lblNama
+            // 
+            this.lblNama.AutoSize = true;
+            this.lblNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNama.Location = new System.Drawing.Point(73, 8);
+            this.lblNama.Name = "lblNama";
+            this.lblNama.Size = new System.Drawing.Size(41, 15);
+            this.lblNama.TabIndex = 12;
+            this.lblNama.Text = "Nama";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Jabatan :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Nama    :";
+            // 
             // FormLaporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +401,7 @@
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelNotif.ResumeLayout(false);
+            this.panelNotif.PerformLayout();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -380,5 +429,9 @@
         private System.Windows.Forms.Button btnPengadaanProdukBulanan;
         private System.Windows.Forms.Button btnPengadaanProdukTahunan;
         private System.Windows.Forms.Button btnPendapatanBulanan;
+        private System.Windows.Forms.Label lblJabatan;
+        private System.Windows.Forms.Label lblNama;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

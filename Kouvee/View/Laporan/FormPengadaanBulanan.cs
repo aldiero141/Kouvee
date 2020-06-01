@@ -140,7 +140,7 @@ namespace Kouvee.View.Laporan
             pdfDoc.Add(tanggal);
             pdfDoc.Add(spacer);
             pdfDoc.Close();
-            totalPengeluaran = 0
+            totalPengeluaran = 0;
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
@@ -247,7 +247,7 @@ namespace Kouvee.View.Laporan
             pdfDoc.Close();
 
             adobeReader.src = "file:///e:/PengadaaanProdukBulanan.pdf";
-            totalPengeluaran = 0
+            totalPengeluaran = 0;
         }
 
         private void buttonKembali_Click(object sender, EventArgs e)

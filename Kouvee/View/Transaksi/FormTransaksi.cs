@@ -21,6 +21,35 @@ namespace Kouvee.View.Transaksi
         {
             InitializeComponent();
             CustomizeDesign();
+            setText();
+            setAuthority();
+        }
+
+        public void setAuthority()
+        {
+            if (FormLogin.jabatan == "Admin")
+            {
+                btnCashier.Visible = false;
+                
+            }
+            else if (FormLogin.jabatan == "CS")
+            {
+                btnReport.Visible = false;
+                buttonTampilTransaksiProduk.Enabled = false;
+                buttonUbahJenisHewan.Enabled = false;
+                buttonPembayaran.Visible = false;
+            }
+            else if (FormLogin.jabatan == "Kasir")
+            {
+                btnReport.Visible = false;
+                btnData.Visible = false;
+            }
+        }
+
+        public void setText()
+        {
+            lblNama.Text = FormLogin.nama;
+            lblJabatan.Text = FormLogin.jabatan;
         }
 
         #region Submenu Customizer

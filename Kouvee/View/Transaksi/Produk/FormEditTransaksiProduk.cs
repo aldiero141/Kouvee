@@ -346,7 +346,7 @@ namespace Kouvee.View.Transaksi.Produk
                 else
                 {
                     ctrlTP.DeleteTransaksiProduk(txtCari.Text);
-                    //ctrlDTP.DeleteDetilTransaksiProduk(txtCari.Text);
+                    ctrlDTP.DeleteDetilTransaksiProdukUsingIDTransaksi(txtCari.Text);
                     MessageBox.Show("Transaksi Berhasil Dibatalkan!");
                     txtCari.Text = string.Empty;
                     txtDiskon.Text = string.Empty;

@@ -31,6 +31,7 @@ namespace Kouvee.View.Transaksi.Layanan
         int oldSubtotal;
         int tempDiskon;
         int totalHargaAkhir;
+        int tempSubtotalLayanan;
 
         public FormEditTransaksiLayanan()
         {
@@ -178,6 +179,7 @@ namespace Kouvee.View.Transaksi.Layanan
                     progressLayanan = transaksiLayanan.Progres_Layanan;
                     tempDiskon = transaksiLayanan.Diskon_Layanan;
                     subtotalLayanan = transaksiLayanan.Subtotal_Transaksi_Layanan;
+                    tempSubtotalLayanan = subtotalLayanan;
 
                     if (transaksiLayanan.Status_Layanan == 1) comboBoxStatus.Text = "Lunas";
                     else comboBoxStatus.Text = "Belum Lunas";
@@ -372,7 +374,7 @@ namespace Kouvee.View.Transaksi.Layanan
                 }
 
                 ctrlTL.DeleteTransaksiLayanan(txtCari.Text);
-                ctrlDTL.DeleteDetilTransaksiLayanan(txtCariDetil.Text,txtCari.Text);
+                ctrlDTL.DeleteDetilTransaksiLayananUsingIDTransaksi(txtCari.Text);
                 MessageBox.Show("Transaksi Berhasil Dibatalkan");
                 txtCari.Text = string.Empty;
                 txtDiskon.Text = string.Empty;
@@ -452,11 +454,6 @@ namespace Kouvee.View.Transaksi.Layanan
                     MessageBox.Show("Kode Transaksi Kosong");
                     throw null;
                 }
-                if (string.IsNullOrEmpty(txtCariDetil.Text.Trim()))
-                {
-                    MessageBox.Show("Kode Detil Transaksi Kosong");
-                    throw null;
-                }
                 if (string.IsNullOrEmpty(txtJumlah.Text.Trim()))
                 {
                     MessageBox.Show("Jumlah Kosong");
@@ -500,9 +497,9 @@ namespace Kouvee.View.Transaksi.Layanan
 
 
                 SubtotalLayanan = (Convert.ToInt32(txtJumlah.Text) * hargaLayananInput);
-                subtotalLayanan = subtotalLayanan + SubtotalLayanan;
+                subtotalLayanan = tempSubtotalLayanan + SubtotalLayanan;
                 totalHargaAkhir = subtotalLayanan - tempDiskon;
-                detilTransaksiLayanan = new DetilTransaksiLayanan(txtCari.Text, idLayanan, subtotalLayanan, Convert.ToInt32(txtJumlah.Text));
+                detilTransaksiLayanan = new DetilTransaksiLayanan(txtCari.Text, idLayanan, SubtotalLayanan, Convert.ToInt32(txtJumlah.Text));
                 transaksiLayanan = new TransaksiLayanan(subtotalLayanan);
                 ctrl.CreateDetilTransaksiLayanan(detilTransaksiLayanan);
                 ctrlTL.UpdateSubtotalLayanan(transaksiLayanan, txtCari.Text);
@@ -579,7 +576,7 @@ namespace Kouvee.View.Transaksi.Layanan
                 ValidateNumberOnly(txtJumlah.Text);
 
                 SubtotalLayanan = (Convert.ToInt32(txtJumlah.Text) * hargaLayananInput);
-                subtotalLayanan = subtotalLayanan - oldSubtotal + SubtotalLayanan;
+                subtotalLayanan = tempSubtotalLayanan - oldSubtotal + SubtotalLayanan;
                 totalHargaAkhir = subtotalLayanan - tempDiskon;
                 detilTransaksiLayanan = new DetilTransaksiLayanan(comboBoxLayanan.Text, SubtotalLayanan, Convert.ToInt32(txtJumlah.Text));
                 transaksiLayanan = new TransaksiLayanan(subtotalLayanan);
@@ -601,6 +598,8 @@ namespace Kouvee.View.Transaksi.Layanan
 
         private void btnHapusLayanan_Click(object sender, EventArgs e)
         {
+            var ctrlDTL = new DetilTransaksiLayananControl();
+            var ctrlTL = new TransaksiLayananControl();
             try
             {
                 if (string.IsNullOrEmpty(txtCari.Text.Trim()))
@@ -613,46 +612,23 @@ namespace Kouvee.View.Transaksi.Layanan
                     MessageBox.Show("Text Pencarian Kosong");
                     throw null;
                 }
-                var ctrlDTL = new DetilTransaksiLayananControl();
-                var ctrlTL = new TransaksiLayananControl();
                 if (txtCariDetil.Text != null && ctrlDTL.SearchDetilTransaksiLayanan(txtCariDetil.Text) != null)
                 {
-                    string connStr = "datasource=127.0.0.1;port=3306;username=root;password=;database=kouvee;Convert Zero Datetime=True;";
-                    MySqlConnection conn = new MySqlConnection(connStr);
-                    string sqlhewan = "SELECT * FROM detil_transaksi_produk WHERE ID_DETIL_TRANSAKSI = '" + txtCariDetil.Text + "';";
-
-                    conn.Open();
-                    try
-                    {
-                        MySqlCommand cmd1 = new MySqlCommand(sqlhewan, conn);
-                        MySqlDataReader result1 = cmd1.ExecuteReader();
-                        if (result1 != null)
-                        {
-                            while (result1.Read())
-                            {
-                                hargaSubtotal = result1.GetInt32("SUB_TOTAL_PRODUK");
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Failed to read...");
-                        Console.WriteLine(ex.ToString());
-                    }
-                    conn.Close();
+                    hargaSubtotal = 0;
+                    detilTransaksiLayanan = ctrlDTL.SearchDetilTransaksiLayanan(txtCariDetil.Text);
+                    hargaSubtotal = detilTransaksiLayanan.Sub_Total_Layanan;
 
                     ctrlDTL.DeleteDetilTransaksiLayanan(txtCariDetil.Text, txtCari.Text);
                     subtotalLayanan = subtotalLayanan - hargaSubtotal;
                     totalHargaAkhir = subtotalLayanan - tempDiskon;
-                    transaksiLayanan = new TransaksiLayanan(subtotalLayanan);
-                    ctrlTL.UpdateSubtotalLayanan(transaksiLayanan, txtCari.Text);
+                    ctrlTL.UpdateSubtotalLayanan(subtotalLayanan, txtCari.Text);
                     ctrlTL.UpdateTotalHargaLayanan(totalHargaAkhir, txtCari.Text);
-                    MessageBox.Show("Produk Berhasil Dihapus!");
+                    MessageBox.Show("Layanan Berhasil Dihapus!");
                 }
                 else
                 {
 
-                    MessageBox.Show("Transaksi Produk Tidak ditemukan!");
+                    MessageBox.Show("Transaksi Layanan Tidak ditemukan!");
                     throw null;
                 }
 

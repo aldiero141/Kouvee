@@ -16,6 +16,33 @@ namespace Kouvee.View.Laporan
         public FormLaporan()
         {
             InitializeComponent();
+            setText();
+            setAuthority();
+        }
+
+        public void setAuthority()
+        {
+            if (FormLogin.jabatan == "Admin")
+            {
+                btnCashier.Visible = false;
+
+            }
+            else if (FormLogin.jabatan == "CS")
+            {
+                btnReport.Visible = false;
+
+            }
+            else if (FormLogin.jabatan == "Kasir")
+            {
+                btnReport.Visible = false;
+                btnData.Visible = false;
+            }
+        }
+
+        public void setText()
+        {
+            lblNama.Text = FormLogin.nama;
+            lblJabatan.Text = FormLogin.jabatan;
         }
 
         private Form activeForm = null;

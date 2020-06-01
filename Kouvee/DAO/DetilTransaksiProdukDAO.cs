@@ -277,6 +277,25 @@ namespace Kouvee.DAO
             }
         }
 
+        public void DeleteDetilTransaksiProdukUsingIDTransaksi(String idTransaksi)
+        {
+            string sql = "SET FOREIGN_KEY_CHECKS = 0; " +
+                "DELETE FROM detil_transaksi_produk WHERE ID_TRANSAKSI_PRODUK = '" + idTransaksi + "'; " +
+                "SET FOREIGN_KEY_CHECKS = 1;";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteReader();
+                Console.WriteLine("Data Deleted...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to delete...");
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
         public List<DetilTransaksiProduk> ShowDetilNotaProduk()
         {
             string sql = "SELECT P.NAMA_PRODUK, D.SUB_TOTAL_PRODUK, D.JUMLAH_PRODUK, P.HARGA_JUAL " +

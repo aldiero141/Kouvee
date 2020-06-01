@@ -57,6 +57,14 @@ namespace Kouvee.Control
             dtlDAO.DeleteDetilTransaksiLayanan(idTransaksi, idDetil);
             dtlDAO.closeConnection();
         }
+
+        public void DeleteDetilTransaksiLayananUsingIDTransaksi(String idTransaksi)
+        {
+            dtlDAO.makeConnection();
+            dtlDAO.DeleteDetilTransaksiLayananUsingIDTransaksi(idTransaksi);
+            dtlDAO.closeConnection();
+        }
+
         public List<DetilTransaksiLayanan> ShowDetilNotaLayanan()
         {
             dtlDAO.makeConnection();

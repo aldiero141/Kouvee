@@ -46,7 +46,7 @@ namespace Kouvee.View.Laporan
             PdfWriter.GetInstance(pdfDoc, new FileStream(path + "/PendapatanBulanan.pdf", FileMode.OpenOrCreate));
             pdfDoc.Open();
 
-            var imagepath = @"E:\KPS.PNG";
+            var imagepath = @Directory.GetCurrentDirectory() + "\\KPS.PNG";
             var png = iTextSharp.text.Image.GetInstance(imagepath);
             png.ScalePercent(87f);
             pdfDoc.Add(png);
@@ -215,7 +215,7 @@ namespace Kouvee.View.Laporan
             PdfWriter.GetInstance(pdfDoc, new FileStream(path + "/PendapatanBulanan.pdf", FileMode.OpenOrCreate));
             pdfDoc.Open();
 
-            var imagepath = @"E:\KPS.PNG";
+            var imagepath = @Directory.GetCurrentDirectory() + "\\KPS.PNG";
             var png = iTextSharp.text.Image.GetInstance(imagepath);
             png.ScalePercent(87f);
             pdfDoc.Add(png);

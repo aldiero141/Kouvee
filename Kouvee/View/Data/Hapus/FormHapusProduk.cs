@@ -61,15 +61,18 @@ namespace Kouvee.View.Data.Hapus
                 }
                 else
                 {
-                    byte[] img = (byte[])table.Rows[0][9];
-                    MemoryStream ms = new MemoryStream(img);
+                    if (!Convert.IsDBNull(table.Rows[0][12]))
+                    {
+                        byte[] img = (byte[])table.Rows[0][12];
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBoxProduk.Image = Image.FromStream(ms);
+                    }
                     txtNamaProduk.DataBindings.Add("Text", table, "NAMA_PRODUK");
                     txtStok.DataBindings.Add("Text", table, "STOCK");
                     txtStokMinimal.DataBindings.Add("Text", table, "MIN_STOCK");
                     txtSatuanProduk.DataBindings.Add("Text", table, "SATUAN_PRODUK");
                     txtHargaBeli.DataBindings.Add("Text", table, "HARGA_BELI");
                     txtHargaJual.DataBindings.Add("Text", table, "HARGA_JUAL");
-                    pictureBoxProduk.Image = Image.FromStream(ms);
                     buttonHapus.Enabled = true;
                     da.Dispose();
                 }

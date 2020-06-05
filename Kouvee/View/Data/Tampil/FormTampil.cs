@@ -138,7 +138,7 @@ namespace Kouvee.View.Data.Tampil
             da.Fill(table);
             dataGridViewTampil.DataSource = table;
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn = (DataGridViewImageColumn)dataGridViewTampil.Columns[9];
+            imageColumn = (DataGridViewImageColumn)dataGridViewTampil.Columns[12];
             dataGridViewTampil.Columns[8].Visible = false;
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             da.Dispose();
